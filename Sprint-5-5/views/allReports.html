@@ -1,0 +1,518 @@
+<section class="content-header">
+    <h1>
+        Reports
+    </h1>
+</section>
+
+<section class="content">
+    <div class="box">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-lg-12 form-group">
+                        <h4>Search Reports</h4>
+                        <div class="input-group">
+                            <input class="form-control" auto-complete ui-items="names" ng-model="selected">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary btn-right" type="submit" ng-model="reportSearch" ng-click="reportSearch=true">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 pad-b-15">
+                        <div class="col-lg-6" style="height: 120px; overflow: auto; border-right: 1px solid #ccc;">
+                            <p><strong><i class="fa fa-clock-o fa-fw text-blue" aria-hidden="true"></i> Recent Reports:</strong></p>
+                            <p><a href="">Equity Transactions</a></p>
+                            <p><a href="">SAP Details Report</a></p>
+                            <p><a href="">Monthly/Qtrly DCR Data</a></p>
+                            <p><a href="">Monthly/Qtrly DCR Data</a></p>
+                        </div>
+                        <div class="col-lg-6" style="height: 120px; overflow: auto;">
+                            <p><strong><i class="fa fa-star fa-fw text-blue" aria-hidden="true"></i> Favorite Reports:</strong></p>
+                            <p><a href="">Account-Sub Account- Currency</a></p>
+                            <p><a href="">Account-Sub Account- USD</a></p>
+                            <p><a href="">Account-USD</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 mar-b-20">
+                <hr />
+            </div>
+        </div>
+        <div class="box-body">
+
+
+            <div class="row" ng-show="reportSearch">
+                <div class="col-lg-12">
+                    <div class="col-lg-12 border-gray">
+                        <div class="row">
+                            <div class="col-lg-12 header-blue border-bottom">
+                                <h4>
+                                    Equity Suspense Non-USD
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1 pad-t-b-15">
+                                <div class="col-lg-4 form-group">
+                                    <h5>Comapny Name</h5>
+                                    <select class="form-control" id="">
+                                        <option value="SelectLegalEntity">Select Legal Entity</option>
+                                        <option value="IFCSpecialLedger">IFC Special Ledger</option>
+                                        <option value="IFC">IFC</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 form-group">
+                                    <h5>Comapny ID</h5>
+                                    <select class="form-control" id="">
+                                        <option value=" SelectCompanyID">Select Company ID</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 form-group">
+                                    <h5>Project ID</h5>
+                                    <select class="form-control" id="">
+                                        <option value="all">All</option>                                        
+                                    </select>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="col-lg-12">
+                                        <button type="button" class="btn btn-primary pull-right">View Reports</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li><a href="" class="link-black text-sm"><i class="fa fa fa-file-excel-o margin-r-5 text-green"></i> Export in Excel</a></li>
+                        <li><a href="" class="link-black text-sm"><i class="fa fa-file-pdf-o margin-r-5 text-red"></i> Export in PDF</a></li>
+                        <li><a href="" class="link-black text-sm"><i class="fa fa fa-file-excel-o margin-r-5 text-green"></i> Export in CSV</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="row" ng-hide="reportSearch">
+                <div class="col-lg-6">
+                    <div class="select-fields">
+                        <div class="col-lg-12">
+                            <h4>
+                                Account Trial Balance
+                            </h4>
+                        </div>
+                        <div class="col-lg-6 pad-t-b-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="atb1" ng-class="atb1 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="atb1 = !atb1;">
+                                    <span class="font"> Account-Sub Account- Currency</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="atb2" ng-class="atb2 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="atb2 = !atb2;">
+                                    <span class="font"> Account-Sub Account- USD</span>
+                                </a>
+                            </div>
+                            <p>
+                                <a href="" class="btn btn-bem pad-0" ng-model="atb3" ng-class="atb3 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="atb3 = !atb3;">
+                                    <span class="font"> Account-USD</span>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-lg-6 pad-t-b-15">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="select-fields">
+                        <div class="col-lg-12">
+                            <h4>
+                                ASL Recon Reports
+                            </h4>
+                        </div>
+                        <div class="col-lg-12 pad-t-b-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="arr1" ng-class="arr1 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="arr1 = !arr1;">
+                                    <span class="font"> AST Conclusions Report from ASL For Report Date</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="arr2" ng-class="arr2 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="arr2 = !arr2;">
+                                    <span class="font"> AST Conclusions Report from ASL For Upload Date</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="arr3" ng-class="arr3 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="arr3 = !arr3;">
+                                    <span class="font"> Monthly/Quarterly AST Conclusions Data</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="arr4" ng-class="arr4 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="arr4 = !arr4;">
+                                    <span class="font"> Reconciliation Report – DCR and OSL</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="arr5" ng-class="arr5 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="arr5 = !arr5;">
+                                    <span class="font"> Reconciliation Report For AST Conclusions and ASL</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="select-fields">
+                        <div class="col-lg-12">
+                            <h4>
+                                ASL Reports
+                            </h4>
+                        </div>
+                        <div class="col-lg-6 pad-t-b-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ar1" ng-class="ar1 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ar1 = !ar1;">
+                                    <span class="font"> FAS133 &amp; Freestanding Analysis Reports</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ar2" ng-class="ar2 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ar2 = !ar2;">
+                                    <span class="font"> Inactive Options Report</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ar3" ng-class="ar3 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ar3 = !ar3;">
+                                    <span class="font"> Loan and Equity Valuation Analysis</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 pad-t-b-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ar4" ng-class="ar4 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ar4 = !ar4;">
+                                    <span class="font"> Monthly/Qtrly DCR Data</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ar5" ng-class="ar5 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ar5 = !ar5;">
+                                    <span class="font"> Monthly/Qtrly DCR Data</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ar6" ng-class="ar6 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ar6 = !ar6;">
+                                    <span class="font"> Equity Transactions</span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="select-fields">
+                        <div class="col-lg-12">
+                            <h4>
+                                CFAEC Reports
+                            </h4>
+                        </div>
+                        <div class="col-lg-6 pad-t-b-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="cr1" ng-class="cr1 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="cr1 = !cr1;">
+                                    <span class="font"> Account Suspense Non-USD</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="cr2" ng-class="cr2 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="cr2 = !cr2;">
+                                    <span class="font"> Account Suspense USD</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="cr3" ng-class="cr3 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="cr3 = !cr3;">
+                                    <span class="font"> Equity Linked Events Report</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 pad-t-b-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="cr4" ng-class="cr4 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="cr4 = !cr4;">
+                                    <span class="font"> Equity Transactions</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="cr5" ng-class="cr5 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="cr5 = !cr5;">
+                                    <span class="font"> SAP Details Report</span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="select-fields">
+                        <div class="col-lg-12">
+                            <h4>
+                                Equity Control Reports
+                            </h4>
+                        </div>
+                        <div class="col-lg-6 pad-t-b-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ecr1" ng-class="ecr1 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ecr1 = !ecr1;">
+                                    <span class="font"> Active Projects</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ecr2" ng-class="ecr2 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ecr2 = !ecr2;">
+                                    <span class="font"> Cancellations</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ecr3" ng-class="ecr3 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ecr3 = !ecr3;">
+                                    <span class="font"> Company Transaction Details</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 pad-t-b-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ecr4" ng-class="ecr4 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ecr4 = !ecr4;">
+                                    <span class="font"> Company Transaction History</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ecr5" ng-class="ecr5 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ecr5 = !ecr5;">
+                                    <span class="font"> Disbursements</span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="select-fields">
+                        <div class="col-lg-12">
+                            <h4>
+                                Equity Custody Reports
+                            </h4>
+                        </div>
+                        <div class="col-lg-6 pad-t-b-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ecrs1" ng-class="ecrs1 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ecrs1 = !ecrs1;">
+                                    <span class="font"> Equity Custody Events - Both</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ecrs2" ng-class="ecrs2 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ecrs2 = !ecrs2;">
+                                    <span class="font"> Equity Custody Events - Checker</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ecrs3" ng-class="ecrs3 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ecrs3 = !ecrs3;">
+                                    <span class="font"> Equity Custody Events - Maker</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 pad-t-b-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ecrs4" ng-class="ecrs4 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ecrs4 = !ecrs4;">
+                                    <span class="font"> Equity Transactions</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ecrs5" ng-class="ecrs5 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ecrs5 = !ecrs5;">
+                                    <span class="font"> SAP Details Report</span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="select-fields">
+                        <div class="col-lg-12">
+                            <h4>
+                                Equity Trade Reports
+                            </h4>
+                        </div>
+                        <div class="col-lg-6 pad-t-b-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="etr1" ng-class="etr1 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="etr1 = !etr1;">
+                                    <span class="font"> Equity Trade Events-Both</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="etr2" ng-class="etr2 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="etr2 = !etr2;">
+                                    <span class="font"> Equity Trade Events-Checker</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="etr3" ng-class="etr3 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="etr3 = !etr3;">
+                                    <span class="font"> Equity Trade Events-Maker</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 pad-t-b-15">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="select-fields">
+                        <div class="col-lg-12">
+                            <h4>
+                                Income Reports
+                            </h4>
+                        </div>
+                        <div class="col-lg-6 mar-t-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ir1" ng-class="ir1 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ir1 = !ir1;">
+                                    <span class="font"> Cash Receipts for Energy Projects</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ir2" ng-class="ir2 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ir2 = !ir2;">
+                                    <span class="font"> Company Dividend History</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ir3" ng-class="ir3 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ir3 = !ir3;">
+                                    <span class="font"> Dividend Income</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 mar-t-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ir4" ng-class="ir4 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ir4 = !ir4;">
+                                    <span class="font"> Dividend Income All Company</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="ir5" ng-class="ir5 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="ir5 = !ir5;">
+                                    <span class="font"> Energy Projects</span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="select-fields">
+                        <div class="col-lg-12">
+                            <h4>
+                                Reconciliation Reports
+                            </h4>
+                        </div>
+                        <div class="col-lg-6 mar-t-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="rr1" ng-class="rr1 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="rr1 = !rr1;">
+                                    <span class="font"> Account Suspense Non-USD</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="rr2" ng-class="rr2 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="rr2 = !rr2;">
+                                    <span class="font"> Account Suspense USD</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="rr3" ng-class="rr3 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="rr3 = !rr3;">
+                                    <span class="font"> Equity Linked Events Report</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="rr4" ng-class="rr4 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="rr4 = !rr4;">
+                                    <span class="font"> Equity Transactions</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 mar-t-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="rr5" ng-class="rr5 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="rr5 = !rr5;">
+                                    <span class="font"> Equity Transactions</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="rr6" ng-class="rr6 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="rr6 = !rr6;">
+                                    <span class="font"> SAP Details Report</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="rr7" ng-class="rr7 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="rr7 = !rr7;">
+                                    <span class="font"> Equity Transactions</span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="select-fields">
+                        <div class="col-lg-12">
+                            <h4>
+                                Share Custody
+                            </h4>
+                        </div>
+                        <div class="col-lg-6 mar-t-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="sc1" ng-class="sc1 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="sc1 = !sc1;">
+                                    <span class="font"> Certificate Information</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="sc2" ng-class="sc2 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="sc2 = !sc2;">
+                                    <span class="font"> Company Share Information</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="sc3" ng-class="sc3 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="sc3 = !sc3;">
+                                    <span class="font"> Share Exception Report</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="sc4" ng-class="sc4 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="sc4 = !sc4;">
+                                    <span class="font"> Share Holdings Report</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 mar-t-15">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="select-fields">
+                        <div class="col-lg-12">
+                            <h4>
+                                Trial Balance Report
+                            </h4>
+                        </div>
+                        <div class="col-lg-6 mar-t-15">
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="tbr1" ng-class="tbr1 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="tbr1 = !tbr1;">
+                                    <span class="font"> Account Trial Balance(Conversion)</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="btn btn-bem pad-0" ng-model="tbr2" ng-class="tbr2 ? 'fa fa-star fa-fw text-blue' : 'fa fa-star-o fa-fw'" ng-click="tbr2 = !tbr2;">
+                                    <span class="font"> Company Trial Balances</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 mar-t-15">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

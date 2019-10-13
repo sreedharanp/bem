@@ -1,0 +1,263 @@
+<section class="content-header">
+    <h1>
+        Host Re-Class Event Settings
+    </h1>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box">
+                <div class="box-header">
+                    <div class="row">
+                        <div class="col-lg-3 box-title pad-t-5">
+                            Event Type - Host Re-Class
+                        </div>
+                        <div class="col-lg-4 box-title pad-t-5">
+                            Legal Entity - IFC
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-body">
+                    <fieldset>
+                        <legend>New Mapping</legend>
+                        <div class="col-lg-3 form-group">
+                            <h5>Host System Account</h5>
+                            <select class="form-control" id="">
+                                <option selected="" value="Select Legal Entity">Select Legal Entity</option>
+                                <option value="IFC Special Ledger">IFC Special Ledger</option>
+                                <option value="IFC">IFC</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 form-group">
+                            <h5>ASL Account</h5>
+                            <select class="form-control" id="">
+                                <option selected="" value="Select Legal Entity">Select Legal Entity</option>
+                                <option value="IFC Special Ledger">IFC Special Ledger</option>
+                                <option value="IFC">IFC</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 form-group">
+                            <h5>&nbsp;</h5>
+                            <button type="button" class="btn btn-primary btn-block">Insert</button>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-body">
+                    <div class="row">
+                        <h5 class="pull-left mar-l-15">
+                            Showing 1 to 10 of 1234 with 75 pages
+                        </h5>
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="pad-l-15" style="padding-top: 7px;">Showing Records</li>
+                            <li class="form-group pad-l-15 mar-r-15">
+                                <select class="form-control" id="">
+                                    <option value="1">Select</option>
+                                    <option value="1">10</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </li>
+                            <li class="pad-l-15" style="padding-top: 7px;">Jump To</li>
+                            <li class="form-group pad-l-15 mar-r-15">
+                                <select class="form-control" id="">
+                                    <option value="1">Select</option>
+                                    <option value="1">10</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-striped mar-0">
+                                    <thead>
+                                        <tr>
+                                            <th width="30%">Host System Account</th>
+                                            <th width="30%">ASL Account</th>
+                                            <th width="30%" class="text-right">Action</th>
+                                            <th width="10%"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="bg-gray pad-t-b-20">
+                                            <td class="form-group">
+                                                <select class="form-control" id="">
+                                                        <option selected="" value="Select"> Select</option>
+                                                        <option value="701010100 Cash Clearing Account">701010100 Cash Clearing Account</option>
+                                                        <option value="701010100 Cash Clearing FX">701010100 Cash Clearing FX</option>
+                                                </select>
+                                            </td>
+                                            <td class="form-group">
+                                                <select class="form-control" id="">
+                                                        <option selected="" value="Select"> Select</option>
+                                                        <option value="701010100 Cash Clearing Account">701010100 Cash Clearing Account</option>
+                                                        <option value="701010100 Cash Clearing FX">701010100 Cash Clearing FX</option>
+                                                    </select>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <span ng-hide="hre11">
+                                <table class="table table-hover table-striped mar-0">
+                                    <tbody>
+                                        <tr>
+                                            <td width="30%">
+                                                <button class="btn btn-bem mar-r-15" ng-model="hre1" ng-class="hre1 ? 'icn-minus' : 'icn-plus'" ng-click="hre1 = !hre1;">                                                                                
+                                                </button> 701010100 Cash Clearing Account</td>
+                                            <td width="20%">701010100 Cash Clearing Account</td>
+                                            <td width="20%"></td>
+                                            <td width="20%" class="text-right"><a href="" ng-model="hre11" ng-click="hre11=true"><i class="fa fa-trash-o fa-fw fa-lg pad-5" aria-hidden="true"></i></a></td>
+                                            <td width="10%"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="table table-hover table-striped" style="margin-top: -1px; margin-bottom: 0;" ng-show="hre1">
+                                    <thead>
+                                        <tr>
+                                            <th width="30%">Accounting Indicator</th>
+                                            <th width="20%">Accounting Indicator Mapped Account</th>
+                                            <th width="20%">Trans Types (Credit/Debit)</th>
+                                            <th width="20%" class="text-right">Action</th>
+                                            <th width="10%"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-hide="hreSub1">
+                                            <td>Loan_Amortized_cost</td>
+                                            <td>701010100 Cash Clearing Account</td>
+                                            <td>
+                                                Cash Clearing Account -DR <br /> Cash Clearing Account -CR
+                                            </td>
+                                            <td class="text-right">
+                                                <a href="" ng-model="hreSub11" ng-click="hreSub11=true">Insert New</a>
+                                                <a href="" ng-model="hreSub1" ng-click="hreSub1=true"><i class="fa fa-trash-o fa-fw fa-lg pad-5" aria-hidden="true"></i></a></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr ng-show="hreSub11" style="border-top: 2px solid #e5e5e5;">
+                                            <td class="form-group">
+                                                <select class="form-control" id="">
+                                                                            <option selected="" value="Select">Select</option>
+                                                                            <option value="Loan_Amortized_cost">Loan_Amortized_cost</option>
+                                                                            <option value="Afs_Debt_Acbs">Afs_Debt_Acbs</option>
+                                                                            <option value="Fvo_Debt_Acbs">Fvo_Debt_Acbs</option>
+                                                                            </select>
+                                            </td>
+                                            <td class="form-group">
+                                                <select class="form-control" id="">
+                                                                            <option selected="" value="Select">Select</option>
+                                                                            <option value="711010100 Cash Clearing Account">711010100 Cash Clearing Account</option>
+                                                                            <option value="711010100 Cash Clearing FX">711010100 Cash Clearing FX</option>
+                                                                        </select>
+                                            </td>
+                                            <td></td>
+                                            <td class="text-right">
+                                                <a href="">Insert New</a>
+                                                <a href=""><i class="fa fa-floppy-o fa-fw fa-lg pad-5" aria-hidden="true"></i></a>
+                                                <a href=""><i class="fa fa-times fa-fw fa-lg pad-5" aria-hidden="true"></i></a>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </span>
+                                <span ng-hide="hre22">
+                                    <table class="table table-hover table-striped mar-0">
+                                        <tbody>
+                                            <tr>
+                                                <td width="30%">
+                                                    <button class="btn btn-bem mar-r-15" ng-model="hre2" ng-class="hre2 ? 'icn-minus' : 'icn-plus'" ng-click="hre2 = !hre2;">                                                                                
+                                                    </button> 701010100 Cash Clearing Account</td>
+                                                <td width="20%">701010100 Cash Clearing Account</td>
+                                                <td width="20%"></td>
+                                                <td width="20%" class="text-right"><a href="" ng-model="hre22" ng-click="hre22=true"><i class="fa fa-trash-o fa-fw fa-lg pad-5" aria-hidden="true"></i></a></td>
+                                                <td width="10%"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+    
+                                    <table class="table table-hover table-striped" style="margin-top: -1px; margin-bottom: 0;" ng-show="hre2">
+                                        <thead>
+                                            <tr>
+                                                <th width="30%">Accounting Indicator</th>
+                                                <th width="20%">Accounting Indicator Mapped Account</th>
+                                                <th width="20%">Trans Types (Credit/Debit)</th>
+                                                <th width="20%" class="text-right">Action</th>
+                                                <th width="10%"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-hide="hreSub2">
+                                                <td>Loan_Amortized_cost</td>
+                                                <td>701010100 Cash Clearing Account</td>
+                                                <td>
+                                                    Cash Clearing Account -DR <br /> Cash Clearing Account -CR
+                                                </td>
+                                                <td class="text-right">
+                                                    <a href="" ng-model="hreSub22" ng-click="hreSub22=true">Insert New</a>
+                                                    <a href="" ng-model="hreSub2" ng-click="hreSub2=true"><i class="fa fa-trash-o fa-fw fa-lg pad-5" aria-hidden="true"></i></a></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr ng-show="hreSub22" style="border-top: 2px solid #e5e5e5;">
+                                                <td class="form-group">
+                                                    <select class="form-control" id="">
+                                                                                <option selected="" value="Select">Select</option>
+                                                                                <option value="Loan_Amortized_cost">Loan_Amortized_cost</option>
+                                                                                <option value="Afs_Debt_Acbs">Afs_Debt_Acbs</option>
+                                                                                <option value="Fvo_Debt_Acbs">Fvo_Debt_Acbs</option>
+                                                                                </select>
+                                                </td>
+                                                <td class="form-group">
+                                                    <select class="form-control" id="">
+                                                                                <option selected="" value="Select">Select</option>
+                                                                                <option value="711010100 Cash Clearing Account">711010100 Cash Clearing Account</option>
+                                                                                <option value="711010100 Cash Clearing FX">711010100 Cash Clearing FX</option>
+                                                                            </select>
+                                                </td>
+                                                <td></td>
+                                                <td class="text-right">
+                                                    <a href="">Insert New</a>
+                                                    <a href=""><i class="fa fa-floppy-o fa-fw fa-lg pad-5" aria-hidden="true"></i></a>
+                                                    <a href=""><i class="fa fa-times fa-fw fa-lg pad-5" aria-hidden="true"></i></a>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="pagination pull-right charectorSearch">
+                                <a href="#"><i class="fa fa-angle-left fa-fw" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-angle-double-left fa-fw" aria-hidden="true"></i></a>
+                                <a href="#">1</a>
+                                <a class="active" href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>

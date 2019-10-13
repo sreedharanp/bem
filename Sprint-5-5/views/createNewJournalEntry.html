@@ -1,0 +1,858 @@
+<section class="content-header">
+    <h1 class="pull-left pad-t-5">
+        Create New Journal Entry
+    </h1>
+
+    <ul class="nav navbar-nav step-right hidden-xs hidden-sm">
+        <li class="selected">Step 1</li>
+        <li>Step 2</li>
+        <li>Step 3</li>
+    </ul>
+
+    <div class="nav navbar-nav pull-right hidden-xs hidden-sm pad-b-10 mar-m-5">
+
+        <button type="button" class="btn btn-link link">Recalculate</button>
+        <button type="button" class="btn btn-link link">Edit</button>
+        <button type="button" class="btn btn-link link">Cancel</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#submitModel" ng-click="activeMenu = 'submit'">Submit</button>
+
+    </div>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box-solid">
+                <div id="accordion" class="box-group">
+                    <div class="panel box">
+                        <div class="box-header with-border panel-heading">
+                            <h4 class="box-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" href="">
+                                    <span class="badge" ng-class="eventType[jurnalEntry]">1</span> Event Type
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <div class="col-sm-3">
+                                        <h4>Legal Entity - IFC</h4>
+                                    </div>
+
+                                    <div class="col-sm-3">
+                                        <h4>Journal Entry</h4>
+                                    </div>
+                                    <div class="col-sm-3 form-group">
+                                        <select class="form-control" ng-model="jurnalEntry">
+                                                <option value="" selected="">Select Trade Type</option>                                                
+                                                <option class="active" value="1">Regular</option>                                                
+                                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel box" ng-show="jurnalEntry">
+                        <div class="box-header with-border panel-heading">
+                            <h4 class="box-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" href="">
+                                    <span class="badge" ng-class="{active : generateEntry === 'generate'}">2</span> Event Details - Journal Entry - Regular
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse in">
+                            <div class="box-body">
+                                <fieldset>
+                                    <legend>Event Details</legend>
+                                    <div class="col-lg-12">
+                                        <div class="row">
+                                            <div class="col-lg-3 form-group">
+                                                <h5>Institution / Projects <sup> * </sup></h5>
+                                                <div class="input-group">
+                                                    <input class="form-control" placeholder="Search" id="" type="text">
+                                                    <div class="input-group-btn">
+                                                        <button class="btn btn-primary btn-right" type="submit" data-toggle="modal" data-target="#eventDetailsModel">
+                                                                        <span class="glyphicon glyphicon-search"></span>
+                                                                    </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 form-group">
+                                                <h5>Tranche <sup> * </sup></h5>
+                                                <select class="form-control" id="">
+                                                    <option value="IFC"></option>                                                      
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-3 form-group">
+                                                <h5>Initiative <sup> * </sup></h5>
+                                                <input class="form-control" id="" type="text">
+                                            </div>
+                                            <div class="col-lg-3 form-group">
+                                                <h5>Investor <sup> * </sup></h5>
+                                                <select class="form-control" id="">
+                                                    <option value="IFC">IFC</option>                                                      
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Event Reference</legend>
+                                    <div class="col-lg-12">
+                                        <div class="row">
+                                            <div class="col-lg-9">
+                                                <div class="row">
+                                                    <div class="col-lg-4 form-group">
+                                                        <h5>Posting Date <sup> * </sup></h5>
+                                                        <div class='input-group date'>
+                                                            <input id="date-picker-pd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                            <label for="date-picker-pd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                    </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 form-group">
+                                                        <h5>Value Date <sup> * </sup></h5>
+                                                        <div class='input-group date'>
+                                                            <input id="date-picker-vd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                            <label for="date-picker-vd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                    </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 form-group">
+                                                        <h5>Modification Date <sup> * </sup></h5>
+                                                        <div class='input-group date'>
+                                                            <input id="date-picker-md" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                            <label for="date-picker-md" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                    </label>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-lg-4 form-group">
+                                                        <h5>Settlement Date <sup> * </sup></h5>
+                                                        <div class='input-group date'>
+                                                            <input id="date-picker-sd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                            <label for="date-picker-sd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                    </label>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-lg-4 form-group">
+                                                        <h5>EPMS Transaction ID </h5>
+                                                        <input class="form-control" id="" type="text">
+                                                    </div>
+                                                    <div class="col-lg-4 form-group">
+                                                        <h5>Free Code <sup> * </sup></h5>
+                                                        <input class="form-control" id="" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 form-group">
+                                                <h5>Remarks</h5>
+                                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="col-lg-12 line-header">
+                                            <span>Transaction details</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 pad-t-b-15">
+                                        <div class="col-lg-12 border-gray">
+                                            <div class="row mar-b-20">
+                                                <div class="col-lg-12 header-blue">
+                                                    <div class="row">
+                                                        <div class="col-lg-2">
+                                                            <h6 class="mar-0">
+                                                                <strong>Description <sup>*</sup></strong>
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <h6 class="mar-0">
+                                                                <strong>Security Type <sup>*</sup></strong>
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <h6 class="mar-0">
+                                                                <strong>Option ID <sup>*</sup></strong>
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-lg-2">
+                                                            <h6 class="mar-0">
+                                                                <strong>Currency  <sup>*</sup></strong>
+                                                            </h6>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <h6 class="mar-0">
+                                                                <strong>FX Rate <sup>*</sup></strong>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 form-group">
+                                                    <select class="form-control" id="">
+                                                                <option value="Common Shares">Equity</option>                                                      
+                                                            </select>
+                                                </div>
+                                                <div class="col-lg-2 form-group">
+                                                    <select class="form-control" id="">
+                                                                <option value="Common Shares">Common Shares</option>                                                      
+                                                            </select>
+                                                </div>
+                                                <div class="col-lg-2 form-group">
+                                                    <select class="form-control" id="">
+                                                                <option value="0">0</option>                                                      
+                                                            </select>
+                                                </div>
+                                                <div class="col-lg-2 form-group">
+                                                    <select class="form-control" id="">
+                                                                <option value="USD">USD</option>
+                                                                <option value="Euro">Euro</option>
+                                                            </select>
+                                                </div>
+                                                <div class="col-lg-4 form-group">
+                                                    <div class="input-group">
+                                                        <input class="form-control" placeholder="Search" id="" type="text">
+                                                        <div class="input-group-btn">
+                                                            <button class="btn btn-default height-40" type="submit">1/x
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 form-group">
+                                                    <select class="form-control" id="">
+                                                                    <option value="Common Shares">Equity</option>                                                      
+                                                                </select>
+                                                </div>
+                                                <div class="col-lg-2 form-group">
+                                                    <select class="form-control" id="">
+                                                                    <option value="Common Shares">Common Shares</option>                                                      
+                                                                </select>
+                                                </div>
+                                                <div class="col-lg-2 form-group">
+                                                    <select class="form-control" id="">
+                                                                    <option value="0">0</option>                                                      
+                                                                </select>
+                                                </div>
+                                                <div class="col-lg-2 form-group">
+                                                    <select class="form-control" id="">
+                                                                    <option value="USD">USD</option>
+                                                                    <option value="Euro">Euro</option>
+                                                                </select>
+                                                </div>
+                                                <div class="col-lg-4 form-group">
+                                                    <div class="input-group">
+                                                        <input class="form-control" placeholder="Search" id="" type="text">
+                                                        <div class="input-group-btn">
+                                                            <button class="btn btn-default height-40" type="submit">1/x
+                                                                </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 form-group">
+                                                    <a href="">
+                                                        <i class="btn btn-bem icn-plus" ng-class="'icn-plus'"></i> <span class="icn-text">Add</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="table-responsive pad-t-20">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Description <sup> * </sup></th>
+                                                        <th>Security Type <sup> * </sup></th>
+                                                        <th>Option ID <sup> * </sup></th>
+                                                        <th>Currency <sup> * </sup></th>
+                                                        <th>FX Rate</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                                        <option value="Common Shares">Equity</option>                                                      
+                                                                                    </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                                        <option value="Common Shares">Common Shares</option>                                                      
+                                                                                    </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                                        <option value="0">0</option>                                                      
+                                                                                    </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                                        <option value="USD">USD</option>
+                                                                                        <option value="Euro">Euro</option>
+                                                                                    </select>
+                                                        </td>
+                                                        <td class="input-group">
+
+                                                            <input class="form-control" placeholder="Search" id="" type="text">
+                                                            <div class="input-group-btn">
+                                                                <button class="btn btn-default height-40" type="submit">
+                                                                                                    1/x
+                                                                                                </button>
+                                                            </div>
+
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="">
+                                                                <i class="btn btn-bem" ng-class="'icn-plus'"></i> <span class="icn-text">Add</span>
+                                                            </a>
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button type="button" class="btn btn-primary pull-right" ng-model="createNewEntryGenerate" ng-click="createNewEntryGenerate=true; generateEntry = 'generate'">Generate</button>
+                                        <button type="button" class="btn btn-link link pull-right">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel box" ng-show="createNewEntryGenerate">
+                        <div class="box-header with-border panel-heading">
+                            <h4 class="box-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree" href="">
+                                    <span class="badge" ng-class="{active : activeMenu === 'submit'}">3</span> Generated Entries
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse in" ng-show="createNewEntryGenerate">
+                            <div class="box-body">
+                                <div class="row pad-b-15">
+                                    <div class="col-lg-4 pad-0 form-group">
+                                        <div class="col-xs-5"><strong>Institution:</strong></div>
+                                        <div class="col-xs-7">21 century</div>
+                                    </div>
+                                    <div class="col-lg-4 pad-0 form-group">
+                                        <div class="col-xs-5"><strong>Posting Date:</strong></div>
+                                        <div class="col-xs-7">27 Jan 2017</div>
+                                    </div>
+                                    <div class="col-lg-4 pad-0 form-group">
+                                        <div class="col-xs-5"><strong>Currency:</strong></div>
+                                        <div class="col-xs-7">USD</div>
+                                    </div>
+                                    <div class="col-lg-4 pad-0 form-group">
+                                        <div class="col-xs-5"><strong>Local Amount:</strong></div>
+                                        <div class="col-xs-7">1,00,000</div>
+                                    </div>
+                                    <div class="col-lg-4 pad-0 form-group">
+                                        <div class="col-xs-5"><strong>Legal Amount:</strong></div>
+                                        <div class="col-xs-7">1,00,000</div>
+                                    </div>
+                                    <div class="col-lg-4 pad-0 form-group">
+                                        <div class="col-xs-5"><strong>Batch ID:</strong></div>
+                                        <div class="col-xs-7">0</div>
+                                    </div>
+                                    <div class="col-lg-4 pad-0 form-group">
+                                        <div class="col-xs-5"><strong>Value Date:</strong></div>
+                                        <div class="col-xs-7">28 Jan 2017</div>
+                                    </div>
+                                    <div class="col-lg-4 pad-0 form-group">
+                                        <div class="col-xs-5"><strong>Projects:</strong></div>
+                                        <div class="col-xs-7">0</div>
+                                    </div>
+                                    <div class="col-lg-4 pad-0 form-group">
+                                        <div class="col-xs-5"><strong>Quantity:</strong></div>
+                                        <div class="col-xs-7">1,1</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="col-lg-12 line-header">
+                                            <span>Accounting Entries</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="table-responsive pad-t-20">
+                                            <table class="table table-hover mar-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Project ID</th>
+                                                        <th>Tranche Number</th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>26548</td>
+                                                        <td>10</td>
+                                                        <td><button type="button" class="btn btn-primary" ng-model="insertJournalEntry1" ng-click="insertJournalEntry1=!insertJournalEntry1">Insert Journal Entry</button></td>
+                                                        <td>&nbsp;</td>
+                                                        <td class="text-right">
+                                                            <button class="btn btn-bem" ng-model="toggle1" ng-class="toggle1 ? 'icn-minus' : 'icn-plus'" ng-click="toggle1 = !toggle1;">                                                                                
+                                                                    </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="row" ng-show="insertJournalEntry1">
+                                            <div class="col-lg-12">
+                                                <div class="col-lg-12 border-gray">
+                                                    <div class="row mar-b-20">
+                                                        <div class="col-lg-12 header-blue">
+                                                            <div class="row">
+                                                                <div class="col-lg-1">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-12"><strong>JE Index</strong></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-7">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-2"><strong>Account Transaction Type</strong></div>
+                                                                        <div class="col-lg-2"><strong>DR/CR</strong></div>
+                                                                        <div class="col-lg-2"><strong>Position</strong></div>
+                                                                        <div class="col-lg-2"><strong>Local Amount</strong></div>
+                                                                        <div class="col-lg-2"><strong>Legal Amount</strong></div>
+                                                                        <div class="col-lg-2"><strong>Quantity</strong></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-4">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-3"><strong>JE Type</strong></div>
+                                                                        <div class="col-lg-3"><strong>Currency</strong></div>
+                                                                        <div class="col-lg-3"><strong>FX Rates</strong></div>
+                                                                        <div class="col-lg-3"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row displayFlex">
+                                                        <div class="col-lg-1">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">1</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-7">
+                                                            <div class="row">
+                                                                <div class="col-lg-2 form-group">
+                                                                    <div class="input-group">
+                                                                        <input class="form-control" type="text">
+                                                                        <span class="input-group-btn">
+                                                                                    <button class="btn btn-primary" type="submit">
+                                                                                            <span class="glyphicon glyphicon-search"></span>
+                                                                        </button>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-2 form-group">
+                                                                    <select class="form-control" id="">
+                                                                                <option value="IFC"></option>                                                      
+                                                                            </select>
+                                                                </div>
+                                                                <div class="col-lg-2 form-group"><input class="form-control" id="" type="text"></div>
+                                                                <div class="col-lg-2 form-group"><input class="form-control" id="" type="text"></div>
+                                                                <div class="col-lg-2 form-group"><input class="form-control" id="" type="text"></div>
+                                                                <div class="col-lg-2 form-group">
+                                                                    <input class="form-control" id="" type="text">
+                                                                    <a href="" class="trash-button fa fa-trash-o fa-fw"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-lg-2 form-group">
+                                                                    <div class="input-group">
+                                                                        <input class="form-control" type="text">
+                                                                        <span class="input-group-btn">
+                                                                                        <button class="btn btn-primary" type="submit">
+                                                                                                <span class="glyphicon glyphicon-search"></span>
+                                                                        </button>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-2 form-group">
+                                                                    <select class="form-control" id="">
+                                                                                    <option value="IFC"></option>                                                      
+                                                                                </select>
+                                                                </div>
+                                                                <div class="col-lg-2 form-group"><input class="form-control" id="" type="text"></div>
+                                                                <div class="col-lg-2 form-group"><input class="form-control" id="" type="text"></div>
+                                                                <div class="col-lg-2 form-group"><input class="form-control" id="" type="text"></div>
+                                                                <div class="col-lg-2 form-group">
+                                                                    <input class="form-control" id="" type="text">
+                                                                    <a href="" class="trash-button fa fa-trash-o fa-fw"></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="row">
+                                                                <div class="col-lg-3 form-group">
+                                                                    <select class="form-control" id="">
+                                                                        <option value="IFC">MSC</option>                                                      
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-lg-3 form-group">
+                                                                    <select class="form-control" id="">
+                                                                            <option value="IFC">MSC</option>                                                      
+                                                                        </select>
+                                                                </div>
+                                                                <div class="col-lg-3 form-group">
+                                                                    <input class="form-control" id="" type="text">
+                                                                </div>
+                                                                <div class="col-lg-3 form-group pad-t-5">
+                                                                    <a class="pull-left" href="" style="font-size: 16px;"> <i class="fa fa-trash fa-fw fa-lg" aria-hidden="true"></i></a>
+                                                                    <a class="pull-left" href=""><i class="btn btn-bem icn-plus" aria-hidden="true"></i></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="table-responsive pad-t-20">
+                                            <table class="table table-hover mar-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Project ID</th>
+                                                        <th>Tranche Number</th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>26548</td>
+                                                        <td>10</td>
+                                                        <td><button type="button" class="btn btn-primary" ng-model="insertJournalEntry2" ng-click="insertJournalEntry2=!insertJournalEntry2">Insert Journal Entry</button></td>
+                                                        <td>&nbsp;</td>
+                                                        <td class="text-right">
+                                                            <button class="btn btn-bem" ng-model="toggle2" ng-class="toggle2 ? 'icn-minus' : 'icn-plus'" ng-click="toggle2 = !toggle2;">                                                                                
+                                                                        </button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="table-responsive" ng-show="insertJournalEntry2" style="margin-top: -1px;">
+                                                <table class="table bg-gray">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>JE Index</th>
+                                                            <th>Account Transaction Type</th>
+                                                            <th>DR/CR</th>
+                                                            <th>Position</th>
+                                                            <th>Local Amount</th>
+                                                            <th>Legal Amount</th>
+                                                            <th>Quantity</th>
+                                                            <th>JE Type</th>
+                                                            <th>Currency</th>
+                                                            <th>FX Rates</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>
+                                                                <div class="input-group mar-b-10">
+                                                                    <input class="form-control" type="text">
+                                                                    <span class="input-group-btn">
+                                                                        <button class="btn btn-primary" type="submit">
+                                                                                <span class="glyphicon glyphicon-search"></span>
+                                                                    </button>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="input-group mar-b-10">
+                                                                    <input class="form-control" type="text">
+                                                                    <span class="input-group-btn">
+                                                                        <button class="btn btn-primary" type="submit">
+                                                                                <span class="glyphicon glyphicon-search"></span>
+                                                                    </button>
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="form-group">
+                                                                    <select class="form-control" id="">
+                                                                    <option value="IFC"></option>                                                      
+                                                                </select>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <select class="form-control" id="">
+                                                                        <option value="IFC"></option>                                                      
+                                                                    </select>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="form-group">
+                                                                    <input class="form-control" id="" type="text">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input class="form-control" id="" type="text">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="form-group">
+                                                                    <input class="form-control" id="" type="text">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input class="form-control" id="" type="text">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="form-group">
+                                                                    <input class="form-control" id="" type="text">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input class="form-control" id="" type="text">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="form-group po-rel">
+                                                                    <input class="form-control" id="" type="text">
+                                                                    <a href="" class="trash-button fa fa-trash-o fa-fw"></a>
+                                                                </div>
+                                                                <div class="form-group po-rel">
+                                                                    <input class="form-control" id="" type="text">
+                                                                    <a href="" class="trash-button fa fa-trash-o fa-fw"></a>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="form-group">
+                                                                    <select class="form-control" id="">
+                                                                            <option value="IFC">MSC</option>                                                      
+                                                                        </select>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="form-group">
+                                                                    <select class="form-control" id="">
+                                                                                    <option value="IFC">MSC</option>                                                      
+                                                                                </select>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="form-group">
+                                                                    <input class="form-control" id="" type="text">
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 text-right">
+                                        <button type="button" class="btn btn-link link">Recalculate</button>
+                                        <button type="button" class="btn btn-link link">Edit</button>
+                                        <button type="button" class="btn btn-link link">Cancel</button>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#submitModel" ng-click="activeMenu = 'submit'">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal search -->
+<div class="modal fade" id="eventDetailsModel" role="dialog">
+    <div class="modal-dialog" style="width: 75%;">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                <ul class="select2">
+                    <li class="tag">Project 1<a href="#" title="Removing tag">x</a></li>
+                    <li class="tag">Project 2<a href="#" title="Removing tag">x</a></li>
+                    <li class="tag">Project 3<a href="#" title="Removing tag">x</a></li>
+                </ul>
+
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        <div class="input-group">
+                            <input class="form-control" placeholder="Search by Institution Name / Number" id="" type="text">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary btn-right" type="submit">
+                                            <span class="glyphicon glyphicon-search"></span>
+                                        </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <a href="">Clear all</a>
+                    </div>
+                </div>
+                <div class="row" style="overflow: hidden;">
+                    <div class="col-lg-12">
+                        <div style="float: right; width: 50%; padding-left: 10px;">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Project Name</th>
+                                            <th>Project Number</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox">
+                                                    <input id="fl" type="checkbox" name="check" value="fl">
+                                                    <label for="fl">First Lease</label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                01212
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox">
+                                                    <input id="pr1" type="checkbox" name="check" value="pr1">
+                                                    <label for="pr1">Project 1</label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                01212
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div style="overflow: hidden;">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Institution Name</th>
+                                            <th>Institution Number</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="col-lg-12">
+                                                    <div class="radio">
+                                                        <input id="pl" type="radio" name="project" value="pl">
+                                                        <label for="pl">Project Lease</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>54001</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="col-lg-12">
+                                                    <div class="radio">
+                                                        <input id="p1" type="radio" name="project" value="p1">
+                                                        <label for="p1">Project 1</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>54001</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="pagination pull-left charectorSearch mar-0">
+                                <a href="#"><i class="fa fa-angle-left fa-fw" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-angle-double-left fa-fw" aria-hidden="true"></i></a>
+                                <a href="#">1</a>
+                                <a class="active" href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <button class="btn btn-primary pull-right" type="submit">
+                                Submit
+                            </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!--Submit Modal submit -->
+<div id="submitModel" class="modal fade" role="dialog">
+    <div class="modal-dialog" style="width: 35%;">
+        <div class="modal-content">
+
+            <div class="modal-body text-center">
+                <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
+                <i class="exclamatorymark"></i>
+                <h3>Event ID : 32381</h3>
+                <h4>Journal Enrty Created Succesfully</h4><br />
+                <button type="button" class="btn btn-primary pad-l-r-30" ui-sref="viewJournalEntry">OK</button>
+                <br /><br /> You also can: <a href="" type="button" class="btn btn-link link">Edit</a>
+                <a href="" type="button" class="btn btn-link">View</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--EO Submit Modal submit -->

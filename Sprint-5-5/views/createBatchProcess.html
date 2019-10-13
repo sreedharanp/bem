@@ -1,0 +1,232 @@
+<section class="content-header">
+    <h1 class="pull-left pad-t-5">
+        Create New Batch Process
+    </h1>
+
+    <ul class="nav navbar-nav step-right hidden-xs hidden-sm">
+        <li class="selected">Step 1</li>
+        <li>Step 2</li>
+        <li>Step 3</li>
+    </ul>
+
+    <div class="nav navbar-nav pull-right hidden-xs hidden-sm pad-b-10 mar-m-5">
+
+        <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#submitModel" ng-click="generateEntry = 'generate'">Upload to BEM</button>
+
+    </div>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box-solid">
+                <div id="accordion" class="box-group">
+                    <div class="panel box">
+                        <div class="box-header with-border panel-heading">
+                            <h4 class="box-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" href="">
+                                    <span class="badge" ng-class="eventType[batchProcess]">1</span> Event Type
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <div class="col-sm-3">
+                                        <h4>Legal Entity - IFC</h4>
+                                    </div>
+                                    <div class="col-sm-3 form-group">
+                                        <select class="form-control" ng-model="batchProcess">
+                                                    <option value="" selected="">Select Event Type</option>                                                
+                                                    <option class="active" value="1">EITF Write-down Batch</option>                                                
+                                                </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel box" ng-show="batchProcess">
+                        <div class="box-header with-border panel-heading">
+                            <h4 class="box-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" href="">
+                                    <span class="badge" ng-class="{active : generateEntry === 'generate'}">2</span> Event Details - IFC - EITF Write-Down Batch
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse in">
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-lg-12 text-right">
+                                        <a href=""><i class="fa fa-file-excel-o text-green" aria-hidden="true"></i> Download the Template</a>
+                                    </div>
+                                </div>
+
+                                <fieldset>
+                                    <legend>
+                                        Event Details
+                                    </legend>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="col-lg-3 form-group">
+                                                <h5>Value Date <sup> * </sup></h5>
+                                                <div class='input-group date'>
+                                                    <input id="date-picker-vd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                    <label for="date-picker-vd" class="input-group-addon btn">
+                                                        <span class="glyphicon glyphicon-calendar"></span>                                            
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 form-group">
+                                                <h5>Posting Date <sup> * </sup></h5>
+                                                <div class='input-group date'>
+                                                    <input id="date-picker-pd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                    <label for="date-picker-pd" class="input-group-addon btn">
+                                                        <span class="glyphicon glyphicon-calendar"></span>                                            
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 form-group">
+                                                <h5>File to be uploaded</h5>
+                                                <div class="input-group uploadBtn">
+                                                    <input type="text" class="form-control" id="info" readonly="" placeholder="Choose File">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-primary" type="button"><i class="fa fa-upload fa-fw"></i></button>
+                                                    </span>
+                                                </div>
+                                                <input type="file" style="display: none;" onchange="$('#info').val($(this).val().split(/[\\|/]/).pop()); " name="file" id="uploadFile">
+                                            </div>
+                                            <div class="col-lg-3 form-group">
+                                                <h5>&nbsp;</h5>
+                                                <button type="button" class="btn btn-primary">Validate and Preview</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="col-lg-12 line-header">
+                                            <span>Batch File Content</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h5 class="pull-left mar-l-15">
+                                        Showing 1 to 10 of 1234 with 75 pages
+                                    </h5>
+                                    <ul class="nav navbar-nav pull-right">
+                                        <li class="form-group mar-r-15"><button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#submitModel" ng-click="generateEntry = 'generate'">Upload to BEM</button></li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="table-responsive">
+                                            <table class="table scroll-table-height table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Dept.</th>
+                                                        <th>Company</th>
+                                                        <th>Country</th>
+                                                        <th>Tranche Number</th>
+                                                        <th>Obligation Number</th>
+                                                        <th>Instr. Type</th>
+                                                        <th>Currency</th>
+                                                        <th>Amount Type</th>
+                                                        <th>Write-down Amount</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>CFGS6</td>
+                                                        <td>Advans Congo</td>
+                                                        <td>DRC</td>
+                                                        <td>26407-50</td>
+                                                        <td>0</td>
+                                                        <td>ET474</td>
+                                                        <td>USD</td>
+                                                        <td>Equity</td>
+                                                        <td>184050.500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CFGS6</td>
+                                                        <td>Advans Congo</td>
+                                                        <td>DRC</td>
+                                                        <td>26407-50</td>
+                                                        <td>0</td>
+                                                        <td>ET474</td>
+                                                        <td>USD</td>
+                                                        <td>Equity</td>
+                                                        <td>184050.500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CFGS6</td>
+                                                        <td>Advans Congo</td>
+                                                        <td>DRC</td>
+                                                        <td>26407-50</td>
+                                                        <td>0</td>
+                                                        <td>ET474</td>
+                                                        <td>USD</td>
+                                                        <td>Equity</td>
+                                                        <td>184050.500</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="pagination pull-left charectorSearch">
+                                            <a href="#"><i class="fa fa-angle-left fa-fw" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-angle-double-left fa-fw" aria-hidden="true"></i></a>
+                                            <a href="#">1</a>
+                                            <a class="active" href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></a>
+                                        </div>
+                                        <button type="button" class="btn btn-primary pull-right mar-t-10" data-toggle="modal" data-target="#submitModel" ng-click="generateEntry = 'generate'">Upload to BEM</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--Submit Modal submit -->
+<div id="submitModel" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body text-center">
+                <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
+                <i class="checkmark"></i>
+                <h3>Event ID : 32381</h3>
+                <h4>Batch Process Created Succesfully</h4><br />
+                <button type="button" class="btn btn-primary pad-l-r-30" ui-sref="viewBatchProcess">OK</button>
+                <br /><br /> You also can: <a href="" type="button" class="btn btn-link link">Edit</a>
+                <a href="" type="button" class="btn btn-link link">View</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--EO Submit Modal submit -->
+
+<script>
+    $(function() {
+        $(".uploadBtn").click(function(event) {
+            event.preventDefault();
+            $("#uploadFile").click();
+        });
+    });
+</script>

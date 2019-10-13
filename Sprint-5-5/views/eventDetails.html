@@ -1,0 +1,1363 @@
+<section class="content-header">
+    <h1>
+        Event Details
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-cog fa-fw"></i> Event Settings</a></li>
+    </ol>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box-solid">
+                <div id="accordion" class="box-group">
+                    <div class="panel box">
+                        <div class="box-header with-border panel-heading">
+                            <h4 class="box-title">
+                                <a class="accordion-toggle pad-t-5" data-toggle="collapse" data-parent="#accordion" data-target="#refinedSearch" href="">
+                                    Refine Search
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="refinedSearch" class="panel-collapse in">
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div id="containerPie" style="width: 300px; height: 350px; margin: 0 auto"></div>
+                                    </div>
+                                    <div class="col-lg-9" style="border-left: 1px solid #ccc;">
+                                        <div id="containerBar" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="accordion" class="box-group">
+                    <div class="panel box">
+                        <div class="box-header with-border panel-heading">
+                            <h4 class="box-title">
+                                <a class="accordion-toggle pad-t-5 collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#searchEvents" href="">
+                                    Search Events
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="searchEvents" class="panel-collapse collapse">
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Legal Entity</h5>
+                                        <select class="form-control" id="">
+                                            <option value="">Select</option>                                                      
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Institution Details</h5>
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Institution Details" id="" type="text">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-primary btn-right" type="submit">
+                                                    <span class="glyphicon glyphicon-search"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Institution Projects <sup> * </sup></h5>
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Institution Projects" id="" type="text">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-primary btn-right" type="submit">
+                                                    <span class="glyphicon glyphicon-search"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Investran Batch ID</h5>
+                                        <input class="form-control" id="" type="text">
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>JE Type</h5>
+                                        <select class="form-control" id="">
+                                            <option value="">Select</option>                                                      
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Initiative</h5>
+                                        <select class="form-control" id="">
+                                            <option value="">Select</option>                                                      
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Investor</h5>
+                                        <select class="form-control" id="">
+                                            <option value="">Select</option>                                                      
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Imported</h5>
+                                        <select class="form-control" id="">
+                                            <option value="">Select</option>                                                      
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Created By</h5>
+                                        <input class="form-control" id="" type="text">
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Created Date</h5>
+                                        <div class='input-group date'>
+                                            <input id="date-picker-cd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                            <label for="date-picker-cd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Changed By</h5>
+                                        <div class='input-group date'>
+                                            <input id="date-picker-cb" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                            <label for="date-picker-cb" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                    </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Changed Date</h5>
+                                        <div class='input-group date'>
+                                            <input id="date-picker-chd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                            <label for="date-picker-chd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                    </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 pad-t-20">
+                                        <button type="button" class="btn btn-primary pull-right">Search</button>
+                                        <button type="button" class="btn btn-link link pull-right">Clear All</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="row">
+                                <h5 class="pull-left mar-l-15">
+                                    Showing 1 to 10 of 1234 with 75 pages
+                                </h5>
+                                <ul class="nav navbar-nav pull-right">
+                                    <li class="pad-l-15" style="padding-top: 7px;">Showing Records</li>
+                                    <li class="form-group pad-l-15 mar-r-15">
+                                        <select class="form-control" id="">
+                                                <option value="1">Select</option>
+                                                                    <option value="1">10</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                </select>
+                                    </li>
+                                    <li class="pad-l-15" style="padding-top: 7px;">Jump To</li>
+                                    <li class="form-group pad-l-15 mar-r-15">
+                                        <select class="form-control" id="">
+                                                <option value="1">Select</option>
+                                                                    <option value="1">10</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                </select>
+                                    </li>
+                                    <li class="pad-5"><a href="" style="padding: 5px 20px 0 0;"><i class="fa fa-file-excel-o text-green" aria-hidden="true"></i> Export to Excel</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="bem-data-table">
+                                        <div>
+                                            <table class="table table-striped" style="border: none;">
+                                                <thead style="border: none;">
+                                                    <tr>
+                                                        <th>Link</th>
+                                                        <th>Event ID</th>
+                                                        <th>Event Type</th>
+                                                        <th>Event Status</th>
+                                                        <th style="margin-left: 400px;">Institution </th>
+                                                        <th>Project ID</th>
+                                                        <th>Investor </th>
+                                                        <th>Initiative </th>
+                                                        <th>EPMS ID</th>
+                                                        <th>Institution </th>
+                                                        <th>Project ID</th>
+                                                        <th>Investor </th>
+                                                        <th>Initiative </th>
+                                                        <th>EPMS ID</th>
+                                                        <th>Institution </th>
+                                                        <th>Project ID</th>
+                                                        <th>Investor </th>
+                                                        <th>Initiative </th>
+                                                        <th>EPMS ID</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="" class="glyphicon glyphicon-option-vertical"></a>
+                                                        </td>
+                                                        <td><a href="">20001</a></td>
+                                                        <td>Disbursement</td>
+                                                        <td>New</td>
+                                                        <td style="margin-left: 400px;">XYZ Co</td>
+                                                        <td>8002</td>
+                                                        <td>IFC</td>
+                                                        <td>Intiative</td>
+                                                        <td>7009</td>
+                                                        <td>XYZ Co</td>
+                                                        <td>8002</td>
+                                                        <td>IFC</td>
+                                                        <td>Intiative</td>
+                                                        <td>7009</td>
+                                                        <td>XYZ Co</td>
+                                                        <td>8002</td>
+                                                        <td>IFC</td>
+                                                        <td>Intiative</td>
+                                                        <td>7009</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="" class="glyphicon glyphicon-option-vertical"></a>
+                                                        </td>
+                                                        <td><a href="">20001</a></td>
+                                                        <td>Disbursement</td>
+                                                        <td>New</td>
+                                                        <td style="margin-left: 400px;">XYZ Co</td>
+                                                        <td>8002</td>
+                                                        <td>IFC</td>
+                                                        <td>Intiative</td>
+                                                        <td>7009</td>
+                                                        <td>XYZ Co</td>
+                                                        <td>8002</td>
+                                                        <td>IFC</td>
+                                                        <td>Intiative</td>
+                                                        <td>7009</td>
+                                                        <td>XYZ Co</td>
+                                                        <td>8002</td>
+                                                        <td>IFC</td>
+                                                        <td>Intiative</td>
+                                                        <td>7009</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="" class="glyphicon glyphicon-option-vertical"></a>
+                                                        </td>
+                                                        <td><a href="">20001</a></td>
+                                                        <td>Disbursement</td>
+                                                        <td>New</td>
+                                                        <td style="margin-left: 400px;">XYZ Co</td>
+                                                        <td>8002</td>
+                                                        <td>IFC</td>
+                                                        <td>Intiative</td>
+                                                        <td>7009</td>
+                                                        <td>XYZ Co</td>
+                                                        <td>8002</td>
+                                                        <td>IFC</td>
+                                                        <td>Intiative</td>
+                                                        <td>7009</td>
+                                                        <td>XYZ Co</td>
+                                                        <td>8002</td>
+                                                        <td>IFC</td>
+                                                        <td>Intiative</td>
+                                                        <td>7009</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row" style="display: none;">
+                                    <div class="col-lg-12">
+                                        <div class="col-lg-4 pad-0">
+                                            <div class="table-responsive">
+                                                <table class="table table-striped height-small">
+                                                    <thead>
+                                                        <tr>
+                                                            <th width="5%">Link</th>
+                                                            <th width="20%">Event ID
+                                                                <span class="icon-sorting">
+                                                                    <a class="up" href="" aria-hidden="true"></a>
+                                                                    <a class="down" href="" aria-hidden="true"></a>
+                                                            </span>
+                                                            </th>
+                                                            <th width="50%">Event Type
+                                                                <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                </span>
+                                                            </th>
+                                                            <th width="25%">Event Status
+                                                                <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                </span>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="border-down">
+                                                            <td>
+                                                                <a href="" class="glyphicon glyphicon-search pad-t-5 mar-t-7"></a>
+                                                            </td>
+                                                            <td class="form-group">
+                                                                <input class="form-control" id="" type="text">
+                                                            </td>
+                                                            <td class="form-group">
+                                                                <select class="form-control" id="">
+                                                                <option value="1">Disbursement</option>                                                                        
+                                                            </select>
+                                                            </td>
+                                                            <td class="form-group">
+                                                                <select class="form-control" id="">
+                                                                <option value="1">New</option>                                                                            
+                                                            </select>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <a href="" class="glyphicon glyphicon-option-vertical" ng-model="link1" ng-click="link1=!link1"></a>
+                                                                <span class="infobox" ng-show="link1">
+                                                                <h5><a href=""><i class="fa fa-link fa-fw text-black" aria-hidden="true"></i> Event Linking</a></h5>
+                                                                <h5><a href=""><i class="fa fa-clone fa-fw text-black" aria-hidden="true"></i> Clone</a></h5>
+                                                            </span>
+                                                            </td>
+                                                            <td><a href="">20001</a></td>
+                                                            <td>Disbursement</td>
+                                                            <td><i class="fa fa-fw fa-circle" aria-hidden="true" style="color: #00B0FF;"></i> New</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="" class="glyphicon glyphicon-option-vertical" ng-model="link2" ng-click="link2=!link2"></a>
+                                                                <span class="infobox" ng-show="link2">
+                                                                        <h5><a href=""><i class="fa fa-link" aria-hidden="true"></i> Event Linking</a></h5>
+                                                                        <h5><a href=""><i class="fa fa-clone" aria-hidden="true"></i> Clone</a></h5>
+                                                                    </span>
+                                                            </td>
+                                                            <td><a href="">20001</a></td>
+                                                            <td>Disbursement</td>
+                                                            <td><i class="fa fa-fw fa-circle" aria-hidden="true" style="color: #339966;"></i> New</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="" class="glyphicon glyphicon-option-vertical"></a>
+                                                            </td>
+                                                            <td><a href="">20001</a></td>
+                                                            <td>Disbursement</td>
+                                                            <td><i class="fa fa-fw fa-circle" aria-hidden="true" style="color: #339966;"></i> New</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-8 pad-0" style="margin-left: -1px;">
+                                            <div id="eventDetailsTable" class="carousel slide" data-ride="carousel" data-interval="false">
+                                                <div class="carousel-inner" role="listbox">
+                                                    <div class="item active table-responsive">
+                                                        <table class="table table-striped height-small">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th width="20%">Institution
+                                                                        <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                    </th>
+                                                                    <th width="20%">Project ID
+                                                                        <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                    </th>
+                                                                    <th width="20%">Investor
+                                                                        <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                    </th>
+                                                                    <th width="20%">Initiative
+                                                                        <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                    </th>
+                                                                    <th width="20%">EPMS ID
+                                                                        <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="border-down">
+                                                                    <td class="form-group">
+                                                                        <select class="form-control" id="">
+                                                                                    <option value="1">XYZ Co</option>                                                                        
+                                                                                </select>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <input class="form-control" id="" type="text">
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <select class="form-control" id="">
+                                                                                        <option value="1">IFC</option>                                                                        
+                                                                                    </select>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <select class="form-control" id="">
+                                                                                            <option value="1">ABS</option>                                                                        
+                                                                                        </select>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <input class="form-control" id="" type="text">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>XYZ Co</td>
+                                                                    <td>8002</td>
+                                                                    <td>IFC</td>
+                                                                    <td>Intiative</td>
+                                                                    <td>7009</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>XYZ Co</td>
+                                                                    <td>8002</td>
+                                                                    <td>IFC</td>
+                                                                    <td>Intiative</td>
+                                                                    <td>7009</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>XYZ Co</td>
+                                                                    <td>8002</td>
+                                                                    <td>IFC</td>
+                                                                    <td>Intiative</td>
+                                                                    <td>7009</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="item table-responsive">
+                                                        <table class="table table-striped height-small">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th width="20%">Institution
+                                                                        <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                    </th>
+                                                                    <th width="20%">Project ID
+                                                                        <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                    </th>
+                                                                    <th width="20%">Investor
+                                                                        <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                    </th>
+                                                                    <th width="20%">Initiative
+                                                                        <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                    </th>
+                                                                    <th width="20%">EPMS ID
+                                                                        <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="border-down">
+                                                                    <td class="form-group">
+                                                                        <select class="form-control" id="">
+                                                                                    <option value="1">XYZ Co</option>                                                                        
+                                                                                </select>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <input class="form-control" id="" type="text">
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <select class="form-control" id="">
+                                                                                        <option value="1">IFC</option>                                                                        
+                                                                                    </select>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <select class="form-control" id="">
+                                                                                            <option value="1">ABS</option>                                                                        
+                                                                                        </select>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <input class="form-control" id="" type="text">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>XYZ Co</td>
+                                                                    <td>8002</td>
+                                                                    <td>IFC</td>
+                                                                    <td>Intiative</td>
+                                                                    <td>7009</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>XYZ Co</td>
+                                                                    <td>8002</td>
+                                                                    <td>IFC</td>
+                                                                    <td>Intiative</td>
+                                                                    <td>7009</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>XYZ Co</td>
+                                                                    <td>8002</td>
+                                                                    <td>IFC</td>
+                                                                    <td>Intiative</td>
+                                                                    <td>7009</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="item table-responsive">
+                                                        <table class="table table-striped height-small">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th width="20%">Institution
+                                                                        <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                    </th>
+                                                                    <th width="20%">Project ID
+                                                                        <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                    </th>
+                                                                    <th width="20%">Investor
+                                                                        <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                    </th>
+                                                                    <th width="20%">Initiative
+                                                                        <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                    </th>
+                                                                    <th width="20%">EPMS ID
+                                                                        <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="border-down">
+                                                                    <td class="form-group">
+                                                                        <select class="form-control" id="">
+                                                                                    <option value="1">XYZ Co</option>                                                                        
+                                                                                </select>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <input class="form-control" id="" type="text">
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <select class="form-control" id="">
+                                                                                        <option value="1">IFC</option>                                                                        
+                                                                                    </select>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <select class="form-control" id="">
+                                                                                            <option value="1">ABS</option>                                                                        
+                                                                                        </select>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <input class="form-control" id="" type="text">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>XYZ Co</td>
+                                                                    <td>8002</td>
+                                                                    <td>IFC</td>
+                                                                    <td>Intiative</td>
+                                                                    <td>7009</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>XYZ Co</td>
+                                                                    <td>8002</td>
+                                                                    <td>IFC</td>
+                                                                    <td>Intiative</td>
+                                                                    <td>7009</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>XYZ Co</td>
+                                                                    <td>8002</td>
+                                                                    <td>IFC</td>
+                                                                    <td>Intiative</td>
+                                                                    <td>7009</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+
+                                                <a class="table-control arrow-scroll-left" href="" data-target="#eventDetailsTable" role="button" data-slide="prev">
+                                                    <i class="fa fa-chevron-left fa-fw fa-lg" aria-hidden="true"></i>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="table-control arrow-scroll-right" href="" data-target="#eventDetailsTable" role="button" data-slide="next">
+                                                    <i class="fa fa-chevron-right fa-fw fa-lg" aria-hidden="true"></i>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="col-lg-8 pad-0 table-scroll">
+                                        <a class="text-black arrow-scroll-left" href="" data-target="#eventDetailsTable" role="button" data-slide="prev"><i class="fa fa-chevron-left fa-fw fa-lg" aria-hidden="true"></i></a>
+                                        <a class="text-black arrow-scroll-right" href="" data-target="#eventDetailsTable" role="button" data-slide="next"><i class="fa fa-chevron-right fa-fw fa-lg" aria-hidden="true"></i></a>
+                                        <div id="eventDetailsTable" class="carousel slide" data-interval="false">
+                                            <div class="carousel-inner" role="listbox">                                                
+                                                <div class="table-responsive item active">
+                                                    <table class="table table-hover height-small">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Institution
+                                                                    <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                </th>
+                                                                <th>Project ID
+                                                                    <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                </th>
+                                                                <th>Investor
+                                                                    <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                </th>
+                                                                <th>Initiative
+                                                                    <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                </th>
+                                                                <th>EPMS ID
+                                                                    <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="border-down">
+                                                                <td class="form-group">
+                                                                    <select class="form-control" id="">
+                                                                                    <option value="1">XYZ Co</option>                                                                        
+                                                                                </select>
+                                                                </td>
+                                                                <td class="form-group">
+                                                                    <input class="form-control" id="" type="text">
+                                                                </td>
+                                                                <td class="form-group">
+                                                                    <select class="form-control" id="">
+                                                                                        <option value="1">IFC</option>                                                                        
+                                                                                    </select>
+                                                                </td>
+                                                                <td class="form-group">
+                                                                    <select class="form-control" id="">
+                                                                                            <option value="1">ABS</option>                                                                        
+                                                                                        </select>
+                                                                </td>
+                                                                <td class="form-group">
+                                                                    <input class="form-control" id="" type="text">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>XYZ Co</td>
+                                                                <td>8002</td>
+                                                                <td>IFC</td>
+                                                                <td>Intiative</td>
+                                                                <td>7009</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>XYZ Co</td>
+                                                                <td>8002</td>
+                                                                <td>IFC</td>
+                                                                <td>Intiative</td>
+                                                                <td>7009</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>                                               
+                                                <div class="table-responsive item">
+                                                    <table class="table table-hover height-small">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Import Ref ID
+                                                                    <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                </th>
+                                                                <th>Project ID
+                                                                    <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                </th>
+                                                                <th>Investor
+                                                                    <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                </th>
+                                                                <th>Initiative
+                                                                    <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                </th>
+                                                                <th>EPMS ID
+                                                                    <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="border-down">
+                                                                <td class="form-group">
+                                                                    <input class="form-control" id="" type="text">
+                                                                </td>
+                                                                <td class="form-group">
+                                                                    <input class="form-control" id="" type="text">
+                                                                </td>
+                                                                <td class="form-group">
+                                                                    <select class="form-control" id="">
+                                                                                        <option value="1">IFC</option>                                                                        
+                                                                                    </select>
+                                                                </td>
+                                                                <td class="form-group">
+                                                                    <select class="form-control" id="">
+                                                                                            <option value="1">ABS</option>                                                                        
+                                                                                        </select>
+                                                                </td>
+                                                                <td class="form-group">
+                                                                    <input class="form-control" id="" type="text">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>XYZ Co</td>
+                                                                <td>8002</td>
+                                                                <td>IFC</td>
+                                                                <td>Intiative</td>
+                                                                <td>7009</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>XYZ Co</td>
+                                                                <td>8002</td>
+                                                                <td>IFC</td>
+                                                                <td>Intiative</td>
+                                                                <td>7009</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="pagination pull-right charectorSearch">
+                                            <a href="#"><i class="fa fa-angle-left fa-fw" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-angle-double-left fa-fw" aria-hidden="true"></i></a>
+                                            <a href="#">1</a>
+                                            <a class="active" href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
+        </div>
+</section>
+
+
+
+<script>
+    //-------------
+    //- PIE CHART -
+    //-------------
+
+    $(function() {
+        Highcharts.setOptions({
+            colors: ['#FF7978', '#FFC070', '#00CCF1', '#00ADFF']
+        });
+
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'containerPie',
+                type: 'pie',
+                events: {
+                    load: function(event) {
+                        var chart = this,
+                            points = chart.series[0].points,
+                            len = points.length,
+                            total = 0,
+                            i = 0;
+
+                        for (; i < len; i++) {
+                            total += points[i].y;
+                        }
+
+                        chart.setTitle({
+                            text: 'Total<br>' + total,
+                            align: 'center',
+                            verticalAlign: 'middle',
+                            y: -10,
+                            style: {
+                                fontWeight: 'bold'
+                            },
+                        });
+                    }
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                    return '<b>' + this.point.name + '</b>:' + this.y;
+                }
+            },
+            legend: {
+                enabled: true,
+                floating: true,
+                borderWidth: 0,
+                width: 300,
+                align: 'middle',
+                layout: 'horizontal',
+                verticalAlign: 'bottom',
+                labelFormatter: function() {
+                    return '<span style="font-weight: normal;">' + this.name + ' </span> <span style:"font-weight: normal;"><b>' + this.y + '<br/></span>';
+                }
+            },
+            yAxis: {
+                title: {
+                    text: ''
+                }
+            },
+            plotOptions: {
+                pie: {
+                    shadow: false
+                }
+            },
+            series: [{
+                name: '',
+                data: [{
+                    name: 'Quantom',
+                    y: 8800
+                }, {
+                    name: 'Journal Entry',
+                    y: 6730
+                }, {
+                    name: 'IDESK',
+                    y: 7200
+                }, {
+                    name: 'EPMS',
+                    y: 4000
+                }],
+                size: '70%',
+                innerSize: '55%',
+                showInLegend: true,
+                dataLabels: {
+                    enabled: false
+                }
+            }]
+        }, function(chart) { // on complete
+            var textX = chart.plotLeft + (chart.plotWidth * 0.5);
+            var textY = chart.plotTop + (chart.plotHeight * 0.5);
+
+            var span = '<span id="pieChartInfoText" style="position:absolute; text-align:center;">';
+            span += '<span style="font-size: 32px">Upper</span><br>';
+            span += '<span style="font-size: 16px">Lower</span>';
+            span += '</span>';
+
+            $("#addText").append(span);
+            span = $('#pieChartInfoText');
+            span.css('left', textX + (span.width() * -0.5));
+            span.css('top', textY + (span.height() * -0.5));
+        });
+    });
+
+    //-------------
+    //- BAR CHART -
+    //-------------
+
+
+    // Create the chart
+    Highcharts.chart('containerBar', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: ''
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            type: 'category'
+        },
+
+        plotOptions: {
+            series: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+
+        series: [{
+            name: 'EPMS',
+            color: '#00ADFF',
+            data: [{
+                name: 'Interface Imported',
+                y: 550,
+                drilldown: 'interfaceImported-epms'
+
+            }, {
+                name: 'Pending Review',
+                y: 550,
+                drilldown: 'pendingReview-epms'
+            }, {
+                name: 'Pending Linkage',
+                y: 550,
+                drilldown: 'pendingLinkage-epms'
+            }, {
+                name: 'Pending Settlement',
+                y: 550,
+                drilldown: 'pendingSettlement-epms'
+            }, {
+                name: 'Pending Approval',
+                y: 550,
+                drilldown: 'pendingApproval-epms'
+            }, {
+                name: 'Pending Completed',
+                y: 550,
+                drilldown: 'pendingCompleted-epms'
+            }]
+        }, {
+            name: 'IDESK',
+            color: '#00CCF1',
+            data: [{
+                name: 'Interface Imported',
+                y: 900,
+                drilldown: 'interfaceImported-IDESK'
+
+            }, {
+                name: 'Pending Review',
+                y: 900,
+                drilldown: 'pendingReview-IDESK'
+            }, {
+                name: 'Pending Linkage',
+                y: 900,
+                drilldown: 'pendingLinkage-IDESK'
+            }, {
+                name: 'Pending Settlement',
+                y: 900,
+                drilldown: 'pendingSettlement-IDESK'
+            }, {
+                name: 'Pending Approval',
+                y: 900,
+                drilldown: 'pendingApproval-IDESK'
+            }, {
+                name: 'Pending Completed',
+                y: 900,
+                drilldown: 'pendingCompleted-IDESK'
+            }]
+        }, {
+            name: 'Quantom',
+            color: '#FF7978',
+            data: [{
+                name: 'Interface Imported',
+                y: 1500,
+                drilldown: 'interfaceImported-Quantom'
+
+            }, {
+                name: 'Pending Review',
+                y: 1500,
+                drilldown: 'pendingReview-Quantom'
+            }, {
+                name: 'Pending Linkage',
+                y: 1500,
+                drilldown: 'pendingLinkage-Quantom'
+            }, {
+                name: 'Pending Settlement',
+                y: 1500,
+                drilldown: 'pendingSettlement-Quantom'
+            }, {
+                name: 'Pending Approval',
+                y: 1500,
+                drilldown: 'pendingApproval-Quantom'
+            }, {
+                name: 'Pending Completed',
+                y: 1500,
+                drilldown: 'pendingCompleted-Quantom'
+            }]
+        }, {
+            name: 'Journal Entry',
+            color: '#FFC070',
+            data: [{
+                name: 'Interface Imported',
+                y: 550,
+                drilldown: 'interfaceImported-je'
+
+            }, {
+                name: 'Pending Review',
+                y: 550,
+                drilldown: 'pendingReview-je'
+            }, {
+                name: 'Pending Linkage',
+                y: 550,
+                drilldown: 'pendingLinkage-je'
+            }, {
+                name: 'Pending Settlement',
+                y: 550,
+                drilldown: 'pendingSettlement-je'
+            }, {
+                name: 'Pending Approval',
+                y: 550,
+                drilldown: 'pendingApproval-je'
+            }, {
+                name: 'Pending Completed',
+                y: 550,
+                drilldown: 'pendingCompleted-je'
+            }]
+        }],
+
+
+
+
+
+        drilldown: {
+            series: [{
+                id: 'interfaceImported-epms',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingReview-epms',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingLinkage-epms',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingSettlement-epms',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingApproval-epms',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingCompleted-epms',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'interfaceImported-IDESK',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingReview-IDESK',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingLinkage-IDESK',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingSettlement-IDESK',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingApproval-IDESK',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingCompleted-IDESK',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'interfaceImported-Quantom',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingReview-Quantom',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingLinkage-Quantom',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingSettlement-Quantom',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingApproval-Quantom',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingCompleted-Quantom',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'interfaceImported-je',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingReview-je',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingLinkage-je',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingSettlement-je',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingApproval-je',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }, {
+                id: 'pendingCompleted-je',
+                data: [
+                    ['Status 1', 900],
+                    ['Status 2', 600],
+                    ['Status 3', 300],
+                    ['Status 4', 900],
+                    ['Status 5', 600],
+                    ['Status 6', 300],
+                    ['Status 7', 900]
+                ]
+            }]
+        }
+    });
+</script>
+
+<script>
+    $('#eventDetailsTable').on('slid.bs.carousel', checkitem);
+
+    function checkitem() // check function
+    {
+        var $this = $('#eventDetailsTable');
+        if ($('.carousel-inner .item:first').hasClass('active')) {
+            $this.children('.arrow-scroll-left.table-control').hide();
+        } else if ($('.carousel-inner .item:last').hasClass('active')) {
+            $this.children('.arrow-scroll-right.table-control').hide();
+        } else {
+            $this.children('.table-control').show();
+
+        }
+    }
+</script>

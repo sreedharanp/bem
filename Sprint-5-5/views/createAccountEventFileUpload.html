@@ -1,0 +1,967 @@
+<section class="content-header">
+    <h1 class="pull-left pad-t-5">
+        Create New Account Event
+    </h1>
+
+    <ul class="nav navbar-nav step-right hidden-xs hidden-sm">
+        <li class="selected">Step 1</li>
+        <li>Step 2</li>
+        <li>Step 3</li>
+    </ul>
+
+    <div class="nav navbar-nav pull-right hidden-xs hidden-sm pad-b-10 mar-m-5">
+
+        <button type="button" class="btn btn-link link">Cancel</button>
+        <button type="button" class="btn btn-link link">Edit</button>
+        <button type="button" class="btn btn-primary mar-r-15">Recalculate</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#submitModel">Submit</button>
+
+    </div>
+</section>
+<section class="content">
+    <div class="row">
+        <div id="accordion" class="col-lg-12">
+            <div class="panel box">
+                <div class="box-header no-border panel-heading">
+                    <h4 class="box-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" href="">
+                            <span class="badge active">1</span> Event Type
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="box-body">
+                        <div class="col-sm-3 text-right">
+                            <h4>Legal Entity - IFC</h4>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <select class="form-control">
+                                        <option selected="" value="Select Event Type">Select Event Type</option>
+                                        <option value="BasisAdjustment">Basis Adjustment</option>
+                                        <option value="BasisAdjustmentNon-CF">Basis Adjustment Non-CF</option>
+                                        <option value="Cancellation">Cancellation</option>
+                                        <option value="CapitalGain">Capital Gain</option>
+                                        <option value="CashDividend">Cash Dividend</option>
+                                        <option value="Commitment">Commitment</option>
+                                        </select>
+                        </div>
+                        <div class="col-sm-3 form-group">
+                            <select class="form-control">
+                                        <option>Select Trade Type</option>
+                                        <option>Regular</option>                                                
+                                    </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel box">
+                <div class="box-header with-border panel-heading">
+                    <h4 class="box-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" href="">
+                            <span class="badge">2</span> Event Details - Basic Adjustment - Regular
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="box-body">
+                        <fieldset>
+                            <legend>Event Details</legend>
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Institution / Project <sup> * </sup></h5>
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Search" id="" type="text">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-primary btn-right" type="submit" data-toggle="modal" data-target="#institutionProject">
+                                                        <span class="glyphicon glyphicon-search"></span>
+                                                    </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Tranche <sup> * </sup></h5>
+                                        <select class="form-control" id="" disabled="">
+                                                <option value="IFC">Select</option>                                                      
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Initiative <sup> * </sup></h5>
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Search" id="" type="text">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-primary btn-right" type="submit" data-toggle="modal" data-target="#initiative">
+                                                        <span class="glyphicon glyphicon-search"></span>
+                                                    </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Investor <sup> * </sup></h5>
+                                        <select class="form-control" id="">
+                                                <option value="IFC">IFC</option>                                                      
+                                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Event References</legend>
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Posting Date <sup> * </sup></h5>
+                                        <div class='input-group date'>
+                                            <input id="date-picker-pd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                            <label for="date-picker-pd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Value Date <sup> * </sup></h5>
+                                        <div class='input-group date'>
+                                            <input id="date-picker-vd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                            <label for="date-picker-vd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Approval Date <sup> * </sup></h5>
+                                        <div class='input-group date'>
+                                            <input id="date-picker-ad" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                            <label for="date-picker-ad" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                    </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Modificaton Date <sup> * </sup></h5>
+                                        <div class='input-group date'>
+                                            <input id="date-picker-md" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                            <label for="date-picker-md" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                        </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Settlement Type <sup> * </sup></h5>
+                                        <select class="form-control" id="">
+                                                    <option value="IFC">Select</option>                                                      
+                                                </select>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Settlement Date <sup> * </sup></h5>
+                                        <div class='input-group date'>
+                                            <input id="date-picker-sd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                            <label for="date-picker-sd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Proration Method <sup> * </sup></h5>
+                                        <select class="form-control" id="">
+                                                <option value="IFC">Commitment</option>                                                      
+                                            </select>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>EPMS Transaction ID</h5>
+                                        <input class="form-control" id="" type="text">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-9">
+                                        <div class="row">
+                                            <div class="col-lg-4 form-group">
+                                                <h5>Workflow Number</h5>
+                                                <input class="form-control" id="" type="text">
+                                            </div>
+                                            <div class="col-lg-4 form-group">
+                                                <h5>Import Reference ID</h5>
+                                                <input class="form-control" id="" type="text">
+                                            </div>
+                                            <div class="col-lg-4 form-group">
+                                                <h5>Reference Event ID</h5>
+                                                <select class="form-control bemCustom" id="">
+                                                            <option value="IFC">IFC</option>                                                      
+                                                        </select>
+                                            </div>
+                                            <div class="col-lg-4 form-group">
+                                                <h5>Ownership Percentage</h5>
+                                                <label class="bemSwitch">
+                                                        <input checked="" type="checkbox">
+                                                        <span class="bemSlider"></span>
+                                                    </label>
+                                            </div>
+                                            <div class="col-lg-4 form-group">
+                                                <h5>Wipe Off</h5>
+                                                <label class="bemSwitch">
+                                                        <input checked="" type="checkbox">
+                                                        <span class="bemSlider"></span>
+                                                    </label>
+                                            </div>
+                                            <div class="col-lg-4 form-group">
+                                                <h5>Fee Code</h5>
+                                                <select class="form-control bemCustom" id="">
+                                                            <option value="Select">Select</option>                                                      
+                                                        </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="row">
+                                            <div class="col-lg-12 form-group">
+                                                <h5>Remarks</h5>
+                                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="light-blue-bg">
+                            <legend>Transaction Details</legend>
+                            <div class="col-lg-3 form-group">
+                                <h5>Description <sup> * </sup></h5>
+                                <select class="form-control bemCustom" id="">
+                                            <option value="Common Shares">Common Shares</option>                                                      
+                                        </select>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <h5>Security Type <sup> * </sup></h5>
+                                <select class="form-control bemCustom" id="">
+                                            <option value="Common Shares">Common Shares</option>                                                      
+                                        </select>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <h5>Option ID or Price / Unit <sup> * </sup></h5>
+                                <select class="form-control bemCustom" id="">
+                                            <option value="0">0</option>                                                      
+                                        </select>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <h5>Quantity</h5>
+                                <input class="form-control" id="" type="text">
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <h5>Currency <sup> * </sup></h5>
+                                <select class="form-control bemCustom" id="">
+                                            <option value="USD">USD</option>
+                                            <option value="Euro">Euro</option>
+                                        </select>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <h5>FX Rate</h5>
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="Search" id="" type="text">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default btn-right" type="submit" data-toggle="modal" data-target="#eventDetailsModel">
+                                                        1/x
+                                                </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <h5>Local Amount <sup> * </sup></h5>
+                                <input class="form-control" id="" type="text">
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <h5>Legal Amount <sup> * </sup></h5>
+                                <input class="form-control" id="" type="text">
+                            </div>
+                            <div class="col-lg-12 pad-b-15">
+                                <a href="">
+                                    <i class="btn btn-bem" ng-class="'icn-plus'"></i> <span class="icn-text">Add</span>
+                                </a>
+                            </div>
+                        </fieldset>
+                        <div class="row">
+                            <div class="col-lg-12 text-right">
+                                <button type="button" class="btn btn-link link">Cancel</button>
+                                <button type="button" class="btn btn-link link">Save</button>
+                                <button type="button" class="btn btn-primary">Generate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel box">
+                <div class="box-header with-border panel-heading">
+                    <h4 class="box-title">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree" href="">
+                            <span class="badge">3</span> Generated Entries
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <div class="row form-group">
+                                    <div class="col-lg-5"><strong>Institution:</strong></div>
+                                    <div class="col-lg-7">21 Concordia</div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-lg-5"><strong>Project:</strong></div>
+                                    <div class="col-lg-7">0</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="row form-group">
+                                    <div class="col-lg-5"><strong>Posting Date:</strong></div>
+                                    <div class="col-lg-7">27 Jan 2017</div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-lg-5"><strong>Value Date:</strong></div>
+                                    <div class="col-lg-7">28 Feb 2017</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="row form-group">
+                                    <div class="col-lg-5"><strong>Currency:</strong></div>
+                                    <div class="col-lg-7">USD</div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-lg-5"><strong>Quantity:</strong></div>
+                                    <div class="col-lg-7">1.1</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="row form-group">
+                                    <div class="col-lg-5"><strong>Local Amount:</strong></div>
+                                    <div class="col-lg-7">1.00000</div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-lg-5"><strong>Legal Amount:</strong></div>
+                                    <div class="col-lg-7">1.00000</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="row form-group">
+                                    <div class="col-lg-5"><strong>Batch ID:</strong></div>
+                                    <div class="col-lg-7">0</div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="col-lg-12 mar-t-15">
+                                <button type="button" class="btn btn-primary pull-right">Recalculate</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 nav-tabs-custom mar-0">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="pill" data-target="#pt" href="">Proration (Trade)</a></li>
+                                    <li><a data-toggle="pill" data-target="#ps" href="">Proration (Settlement)</a></li>
+                                    <li><a data-toggle="pill" data-target="#kpi" href="">KPI</a></li>
+                                    <li><a data-toggle="pill" data-target="#pc" href="">Proration Calculations</a></li>
+                                    <li><a data-toggle="pill" data-target="#kc" href="">KPI Calculations</a></li>
+                                    <li><a data-toggle="pill" data-target="#tda" href="">Trade Data Accounting</a></li>
+                                    <li><a data-toggle="pill" data-target="#sa" href="">Settlement Accounting</a></li>
+                                </ul>
+
+                                <div class="tab-content pad-0">
+                                    <div id="pt" class="tab-pane fade in active">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped height-50">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Project - Tranche</th>
+                                                        <th class="checkbox">
+                                                            <input id="Prorate1" name="check" value="Prorate1" type="checkbox">
+                                                            <label class="pad-t-5" for="Prorate1">Prorate</label>
+                                                        </th>
+                                                        <th>Weights</th>
+                                                        <th>Quantity</th>
+                                                        <th>Prorated Amount Local</th>
+                                                        <th>Prorated Amount Legal</th>
+                                                        <th>Cost of Sale Local Amount</th>
+                                                        <th>Cost of sale Legal Entity Amount</th>
+                                                        <th>ain LossLocal Amount</th>
+                                                        <th>Gain Loss Legal entity Amount</th>
+                                                        <th>Cost of Sale (Cash Basis) Local Amount</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="border-down">
+                                                        <td>3114-50</td>
+                                                        <td class="checkbox">
+                                                            <input id="Prorate2" name="check" value="Prorate2" type="checkbox">
+                                                            <label class="pad-t-5" for="Prorate2"></label>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <input class="form-control text-right" id="" value="0.0000" type="text">
+                                                        </td>
+                                                        <td>0.0000</td>
+                                                        <td>0.0000</td>
+                                                        <td>0.0000</td>
+                                                        <td>INR</td>
+                                                        <td>0.0000</td>
+                                                        <td>0.0000</td>
+                                                        <td>0.0000</td>
+                                                        <td>0.0000</td>
+                                                    </tr>
+                                                    <tr>
+
+                                                        <td>Total</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>0.0000</td>
+                                                        <td>0.0000</td>
+                                                        <td>0.0000</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="ps" class="tab-pane fade">
+                                        <div class="table-responsive">
+                                            <table class="table height-50">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Project ID</th>
+                                                        <th>Tranche Number</th>
+                                                        <th>Prorate</th>
+                                                        <th>Weights</th>
+                                                        <th>Quantity</th>
+                                                        <th>Prorated Amount Local</th>
+                                                        <th>Prorated Amount Legal</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>3024</td>
+                                                        <td>50</td>
+                                                        <td>No</td>
+                                                        <td>0.0000</td>
+                                                        <td>0.0000</td>
+                                                        <td>0.0000</td>
+                                                        <td>0.0000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="kpi" class="tab-pane fade">
+                                        <div class="table-responsive">
+                                            <table class="table height-50">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Project ID</th>
+                                                        <th>Tranche Number</th>
+                                                        <th>Total Commitment</th>
+                                                        <th>Disbursed and Outstanding</th>
+                                                        <th>Undisbursed</th>
+                                                        <th>Share Quantity</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>3024</td>
+                                                        <td>80</td>
+                                                        <td>No</td>
+                                                        <td>0.0000</td>
+                                                        <td>0.0000</td>
+                                                        <td>0.0000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="pc" class="tab-pane fade">
+                                        <div class="table-responsive">
+                                            <table class="table height-50">
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="30%">Proration Attribute</td>
+                                                        <td>3024 - 50</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Purchase as of: 06/12/2017</td>
+                                                        <td>0.0000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Share Quantity as of : 06/12/2017</td>
+                                                        <td>0.0000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Calculate weights (Based on Commitment)</td>
+                                                        <td>0.0000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Prorated amount (USD)</td>
+                                                        <td>0.0000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="kc" class="tab-pane fade">
+                                        <div class="table-responsive">
+                                            <table class="table height-50">
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="30%">KPI(s) Description</td>
+                                                        <td>3024 - 50</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Total Commitment</td>
+                                                        <td>0.0000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Additional Purchase</td>
+                                                        <td>0.0000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Net Purchases</td>
+                                                        <td>0.0000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Net Share Quantity </td>
+                                                        <td>0.0000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="tda" class="tab-pane fade">
+                                        <div class="table-responsive">
+                                            <table class="table height-50">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Batch Id</th>
+                                                        <th>Batch Status</th>
+                                                        <th>Posting Date</th>
+                                                        <th>Comments:</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>3024</td>
+                                                        <td>50</td>
+                                                        <td>No</td>
+                                                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="sa" class="tab-pane fade">
+                                        <div class="table-responsive">
+                                            <table class="table height-50">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Batch Id</th>
+                                                        <th>Batch Status</th>
+                                                        <th>Batch Comments</th>
+                                                        <th>Posting Date</th>
+                                                        <th>Voucher Numbe</th>
+                                                        <th>Voucher Remarks</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <fieldset>
+                            <legend>Upload Related Files</legend>
+                            <div class="row">
+                                <div class="col-lg-12 mar-t-15">
+                                    <div class="col-lg-3">
+                                        <div class="input-group uploadBtn">
+                                            <input type="text" class="form-control" id="info" readonly="" style="background: #fff;" placeholder="Choose File">
+                                            <span class="input-group-btn">
+                                            <button class="btn btn-primary" type="button"><i class="fa fa-upload fa-fw"></i></button>
+                                            </span>
+                                        </div>
+                                        <input type="file" style="display: none;" onchange="$('#info').val($(this).val().split(/[\\|/]/).pop()); " name="file" id="uploadFile">
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <select class="form-control" id="">
+                                                <option value="" selected="">Select File Type</option>
+                                                <option value="">File Type 1</option>
+                                                <option value="">File Type 2</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-lg-3" form-group>
+                                        <button type="button" class="btn btn-primary">Upload</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="col-lg-12">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td><i class="fa fa-file-pdf-o fa-fw text-red" aria-hidden="true"></i> Attached File Number One.pdf</td>
+                                                        <td>Certificate Copy</td>
+                                                        <td>
+                                                            <a href=""><i class="fa fa-eye fa-fw" aria-hidden="true"></i></a>
+                                                            <a href=""><i class="fa fa-trash-o fa-fw text-red" aria-hidden="true"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td><i class="fa fa-file-excel-o fa-fw text-green" aria-hidden="true"></i> Attached File Number Two.xls</td>
+                                                        <td>Certificate Copy</td>
+                                                        <td>
+                                                            <a href=""><i class="fa fa-eye fa-fw" aria-hidden="true"></i></a>
+                                                            <a href=""><i class="fa fa-trash-o fa-fw text-red" aria-hidden="true"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="row">
+                            <div class="col-lg-12 text-right">
+                                <button type="button" class="btn btn-link link">Delete</button>
+                                <button type="button" class="btn btn-link link">Save</button>
+                                <button type="button" class="btn btn-link link">Cancel</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#submitModel">Submit</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /.box-body -->
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal search -->
+<div class="modal fade" id="institutionProject" role="dialog">
+    <div class="modal-dialog" style="width: 75%;">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                <ul class="select2">
+                    <li class="tag">Project 1<a href="#" title="Removing tag">x</a></li>
+                    <li class="tag">Project 2<a href="#" title="Removing tag">x</a></li>
+                    <li class="tag">Project 3<a href="#" title="Removing tag">x</a></li>
+                </ul>
+
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        <div class="input-group">
+                            <input class="form-control" placeholder="Search by Institution Name / Number" id="" type="text">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary btn-right" type="submit">
+                                                    <span class="glyphicon glyphicon-search"></span>
+                                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <a href="">Clear all</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Institution Name</th>
+                                        <th>Institution Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="col-lg-12">
+                                                <div class="radio">
+                                                    <input id="pl" type="radio" name="project" value="pl">
+                                                    <label for="pl">Project Lease</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>54001</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="col-lg-12">
+                                                <div class="radio">
+                                                    <input id="p1" type="radio" name="project" value="p1">
+                                                    <label for="p1">Project 1</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>54001</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="pagination pull-left charectorSearch mar-0">
+                            <a href="#"><i class="fa fa-angle-left fa-fw" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-angle-double-left fa-fw" aria-hidden="true"></i></a>
+                            <a href="#">1</a>
+                            <a class="active" href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Project Name</th>
+                                        <th>Project Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="fl" type="checkbox" name="check" value="fl">
+                                                <label for="fl">First Lease</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            01212
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="pr1" type="checkbox" name="check" value="pr1">
+                                                <label for="pr1">Project 1</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            01212
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button class="btn btn-primary pull-right" type="submit">
+                                Submit
+                            </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- EO Modal search -->
+
+
+<!-- Modal Initiative -->
+<div class="modal fade" id="initiative" role="dialog">
+    <div class="modal-dialog" style="width: 75%;">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                <ul class="select2">
+                    <li class="tag">INI-EOF-8<a href="#" title="Removing tag">x</a></li>
+                    <li class="tag">INI-FMCC-1<a href="#" title="Removing tag">x</a></li>
+                </ul>
+
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        <div class="input-group">
+                            <input class="form-control" placeholder="Search by Institution Name / Number" id="" type="text">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary btn-right" type="submit">
+                                                    <span class="glyphicon glyphicon-search"></span>
+                                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <a href="">Clear all</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table ng-table="" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th width="50%">
+                                            <div class="checkbox">
+                                                <input id="in1" type="checkbox" name="check" value="fl">
+                                                <label for="in1"><strong>Initiative</strong></label>
+                                            </div>
+                                        </th>
+                                        <th width="50%">
+                                            <div class="checkbox">
+                                                <input id="pr1" type="checkbox" name="check" value="fl">
+                                                <label for="pr1"><strong>Program</strong></label>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="in2" type="checkbox" name="check" value="fl">
+                                                <label for="in2">PRG-CTIF Cleantech Innovation Facility</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="pr2" type="checkbox" name="check" value="fl">
+                                                <label for="pr2">Program-1</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="in3" type="checkbox" name="check" value="fl">
+                                                <label for="in3">INI-EOF-8</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="pr3" type="checkbox" name="check" value="fl">
+                                                <label for="pr3">Program-2</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="in4" type="checkbox" name="check" value="fl">
+                                                <label for="in4">INI-FMCC-1</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="pr4" type="checkbox" name="check" value="fl">
+                                                <label for="pr4">Program-3</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="in5" type="checkbox" name="check" value="fl">
+                                                <label for="in5">INI-FMCC-1</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="pr5" type="checkbox" name="check" value="fl">
+                                                <label for="pr5">Program-4</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="in6" type="checkbox" name="check" value="fl">
+                                                <label for="in6">INI-FMCC-1</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="checkbox">
+                                                <input id="pr6" type="checkbox" name="check" value="fl">
+                                                <label for="pr6">Program-5</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="pagination pull-left charectorSearch mar-0">
+                            <a href="#"><i class="fa fa-angle-left fa-fw" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-angle-double-left fa-fw" aria-hidden="true"></i></a>
+                            <a href="#">1</a>
+                            <a class="active" href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></a>
+                        </div>
+                        <button class="btn btn-primary pull-right" type="submit">
+                                Submit
+                            </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- EO Modal Initiative -->
+
+<!-- Modal submit -->
+<div id="submitModel" class="modal fade" role="dialog">
+    <div class="modal-dialog" style="width: 35%;">
+        <div class="modal-content">
+
+            <div class="modal-body text-center">
+                <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
+                <i class="checkmark"></i>
+                <h3>Event ID : 32381</h3>
+                <h4>Journal Enrty Created Succesfully</h4><br />
+                <button type="button" class="btn btn-primary pad-l-r-30" ui-sref="viewAccountEvent">OK</button>
+                <br /><br /> You also can: <a href="" type="button" class="btn btn-link">Edit</a>
+                <a href="" type="button" class="btn btn-link link">View</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- EO Modal submit -->
+
+<script>
+    $(function() {
+        $(".uploadBtn").click(function(event) {
+            event.preventDefault();
+            $("#uploadFile").click();
+        });
+    });
+</script>

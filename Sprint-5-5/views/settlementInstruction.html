@@ -1,0 +1,1106 @@
+<section class="content-header">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="pull-left">
+                <a href="">
+                    <h4><i class="glyphicon glyphicon-menu-left font-14" aria-hidden="true"></i> Back</h4>
+                </a>
+            </div>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-link link">Cancel</button>
+                <button type="button" class="btn btn-primary mar-r-15">Submit</button>
+                <button type="button" class="btn btn-primary">Edit</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box box-solid">
+                <div class="box-header with-border">
+                    <div class="row pad-t-5">
+                        <div class="col-lg-3 box-title">
+                            Settlement Instruction
+                        </div>
+                        <div class="col-lg-2 box-title">
+                            Event ID - 51875
+                        </div>
+                        <div class="col-lg-3 box-title">
+                            <i class="fa fa-circle text-blue" aria-hidden="true"></i> Event Status - Completed
+                        </div>
+                        <div class="col-lg-4 box-title">
+                            Settlement Type - Settlement
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <fieldset>
+                        <legend>
+                            Message Header
+                        </legend>
+                        <div class="row">
+                            <div class="col-lg-3 form-group">
+                                <div class="col-xs-5"><strong>ID</strong></div>
+                                <div class="col-xs-7">:&nbsp;&nbsp; 52381</div>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <div class="col-xs-5"><strong>Status</strong></div>
+                                <div class="col-xs-7">:&nbsp;&nbsp; Draft</div>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <div class="col-xs-5"><strong>Identifier</strong></div>
+                                <div class="col-xs-7">:&nbsp;&nbsp; 103</div>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <div class="col-xs-5"><strong>Application</strong></div>
+                                <div class="col-xs-7">:&nbsp;&nbsp; FIN</div>
+                            </div>
+                            <div class="col-lg-3 form-group">
+                                <div class="col-xs-5"><strong>Sender</strong></div>
+                                <div class="col-xs-7">:&nbsp;&nbsp; IFCWUF33XX</div>
+                            </div>
+                            <div class="col-lg-6 form-group">
+                                <div class="col-xs-2"><strong>Receiver <sup> * </sup></strong></div>
+                                <div class="col-lg-8">
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="" id="" type="text">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-primary btn-right" type="submit">
+                                            <span class="glyphicon glyphicon-search"></span>
+                                        </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="row">
+                        <div class="col-lg-12 nav-tabs-custom">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="pill" href="" data-target="#message1">Message Type - 103</a></li>
+                                <li><a data-toggle="pill" href="" data-target="#message2">Message Type - 202</a></li>
+                                <li><a data-toggle="pill" href="" data-target="#message3">Message Type - 599</a></li>
+                            </ul>
+
+                            <div class="tab-content pad-0" style="max-height: 500px; overflow-x: hidden; overflow-y: auto;">
+                                <div id="message1" class="tab-pane fade in active mar-t-15">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <fieldset>
+                                                <legend>F20: Sender's Reference <sup>*</sup></legend>
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>EQ</h5>
+                                                            <input class="form-control" id="" type="text" value="EQ" disabled="">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Project ID <sup>*</sup></h5>
+                                                            <input class="form-control" id="" type="text" value="EQ">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Country Code <sup>*</sup></h5>
+                                                            <input class="form-control" id="" type="text" value="IFC">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>F23B: Bank Operation Code <sup>*</sup></h5>
+                                                            <input class="form-control" id="" type="text" value="CRED" disabled="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <fieldset>
+                                                <legend>F32A: Val Dte/ Curr/ Interbnk Settld Amt <sup>*</sup></legend>
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Value Date <sup>*</sup></h5>
+                                                            <div class='input-group date'>
+                                                                <input id="date-picker-vd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                                <label for="date-picker-vd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Currency <sup>*</sup></h5>
+                                                            <select class="form-control" id="">
+                                                                    <option selected="" value="USD">USD</option>
+                                                                    <option value="INR">INR</option>
+                                                                    <option value="Euro">Euro</option>
+                                                                    <option value="CAD">CAD</option>
+                                                                </select>
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Interbnk Settld Amt <sup>*</sup></h5>
+                                                            <input class="form-control" id="" type="text" value="630809.34">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>F50A: Ordering Customer - BIC <sup>*</sup></h5>
+                                                            <input class="form-control" id="" type="text" value="IFCWUF33XX">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="col-lg-12 line-header">
+                                                <span>Sender's Correspondent</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <fieldset>
+                                                <legend>
+                                                    <span class="checkbox">
+                                                <input id="checkSc" type="checkbox" name="check" value="">
+                                                <label for="checkSc">F53A: Sender's Correspondent-F1 BIC</label>
+                                            </span>
+                                                </legend>
+                                                <div class="col-md-3 form-group mar-t-7 pad-b-15">
+                                                    <h5>A/C Number</h5>
+                                                    <input class="form-control" id="" type="text" value="EQ" disabled="">
+                                                </div>
+                                                <div class="col-md-3 form-group mar-t-7 pad-b-15">
+                                                    <h5>BIC <sup>*</sup></h5>
+                                                    <input class="form-control" id="" type="text" value="IFCWUF33XX">
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="col-lg-12 line-header">
+                                                <span>Intermediary Institution</span>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="col-lg-2 form-group mar-t-7">
+                                                        <div class="radio">
+                                                            <input id="aba" type="radio" name="aba" value="">
+                                                            <label for="aba">Aba</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6 mar-b-20">
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                            </div>
+                                            <fieldset>
+                                                <legend>F32A: Val Dte/ Curr/ Interbnk Settld Amt <sup>*</sup></legend>
+                                                <div class="row mar-t-15">
+                                                    <div class="col-lg-12">
+                                                        <div class="col-lg-4 form-group">
+                                                            <div class="radio">
+                                                                <input id="ii1" type="radio" name="ii" value="">
+                                                                <label for="ii1">F56A: Intermediary Institution - F1BIC</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 form-group">
+                                                            <div class="radio">
+                                                                <input id="ii2" type="radio" name="ii" value="">
+                                                                <label for="ii2">F56C: Intermediary Institution</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 form-group">
+                                                            <div class="radio">
+                                                                <input id="ii3" type="radio" name="ii" value="">
+                                                                <label for="ii3">F56D: Intermediary Institution - Name &amp; Address</label>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 pad-b-15">
+                                                        <div class="col-lg-6 form-group">
+                                                            <input class="form-control mar-t-7" id="" type="text" placeholder="Search">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="col-lg-12 line-header">
+                                                <span>Account With Institution</span>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="col-lg-2 form-group mar-t-7">
+                                                        <div class="radio">
+                                                            <input id="awi1" type="radio" name="aba" value="">
+                                                            <label for="awi1">A/C Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 form-group mar-t-7">
+                                                        <div class="radio">
+                                                            <input id="awi2" type="radio" name="aba" value="">
+                                                            <label for="awi2">Aba</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6 form-group">
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="col-lg-12 border-gray pad-15 mar-t-7">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii11" type="radio" name="ii" value="">
+                                                                    <label for="ii11">F57A: Account with Institution - F1 BIC</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii12" type="radio" name="ii" value="">
+                                                                    <label for="ii12">F57B: Account with Institution - Locn</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii13" type="radio" name="ii" value="">
+                                                                    <label for="ii13">F56D: Intermediary Institution - Name &amp; Address</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii14" type="radio" name="ii" value="">
+                                                                    <label for="ii14">F57C: Account with Institution</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 form-group">
+                                                                <input class="form-control mar-t-7" id="" type="text" placeholder="Search">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 pad-t-20">
+                                                    <div class="col-lg-12 line-header">
+                                                        <span>Beneficiary Customer <sup>*</sup></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 mar-t-7">
+                                                    <div class="col-lg-2 form-group">
+                                                        <div class="radio">
+                                                            <input id="aba" type="radio" name="aba" value="">
+                                                            <label for="aba">A/C Number</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6 mar-b-20">
+                                                    <input class="form-control" id="" type="text" placeholder="Account Number">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 mar-b-20">
+                                                    <div class="col-lg-12 border-gray pad-15">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii21" type="radio" name="ii" value="">
+                                                                    <label for="ii21">F59: Beneficiary Customer - Name &amp; Address</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii22" type="radio" name="ii" value="">
+                                                                    <label for="ii22">F59A: Beneficiary Customer - BIC</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 form-group">
+                                                                <input class="form-control" id="" type="text" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-lg-6 form-group">
+                                                                <textarea class="form-control" rows="2" id="" placeholder="Address"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 ">
+                                                    <div class="col-lg-12 border-gray pad-15">
+                                                        <div class="row">
+                                                            <div class="col-lg-4 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii31" type="radio" name="ii" value="">
+                                                                    <label for="ii31">F70: Remittance Information</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii32" type="radio" name="ii" value="">
+                                                                    <label for="ii32">F71A: Details of Charges <sup>*</sup></label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii33" type="radio" name="ii" value="">
+                                                                    <label for="ii33">F72: Sender to Reciever Information</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 form-group">
+                                                                <input class="form-control" id="" type="text" placeholder="">
+                                                            </div>
+                                                            <div class="col-lg-6 form-group">
+                                                                <input class="form-control" id="" type="text" placeholder="">
+                                                            </div>
+                                                            <div class="col-lg-6 form-group">
+                                                                <input class="form-control" id="" type="text" placeholder="">
+                                                            </div>
+                                                            <div class="col-lg-6 form-group">
+                                                                <input class="form-control" id="" type="text" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="message2" class="tab-pane fade mar-t-15">
+
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <fieldset>
+                                                <legend>F20: Sender's Reference <sup>*</sup></legend>
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>EQ</h5>
+                                                            <input class="form-control" id="" type="text" value="EQ" disabled="">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Project ID <sup>*</sup></h5>
+                                                            <input class="form-control" id="" type="text" value="EQ">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Country Code <sup>*</sup></h5>
+                                                            <input class="form-control" id="" type="text" value="IFC">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>F21: Related Reference <sup>*</sup></h5>
+                                                            <input class="form-control" id="" type="text" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <fieldset>
+                                                <legend>F32A: Val Dte/ Curr/ Interbnk Settld Amt <sup>*</sup></legend>
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Value Date <sup>*</sup></h5>
+                                                            <div class='input-group date'>
+                                                                <input id="date-picker-vd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                                <label for="date-picker-vd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Currency <sup>*</sup></h5>
+                                                            <select class="form-control" id="">
+                                                                    <option selected="" value="USD">USD</option>
+                                                                    <option value="INR">INR</option>
+                                                                    <option value="Euro">Euro</option>
+                                                                    <option value="CAD">CAD</option>
+                                                                </select>
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Amount <sup>*</sup></h5>
+                                                            <input class="form-control" id="" type="text" value="0">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <fieldset>
+                                        <legend>Ordering Institution</legend>
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <div class="col-lg-12 mar-t-7">
+                                                    <div class="col-lg-4 form-group mar-t-7">
+                                                        <div class="radio">
+                                                            <input id="oif1" type="radio" name="aba" value="">
+                                                            <label for="oif1">F52A: Ordering Institution - F1 BIC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 form-group mar-t-7">
+                                                        <div class="radio">
+                                                            <input id="oif2" type="radio" name="aba" value="">
+                                                            <label for="oif2">F52D: Ordering Institution - Name &amp; Address</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6 form-group">
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <textarea class="form-control" rows="1" id="comment"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="col-lg-12 line-header">
+                                                <span>Sender's Correspondent</span>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="col-lg-2 form-group mar-t-7">
+                                                        <div class="radio">
+                                                            <input id="acnew" type="radio" name="aba" value="">
+                                                            <label for="acnew">A/C New</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6 mar-b-20">
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="col-lg-12 border-gray pad-15 mar-b-20">
+                                                <div class="row">
+                                                    <div class="col-lg-3 form-group">
+                                                        <div class="radio">
+                                                            <input id="ii11" type="radio" name="ii" value="">
+                                                            <label for="ii11">F57A: Account with Institution - F1 BIC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 form-group">
+                                                        <div class="radio">
+                                                            <input id="ii12" type="radio" name="ii" value="">
+                                                            <label for="ii12">F57B: Account with Institution - Locn</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 form-group">
+                                                        <div class="radio">
+                                                            <input id="ii13" type="radio" name="ii" value="">
+                                                            <label for="ii13">F56D: Intermediary Institution - Name &amp; Address</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 form-group">
+                                                        <div class="radio">
+                                                            <input id="ii14" type="radio" name="ii" value="">
+                                                            <label for="ii14">F56D: Intermediary Institution - Name &amp; Address</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6 form-group">
+                                                        <input class="form-control mar-t-7" id="" type="text" placeholder="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <fieldset>
+                                        <legend>Receiver's Correspondent</legend>
+                                        <div class="col-lg-12 mar-t-7">
+                                            <div class="row">
+                                                <div class="col-lg-3 form-group">
+                                                    <div class="radio">
+                                                        <input id="ii11" type="radio" name="ii" value="">
+                                                        <label for="ii11">F57A: Account with Institution - F1 BIC</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <div class="radio">
+                                                        <input id="ii12" type="radio" name="ii" value="">
+                                                        <label for="ii12">F57B: Account with Institution - Locn</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <div class="radio">
+                                                        <input id="ii13" type="radio" name="ii" value="">
+                                                        <label for="ii13">F56D: Intermediary Institution - Name &amp; Address</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <div class="radio">
+                                                        <input id="ii14" type="radio" name="ii" value="">
+                                                        <label for="ii14">F56D: Intermediary Institution - Name &amp; Address</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6 form-group">
+                                                    <input class="form-control" id="" type="text" placeholder="Search">
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <textarea class="form-control" rows="1" id="comment"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="col-lg-12 line-header">
+                                                        <span>Intermediary Institution</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 mar-t-7">
+                                                    <div class="col-lg-2 form-group">
+                                                        <div class="radio">
+                                                            <input id="aba" type="radio" name="aba" value="">
+                                                            <label for="aba">Aba</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6 form-group">
+                                                    <input class="form-control" id="" type="text" placeholder="Search">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 mar-b-20">
+                                                    <div class="col-lg-12 border-gray pad-15">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii21" type="radio" name="ii" value="">
+                                                                    <label for="ii21">F56A: Intermediary Institution - F1 BIC</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii22" type="radio" name="ii" value="">
+                                                                    <label for="ii22">F56D: Intermediary Institution - Name &amp; Address</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 form-group">
+                                                                <input class="form-control" id="" type="text" placeholder="Search">
+                                                            </div>
+                                                            <div class="col-lg-6 form-group">
+                                                                <textarea class="form-control" rows="2" id="" placeholder="Address"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="col-lg-12 line-header">
+                                                        <span>Account With Institution</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 mar-t-7">
+                                                    <div class="col-lg-2 form-group">
+                                                        <div class="radio">
+                                                            <input id="aba33" type="radio" name="aba" value="">
+                                                            <label for="aba33">A/C Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 form-group">
+                                                        <div class="radio">
+                                                            <input id="aba34" type="radio" name="aba" value="">
+                                                            <label for="aba34">Aba</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6 form-group">
+                                                    <input class="form-control" id="" type="text" placeholder="Search">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 mar-b-20">
+                                                    <div class="col-lg-12 border-gray pad-15">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii31" type="radio" name="ii" value="">
+                                                                    <label for="ii31">F57A: Account with Institution - F1 BIC</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii32" type="radio" name="ii" value="">
+                                                                    <label for="ii32">F57B: Account with Institution - Locn</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii33" type="radio" name="ii" value="">
+                                                                    <label for="ii33">F57D: Account With Institution - Name &amp;  Address</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 form-group">
+                                                                <input class="form-control" id="" type="text" placeholder="Search">
+                                                            </div>
+                                                            <div class="col-lg-6 form-group">
+                                                                <textarea class="form-control" rows="2" id="" placeholder="Address"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="col-lg-12 line-header">
+                                                        <span>Beneficiary Customer <sup>*</sup></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 mar-t-7">
+                                                    <div class="col-lg-2 form-group">
+                                                        <div class="radio">
+                                                            <input id="aba41" type="radio" name="aba" value="">
+                                                            <label for="aba41">A/C Number</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6 mar-b-20">
+                                                    <input class="form-control" id="" type="text" placeholder="Account Number">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 mar-b-20">
+                                                    <div class="col-lg-12 border-gray pad-15">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii42" type="radio" name="ii" value="">
+                                                                    <label for="ii42">F58A: Beneficiary Customer - FI BIC</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 form-group">
+                                                                <div class="radio">
+                                                                    <input id="ii43" type="radio" name="ii" value="">
+                                                                    <label for="ii43">F58D: Beneficiary Customer - Name &amp; Address</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 form-group">
+                                                                <input class="form-control" id="" type="text" placeholder="Name">
+                                                            </div>
+                                                            <div class="col-lg-6 form-group">
+                                                                <textarea class="form-control" rows="2" id="" placeholder="Address"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="col-lg-12 line-header">
+                                                <span>Beneficiary Customer <sup>*</sup></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 mar-t-15">
+                                            <div class="col-lg-12 border-gray pad-15">
+
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="row">
+                                                            <div class="col-lg-4 form-group">
+                                                                <div class="radio">
+                                                                    <input id="aba51" type="radio" name="aba" value="">
+                                                                    <label for="aba51">F72: Sender to Receiver Information</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-md-3 form-group">
+                                                                <select class="form-control" id="">
+                                                                    <option value="" selected="">Select</option>                                    
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-lg-9 form-group">
+                                                                <input class="form-control" id="" type="text" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 form-group">
+                                                                <select class="form-control" id="">
+                                                                        <option value="" selected="">Select</option>                                    
+                                                                    </select>
+                                                            </div>
+                                                            <div class="col-lg-9 form-group">
+                                                                <input class="form-control" id="" type="text" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 form-group">
+                                                                <select class="form-control" id="">
+                                                                            <option value="" selected="">Select</option>                                    
+                                                                        </select>
+                                                            </div>
+                                                            <div class="col-lg-9 form-group">
+                                                                <input class="form-control" id="" type="text" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-md-3 form-group">
+                                                                <select class="form-control" id="">
+                                                                        <option value="" selected="">Select</option>                                    
+                                                                    </select>
+                                                            </div>
+                                                            <div class="col-lg-9 form-group">
+                                                                <input class="form-control" id="" type="text" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 form-group">
+                                                                <select class="form-control" id="">
+                                                                            <option value="" selected="">Select</option>                                    
+                                                                        </select>
+                                                            </div>
+                                                            <div class="col-lg-9 form-group">
+                                                                <input class="form-control" id="" type="text" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 form-group">
+                                                                <select class="form-control" id="">
+                                                                                <option value="" selected="">Select</option>                                    
+                                                                            </select>
+                                                            </div>
+                                                            <div class="col-lg-9 form-group">
+                                                                <input class="form-control" id="" type="text" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div id="message3" class="tab-pane fade mar-t-15">
+                                    <fieldset>
+                                        <legend>Message Format</legend>
+                                        <div class="col-lg-12">
+                                            <div class="col-sm-3 text-right">
+                                                <h4>MT 599 Formate</h4>
+                                            </div>
+                                            <div class="col-sm-3 form-group">
+                                                <select class="form-control">
+                                                    <option selected="" value="Select">&nbsp; Select</option>
+                                                    <option value="BDT-Disbursement">&nbsp;BDT-Disbursement</option>
+                                                    <option value="COP">&nbsp;COP</option>
+                                                    <option value="EGP">&nbsp;EGP</option>
+                                                    <option value="KES">&nbsp;KES</option>
+                                                    <option value="LKR">&nbsp;LKR</option>
+                                                    <option value="PHP">&nbsp;PHP</option>
+                                                    <option value="THB">&nbsp;THB</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                    </fieldset>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="col-lg-12 line-header">
+                                                <span>Transaction Details</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <fieldset>
+                                                <legend>F:20 Transaction Reference</legend>
+                                                <div class="col-lg-12">
+                                                    <div class="row height-80">
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>EQ</h5>
+                                                            <input class="form-control" id="" type="text" value="EQ" disabled="">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Project ID <sup>*</sup></h5>
+                                                            <input class="form-control" id="" type="text" value="EQ">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Country Code <sup>*</sup></h5>
+                                                            <input class="form-control" id="" type="text" value="IFC">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>F21: Related Reference <sup>*</sup></h5>
+                                                            <input class="form-control" id="" type="text" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <fieldset>
+                                                <legend>F: 21</legend>
+                                                <div class="col-lg-12">
+                                                    <div class="row height-80">
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Related Reference:</h5>
+                                                            <input id="" placeholder="" type="text" class="form-control" />
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row height-80">
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Page1</h5>
+                                                            <h4>ID: 0 Status : Draft</h4>
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Page2</h5>
+                                                            <h4>ID: 0 Status : Draft</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="col-lg-12 line-header">
+                                                <span>Page 1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 height-80">
+                                            <fieldset>
+                                                <legend>F:79 Narrative</legend>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Account Name</h5>
+                                                    <input id="" placeholder="" type="text" class="form-control" value="CB NYK - INTERNATIONAL FIN CORPORATION" />
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Beneficiary Name</h5>
+                                                    <input id="" placeholder="" type="text" class="form-control" value="Jim" />
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Fund Amount</h5>
+                                                    <input id="" placeholder="" type="text" class="form-control" value="10000.00" />
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Fund Currency</h5>
+                                                    <input id="" placeholder="" type="text" class="form-control" value="USD" />
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>IFC Account Number</h5>
+                                                    <input id="" placeholder="" type="text" class="form-control" value="17876629" />
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Safe keeping A/C No.</h5>
+                                                    <input id="" placeholder="" type="text" class="form-control" value="7001380001" />
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Value Date</h5>
+                                                    <input id="" placeholder="" type="text" class="form-control" value="12/Aug/2017" />
+                                                </div>
+                                            </fieldset>
+                                        </div>
+
+                                        <div class="col-lg-6 height-80">
+                                            <fieldset>
+                                                <legend>Preview</legend>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Account Name</h5>
+                                                    <h4>CB NYK - INTERNATIONAL FIN CORPORATION</h4>
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Beneficiary Name</h5>
+                                                    <h4>Jim</h4>
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Fund Amount</h5>
+                                                    <h4>10000.00</h4>
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Fund Currency</h5>
+                                                    <h4>USD</h4>
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>IFC Account Number</h5>
+                                                    <h4>17876629</h4>
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Safe keeping A/C No.</h5>
+                                                    <h4>7001380001</h4>
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Value Date</h5>
+                                                    <h4>12/Aug/2017</h4>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="col-lg-12 line-header">
+                                                <span>Page 2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 height-80">
+                                            <fieldset>
+                                                <legend>F:79 Narrative</legend>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Account Name</h5>
+                                                    <input id="" placeholder="" type="text" class="form-control" value="CB NYK - INTERNATIONAL FIN CORPORATION" />
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Beneficiary Name</h5>
+                                                    <input id="" placeholder="" type="text" class="form-control" value="Jim" />
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Fund Amount</h5>
+                                                    <input id="" placeholder="" type="text" class="form-control" value="10000.00" />
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Fund Currency</h5>
+                                                    <input id="" placeholder="" type="text" class="form-control" value="USD" />
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>IFC Account Number</h5>
+                                                    <input id="" placeholder="" type="text" class="form-control" value="17876629" />
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Safe keeping A/C No.</h5>
+                                                    <input id="" placeholder="" type="text" class="form-control" value="7001380001" />
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Value Date</h5>
+                                                    <input id="" placeholder="" type="text" class="form-control" value="12/Aug/2017" />
+                                                </div>
+                                            </fieldset>
+                                        </div>
+
+                                        <div class="col-lg-6 height-80">
+                                            <fieldset>
+                                                <legend>Preview</legend>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Account Name</h5>
+                                                    <h4>CB NYK - INTERNATIONAL FIN CORPORATION</h4>
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Beneficiary Name</h5>
+                                                    <h4>Jim</h4>
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Fund Amount</h5>
+                                                    <h4>10000.00</h4>
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Fund Currency</h5>
+                                                    <h4>USD</h4>
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>IFC Account Number</h5>
+                                                    <h4>17876629</h4>
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Safe keeping A/C No.</h5>
+                                                    <h4>7001380001</h4>
+                                                </div>
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Value Date</h5>
+                                                    <h4>12/Aug/2017</h4>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+
+                            <div class="row mar-t-15">
+                                <div class="col-lg-12 pad-t-20">
+                                    <button type="button" class="btn btn-primary pull-right">Generate</button>
+                                    <button type="button" class="btn btn-link link pull-right">Edit</button>
+                                    <button type="button" class="btn btn-link link pull-right">Save</button>
+                                    <button type="button" class="btn btn-link link pull-right">Reset</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>

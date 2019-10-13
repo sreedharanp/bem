@@ -1,0 +1,280 @@
+<section class="content-header">
+    <h1>
+        Stock Record Entry
+    </h1>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box">
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-lg-3 form-group">
+                            <h5>Institution <sup> * </sup></h5>
+                            <div class="input-group">
+                                <input class="form-control" placeholder="" value="8 miles" id="" type="text">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-primary btn-right" type="submit" data-toggle="modal" data-target="#stockRecordEntryInstitution">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 form-group">
+                            <h5>Stock Record Type</h5>
+                            <select class="form-control" id="">
+                                    <option selected="" value="IFCClientStock">&nbsp;IFC Client Stock</option>
+                                    <option value="Colateral">&nbsp;Colateral</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 form-group">
+                            <h5>Security <sup> * </sup></h5>
+                            <select class="form-control" id="">
+                                <option selected="" value="Common Shares">Common Shares</option>
+                                <option value="Non-Share Equity">Non-Share Equity</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 form-group">
+                            <h5>Approval Status</h5>
+                            <select class="form-control" id="">                                
+                                <option value="Submitted">Submitted</option>
+                                <option value="Approved">Approved</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <button type="button" class="btn btn-primary pull-right">Retrieve</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-body">
+                    <div class="row">
+                        <h5 class="pull-left mar-l-15">
+                            Showing 1 to 10 of 1234 with 75 pages
+                        </h5>
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="pad-l-15" style="padding-top: 7px;">Showing Records</li>
+                            <li class="form-group pad-l-15 mar-r-15">
+                                <select class="form-control" id="">
+                                        <option value="1">Select</option>
+                                        <option value="1">10</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                            </li>
+                            <li class="pad-l-15" style="padding-top: 7px;">Jump To</li>
+                            <li class="form-group pad-l-15 mar-r-15">
+                                <select class="form-control" id="">
+                                        <option value="1">Select</option>
+                                        <option value="1">10</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                            </li>
+                            <li class="mar-r-15"><button type="button" class="btn btn-primary">Create New Stock Record</button></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-striped mar-0">
+                                    <thead>
+                                        <tr>
+                                            <th width="15%">Certificate Number</th>
+                                            <th width="15%">Quantity / Face Value</th>
+                                            <th width="20%">Transaction Type - Reason</th>
+                                            <th width="15%">Status</th>
+                                            <th width="15%">Approval Status</th>
+                                            <th width="20%">Modified Date</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <table class="table table-hover table-striped mar-0">
+                                    <tbody>
+                                        <tr>
+                                            <td width="15%">
+                                                <button class="btn btn-bem mar-r-15" ng-model="hr1" ng-class="hr1 ? 'icn-minus' : 'icn-plus'" ng-click="hr1 = !hr1;">                                                                                
+                                                    </button> 1</td>
+                                            <td width="15%">312132324</td>
+                                            <td width="20%">Share Certificate Final Trasfer - Reversal</td>
+                                            <td width="15%" class="text-orange">Expired</td>
+                                            <td width="15%">Approved</td>
+                                            <td width="20%">24 Jun 2016 3:56:23 a.m.</td>
+                                        </tr>
+                                        <tr style="display: none;">
+                                            <table class="table table-hover table-striped" style="margin-top: -1px; margin-bottom: 0;" ng-show="hr1">
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="15%"><strong>Historical Records</strong></td>
+                                                        <td width="15%"></td>
+                                                        <td width="20%"></td>
+                                                        <td width="15%"></td>
+                                                        <td width="15%"></td>
+                                                        <td width="20%"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding-left: 63px;">1</td>
+                                                        <td>312132324</td>
+                                                        <td>Share Certificate Final Trasfer - Reversal</td>
+                                                        <td class="text-orange">Expired</td>
+                                                        <td>Approved</td>
+                                                        <td>24 Jun 2016 3:56:23 a.m.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding-left: 63px;">1</td>
+                                                        <td>312132324</td>
+                                                        <td>Share Certificate Final Trasfer - Reversal</td>
+                                                        <td class="text-green">Active</td>
+                                                        <td>Approved</td>
+                                                        <td>24 Jun 2016 3:56:23 a.m.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="table table-hover table-striped mar-0">
+                                    <tbody>
+                                        <tr>
+                                            <td width="15%">
+                                                <button class="btn btn-bem mar-r-15" ng-model="hr2" ng-class="hr2 ? 'icn-minus' : 'icn-plus'" ng-click="hr2 = !hr2;">                                                                                
+                                                        </button> 1</td>
+                                            <td width="15%">312132324</td>
+                                            <td width="20%">Share Certificate Final Trasfer - Reversal</td>
+                                            <td width="15%" class="text-green">Active</td>
+                                            <td width="15%">Approved</td>
+                                            <td width="20%">24 Jun 2016 3:56:23 a.m.</td>
+                                        </tr>
+                                        <tr style="display: none;">
+                                            <table class="table table-hover table-striped" style="margin-top: -1px; margin-bottom: 0;" ng-show="hr2">
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="15%"><strong>Historical Records</strong></td>
+                                                        <td width="15%"></td>
+                                                        <td width="20%"></td>
+                                                        <td width="15%"></td>
+                                                        <td width="15%"></td>
+                                                        <td width="20%"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding-left: 63px;">1</td>
+                                                        <td>312132324</td>
+                                                        <td>Share Certificate Final Trasfer - Reversal</td>
+                                                        <td class="text-orange">Expired</td>
+                                                        <td>Approved</td>
+                                                        <td>24 Jun 2016 3:56:23 a.m.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding-left: 63px;">1</td>
+                                                        <td>312132324</td>
+                                                        <td>Share Certificate Final Trasfer - Reversal</td>
+                                                        <td class="text-green">Active</td>
+                                                        <td>Approved</td>
+                                                        <td>24 Jun 2016 3:56:23 a.m.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="pagination pull-right charectorSearch">
+                                <a href="#"><i class="fa fa-angle-left fa-fw" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-angle-double-left fa-fw" aria-hidden="true"></i></a>
+                                <a href="#">1</a>
+                                <a class="active" href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal institution -->
+<div class="modal fade" id="stockRecordEntryInstitution" role="dialog">
+    <div class="modal-dialog" style="width: 75%;">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        <div class="input-group">
+                            <input class="form-control" placeholder="Search by Institution Name / Number" id="" type="text">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary btn-right" type="submit">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Institution Name</th>
+                                        <th>Institution Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>First Lease</td>
+                                        <td>54001</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20th Centuryaaww</td>
+                                        <td>54001</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination pull-right charectorSearch mar-0">
+                            <a href="#"><i class="fa fa-angle-left fa-fw" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-angle-double-left fa-fw" aria-hidden="true"></i></a>
+                            <a href="#">1</a>
+                            <a class="active" href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- EO Modal institution -->

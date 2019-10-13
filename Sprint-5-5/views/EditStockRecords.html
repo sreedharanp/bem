@@ -1,0 +1,519 @@
+<section class="content-header">
+    <div class="row">
+        <div class="col-lg-12">
+            <a class="pull-left" href="">
+                <h4><i class="glyphicon glyphicon-menu-left font-14" aria-hidden="true"></i> Back</h4>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h4 class="box-title pad-t-5">
+                        Edit Stock Record
+                    </h4>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Certificate Number</th>
+                                            <th>Quantity\Face Value</th>
+                                            <th>Transaction Type - Reason</th>
+                                            <th>Status</th>
+                                            <th>Approved Status</th>
+                                            <th>Modified Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="radio">
+                                                    <input id="esr1" type="radio" name="project" value="">
+                                                    <label for="esr1">1</label>
+                                                </div>
+                                            </td>
+                                            <td class="text-blue">312132324</td>
+                                            <td>Share Certificate Receipt- Purchase</td>
+                                            <td class="text-orange">Expired</td>
+                                            <td>Approved</td>
+                                            <td>24 Jun 2016 5:56:23 a.m.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="radio">
+                                                    <input id="esr2" type="radio" name="project" value="">
+                                                    <label for="esr2">2</label>
+                                                </div>
+                                            </td>
+                                            <td class="text-blue">312132324</td>
+                                            <td>Share Certificate Receipt- Purchase</td>
+                                            <td class="text-green">Active</td>
+                                            <td>Approved</td>
+                                            <td>24 Jun 2016 5:56:23 a.m.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <button type="button" class="btn btn-primary pull-right">Edit</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 nav-tabs-custom mar-0">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="" data-target="#cd">Certificate Details</a></li>
+                                <li><a data-toggle="tab" href="" data-target="#dd">Depository Details</a></li>
+                            </ul>
+
+                            <div class="tab-content mar-t-15 pad-0">
+                                <div id="cd" class="tab-pane fade in active">
+                                    <div class="row">
+                                        <div class="col-lg-12 mar-t-15">
+                                            <fieldset>
+                                                <legend>Certificate Details - Share Quantity</legend>
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-3 form-group">
+                                                            <h5>Legal Entity</h5>
+                                                            <input class="form-control" id="" type="text" value="IFC" disabled="">
+                                                        </div>
+                                                        <div class="col-lg-3 form-group">
+                                                            <h5>Denomination <sup>*</sup></h5>
+                                                            <input class="form-control text-right" id="" type="text" value="100">
+                                                        </div>
+                                                        <div class="col-lg-3 form-group">
+                                                            <h5>No. of Certificate <sup>*</sup></h5>
+                                                            <input class="form-control text-right" id="" type="text" value="1">
+                                                        </div>
+                                                        <div class="col-lg-3 form-group">
+                                                            <h5>Total Quantity</h5>
+                                                            <input class="form-control text-right" id="" type="text" value="100">
+                                                        </div>
+                                                        <div class="col-lg-3 form-group">
+                                                            <h5>Certificate Date <sup>*</sup></h5>
+                                                            <div class='input-group date'>
+                                                                <input id="date-picker-cd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                                <label for="date-picker-cd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3 form-group">
+                                                            <h5>Received Date <sup>*</sup></h5>
+                                                            <div class='input-group date'>
+                                                                <input id="date-picker-rd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                                <label for="date-picker-rd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3 form-group">
+                                                            <h5>Value Date <sup>*</sup></h5>
+                                                            <div class='input-group date'>
+                                                                <input id="date-picker-vd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                                <label for="date-picker-vd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3 form-group">
+                                                            <h5>Registered Name</h5>
+                                                            <input class="form-control" id="" type="text" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <fieldset>
+                                                <legend>Certificate Number</legend>
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Prefix</h5>
+                                                            <input class="form-control" id="" type="text" value="IFC" disabled="">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>First <sup>*</sup></h5>
+                                                            <input class="form-control" id="" type="text" value="">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Last</h5>
+                                                            <input class="form-control" id="" type="text" value="">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Suffix</h5>
+                                                            <input class="form-control" id="" type="text" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <fieldset>
+                                                <legend>Security Information</legend>
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>ISIN/CUSIP</h5>
+                                                            <input class="form-control" id="" type="text" value="">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Ticker</h5>
+                                                            <input class="form-control" id="" type="text" value="">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Secondary Identifier</h5>
+                                                            <input class="form-control" id="" type="text" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <fieldset>
+                                                <legend>Certificate Status</legend>
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Active</h5>
+                                                            <label class="bemSwitch">
+                                                                        <input checked="" type="checkbox">
+                                                                        <span class="bemSlider"></span>
+                                                                    </label>
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Issue Description <sup>*</sup></h5>
+                                                            <select class="form-control" id="">
+                                                                    <option value="Select">Select</option>
+                                                                    <option value="Physical">Physical</option>
+                                                                    <option value="ProvisionalCertificate">Provisional Certificate</option>
+                                                                    <option selected="" value="Other">Other</option>
+                                                                    </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Trasaction Type</h5>
+                                                            <select class="form-control" id="">
+                                                                    <option selected="" value="ShareCertificateFinalTransfer">Share Certificate Final Transfer</option>
+                                                                    </select>
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Reason</h5>
+                                                            <select class="form-control" id="">
+                                                                    <option value="Reversal">Reversal</option>
+                                                                    <option selected="" value="Conversion">Conversion</option>
+                                                                    </select>
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <span class="pad-b-10 checkbox">
+                                                                <input id="led" type="checkbox" name="check" ng-model="led">
+                                                                <label for="led">Lock in Expiry Date</label>
+                                                            </span>
+                                                            <div class='input-group date'>
+                                                                <input id="date-picker-led" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" ng-disabled="!led" />
+                                                                <label for="date-picker-led" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <span class="pad-b-10 checkbox">
+                                                                    <input id="lr" type="checkbox" name="check" ng-model="lr">
+                                                                    <label for="lr">Legend Restriction</label>
+                                                                </span>
+                                                            <input class="form-control" id="" type="text" value="" ng-disabled="!lr">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <fieldset>
+                                                <legend>Certificate Confirmation</legend>
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Received From</h5>
+                                                            <div class='input-group date'>
+                                                                <input id="date-picker-rf1" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                                <label for="date-picker-rf1" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
+                                                                        </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Received Date</h5>
+                                                            <div class='input-group date'>
+                                                                <input id="date-picker-rd1" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                                <label for="date-picker-rd1" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
+                                                                        </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>Email Address</h5>
+                                                            <input class="form-control" id="" type="text" value="">
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <h5>&nbsp;</h5>
+                                                            <button type="button" class="btn btn-primary">Send Email</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <fieldset>
+                                                <legend>Associate files</legend>
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="col-lg-3 form-group">
+                                                            <h5>File</h5>
+                                                            <div class="input-group">
+                                                                <input id="uploadFile" class="form-control" placeholder="Choose File" disabled="disabled">
+                                                                <div class="input-group-btn">
+                                                                    <div class="fileUpload btn btn-primary">
+                                                                        <span class="displayFlex pad-t-5"><i class="fa fa-upload fa-fw"></i></span>
+                                                                        <input id="uploadBtn" type="file" class="upload" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-3 form-group">
+                                                            <h5>File Type</h5>
+                                                            <select class="form-control" id="">
+                                                            <option value="" selected="">Select File Type</option>
+                                                            <option value="">File Type 1</option>
+                                                            <option value="">File Type 2</option>
+                                                        </select>
+                                                        </div>
+                                                        <div class="col-lg-1 form-group">
+                                                            <h5>&nbsp;</h5>
+                                                            <button type="button" class="btn btn-primary">Upload</button>
+                                                        </div>
+                                                        <div class="col-lg-3 form-group">
+                                                            <h5>&nbsp;</h5>
+                                                            <button type="button" class="btn btn-primary">Send Email</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="col-lg-12 pad-t-5">
+                                                            <div class="table-responsive">
+                                                                <table class="table table-striped">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Id</th>
+                                                                            <th>File Name</th>
+                                                                            <th>File Type</th>
+                                                                            <th>Action</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td><i class="fa fa-file-pdf-o fa-fw text-red" aria-hidden="true"></i> Attached File Number One.pdf</td>
+                                                                            <td>Certificate Copy</td>
+                                                                            <td>
+                                                                                <a href=""><i class="fa fa-eye fa-fw" aria-hidden="true"></i></a>
+                                                                                <a href=""><i class="fa fa-trash-o fa-fw text-red" aria-hidden="true"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td><i class="fa fa-file-excel-o fa-fw text-green" aria-hidden="true"></i> Attached File Number Two.xls</td>
+                                                                            <td>Certificate Copy</td>
+                                                                            <td>
+                                                                                <a href=""><i class="fa fa-eye fa-fw" aria-hidden="true"></i></a>
+                                                                                <a href=""><i class="fa fa-trash-o fa-fw text-red" aria-hidden="true"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="dd" class="tab-pane fade">
+                                    <div class="row">
+                                        <div class="col-sm-2 mar-t-15">
+                                            <h4>Depository: </h4>
+                                        </div>
+                                        <div class="col-lg-3 form-group mar-t-15">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="" id="" value="8 miles">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-primary btn-right" type="submit">
+                                                        <span class="glyphicon glyphicon-search"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2 mar-t-15 pull-right text-right">
+                                            <a href="#"><i class="fa fa-cog fa-fw"></i> Settings</a>
+                                        </div>
+                                    </div>
+                                    <fieldset>
+                                        <legend>Address</legend>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Highlight</h5>
+                                                    <select class="form-control" id="">
+                                                        <option value="" selected="">Select</option>                                                      
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Street 1</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Street 2</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Sector</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>City</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Country</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Telephone</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Telex</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Fax</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Email</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Swift Code</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Contact</legend>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="col-lg-6 form-group">
+                                                    <h5>Highlight</h5>
+                                                    <select class="form-control" id="">
+                                                            <option value="" selected="">Select</option>                                                      
+                                                        </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Name</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Title</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Telephone</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Telex</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Swift Code</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Department</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Fax</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Email</h5>
+                                                    <input class="form-control" id="" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#editStockRecordSubmit">Submit</button>
+                            <button type="button" class="btn btn-link link pull-right">Save</button>
+                            <button type="button" class="btn btn-link link pull-right">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal -->
+<div id="editStockRecordSubmit" class="modal fade" role="dialog">
+    <div class="modal-dialog" style="width: 35%;">
+        <div class="modal-content">
+
+            <div class="modal-body text-center">
+                <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
+                <i class="checkmark"></i>
+                <h3>Stock Record Entry Updated Succesfully</h3><br />
+                <button type="button" class="btn btn-primary pad-l-r-30" ui-sref="viewAccountEvent">OK</button>
+                <br /><br /> You also can: <a href="" type="button" class="btn btn-link link">Edit</a>
+                <a href="" type="button" class="btn btn-link link">Delete</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    document.getElementById("uploadBtn").onchange = function() {
+        document.getElementById("uploadFile").value = this.value.substring(12);
+    };
+</script>

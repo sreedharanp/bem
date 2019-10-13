@@ -1,0 +1,334 @@
+<section class="content-header">
+    <h1>
+        Client Contact Details
+    </h1>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box-solid">
+                <div id="accordion" class="box-group">
+                    <div class="panel box">
+                        <div class="box-header with-border panel-heading">
+                            <h4 class="box-title">
+                                <a class="accordion-toggle pad-t-5 collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#searchEvents" href="">
+                                    Search Options
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="searchEvents" class="panel-collapse collapse">
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-lg-2 form-group">
+                                        <h5>Fiscal Year</h5>
+                                        <select class="form-control" id="">
+                                            <option value="">Select</option>                                                      
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-2 form-group">
+                                        <h5>Institution</h5>
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Institution Details" id="" type="text">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-primary btn-right" type="submit">
+                                                    <span class="glyphicon glyphicon-search"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 form-group">
+                                        <h5>Security Type</h5>
+                                        <select class="form-control" id="">
+                                            <option value="">Select</option>                                                      
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-2 form-group">
+                                        <h5>Mail Sent Date</h5>
+                                        <div class='input-group date'>
+                                            <input id="date-picker-msd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                            <label for="date-picker-msd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                    </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 form-group">
+                                        <h5>Mail Status</h5>
+                                        <select class="form-control" id="">
+                                                            <option value="">Select</option>                                                      
+                                                        </select>
+                                    </div>
+                                    <div class="col-lg-2 form-group">
+                                        <h5>&nbsp;</h5>
+                                        <button type="button" class="btn btn-primary">Search</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 checkbox pad-t-10">
+                                        <input id="edzp" type="checkbox" name="check" value="fl">
+                                        <label for="edzp">Exclude Dout Zero Project</label>
+                                        <input id="ezshp" type="checkbox" name="check" value="fl">
+                                        <label for="ezshp">Exclude Zero Shares held Project</label>
+                                        <input id="els" type="checkbox" name="check" value="fl">
+                                        <label for="els">Exclude listed securities</label>
+                                        <input id="el" type="checkbox" name="check" value="fl">
+                                        <label for="el">Exclusion List</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="row">
+                                <h5 class="pull-left mar-l-15">
+                                    Showing 1 to 10 of 1234 with 75 pages
+                                </h5>
+                                <ul class="nav navbar-nav pull-right">
+                                    <li class="pad-l-15" style="padding-top: 7px;">Showing Records</li>
+                                    <li class="form-group pad-l-15 mar-r-15">
+                                        <select class="form-control" id="">
+                                            <option value="">Select</option>
+                                            <option value="1">10</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </li>
+                                    <li class="pad-l-15" style="padding-top: 7px;">Jump To</li>
+                                    <li class="form-group pad-l-15 mar-r-15">
+                                        <select class="form-control" id="">
+                                            <option value="">Select</option>
+                                                <option value="1">10</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                    </li>
+                                    <li class="pad-5"><a href="" style="padding: 5px 20px 0 0;"><i class="fa fa-file-excel-o text-green" aria-hidden="true"></i> Export to Excel</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mar-0 height-50">
+                                            <thead>
+                                                <tr>
+                                                    <th width="5%">All</th>
+                                                    <th width="10%">Company ID
+                                                        <span class="icon-sorting">
+                                                            <a class="up" href="" aria-hidden="true"></a>
+                                                            <a class="down" href="" aria-hidden="true"></a>
+                                                        </span>
+                                                    </th>
+                                                    <th width="10%">Company Name
+                                                        <span class="icon-sorting">
+                                                                <a class="up" href="" aria-hidden="true"></a>
+                                                                <a class="down" href="" aria-hidden="true"></a>
+                                                            </span>
+                                                    </th>
+                                                    <th width="10%">Project
+                                                        <span class="icon-sorting">
+                                                            <a class="up" href="" aria-hidden="true"></a>
+                                                            <a class="down" href="" aria-hidden="true"></a>
+                                                        </span>
+                                                    </th>
+                                                    <th width="10%">Share Type
+                                                        <span class="icon-sorting">
+                                                            <a class="up" href="" aria-hidden="true"></a>
+                                                            <a class="down" href="" aria-hidden="true"></a>
+                                                        </span>
+                                                    </th>
+                                                    <th width="10%">PO Contact (TO:)
+                                                        <span class="icon-sorting">
+                                                            <a class="up" href="" aria-hidden="true"></a>
+                                                            <a class="down" href="" aria-hidden="true"></a>
+                                                        </span>
+                                                    </th>
+                                                    <th width="15%">Proxies Contact (CC:)
+                                                        <span class="icon-sorting">
+                                                            <a class="up" href="" aria-hidden="true"></a>
+                                                            <a class="down" href="" aria-hidden="true"></a>
+                                                        </span>
+                                                    </th>
+                                                    <th width="10%">Reminder
+                                                        <span class="icon-sorting">
+                                                            <a class="up" href="" aria-hidden="true"></a>
+                                                            <a class="down" href="" aria-hidden="true"></a>
+                                                        </span>
+                                                    </th>
+                                                    <th width="13%">Last Email Sent On
+                                                        <span class="icon-sorting">
+                                                            <a class="up" href="" aria-hidden="true"></a>
+                                                            <a class="down" href="" aria-hidden="true"></a>
+                                                        </span>
+                                                    </th>
+                                                    <th width="7%">Preview
+                                                        <span class="icon-sorting">
+                                                            <a class="up" href="" aria-hidden="true"></a>
+                                                            <a class="down" href="" aria-hidden="true"></a>
+                                                        </span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="header-blue border-bottom">
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input id="ccd1" type="checkbox" name="check" value="">
+                                                            <label class="mar-t-10" for="ccd1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <input class="form-control" id="" type="text">
+                                                    </td>
+                                                    <td>
+                                                        <select class="form-control" id="">
+                                                            <option value="">Select</option>                                                      
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="form-control" id="">
+                                                            <option value="">Select</option>                                                      
+                                                        </select>
+                                                    </td>
+                                                    <td></td>
+                                                    <td>
+                                                        <select class="form-control" id="">
+                                                            <option value="">Select</option>                                                      
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="form-control" id="">
+                                                            <option value="">Select</option>                                                      
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <select class="form-control" id="">
+                                                            <option value="">Select</option>                                                      
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <div class='input-group date'>
+                                                            <input id="date-picker-cd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                            <label for="date-picker-cd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                                        </label>
+                                                        </div>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input id="ccd2" type="checkbox" name="check" value="">
+                                                            <label class="mar-t-10" for="ccd2"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-blue">20001</td>
+                                                    <td>ABM</td>
+                                                    <td>2345 - ABM</td>
+                                                    <td>OWN</td>
+                                                    <td>abcd@ifc.org</td>
+                                                    <td>abcd@ifc.org</td>
+                                                    <td>0</td>
+                                                    <td>-</td>
+                                                    <td><a href="" data-toggle="modal" data-target="#email">Preview</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input id="ccd3" type="checkbox" name="check" value="">
+                                                            <label class="mar-t-10" for="ccd3"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-blue">20001</td>
+                                                    <td>ABM</td>
+                                                    <td>2345 - ABM</td>
+                                                    <td>OWN</td>
+                                                    <td>abcd@ifc.org</td>
+                                                    <td>abcd@ifc.org</td>
+                                                    <td>0</td>
+                                                    <td>-</td>
+                                                    <td><a href="">Preview</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input id="ccd4" type="checkbox" name="check" value="">
+                                                            <label class="mar-t-10" for="ccd4"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-blue">20001</td>
+                                                    <td>ABM</td>
+                                                    <td>2345 - ABM</td>
+                                                    <td>OWN</td>
+                                                    <td>abcd@ifc.org</td>
+                                                    <td>abcd@ifc.org</td>
+                                                    <td>0</td>
+                                                    <td>-</td>
+                                                    <td><a href="">Preview</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6 mar-t-7">
+                                    <div class="pagination charectorSearch">
+                                        <a href="#"><i class="fa fa-angle-left fa-fw" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-angle-double-left fa-fw" aria-hidden="true"></i></a>
+                                        <a href="#">1</a>
+                                        <a class="active" href="#">2</a>
+                                        <a href="#">3</a>
+                                        <a href="#">4</a>
+                                        <a href="#">5</a>
+                                        <a href="#">6</a>
+                                        <a href="#"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 text-right mar-t-15">
+                                    <button type="button" class="btn btn-primary mar-r-15">Validate Email</button>
+                                    <button type="button" class="btn btn-primary">Send Email</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Modal -->
+<div id="email" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h5 class="modal-title"><strong>From: abc@ifc.org</strong></h5>
+                <h5 class="modal-title"><strong>To:  cba@ifc.org</strong></h5>
+                <h5 class="modal-title"><strong>CC: xxx@ifc.org, xyz@ifc.org</strong></h5>
+                <h5 class="modal-title"><strong>Subject:</strong> Internation Finnace Corporation (IFC) Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+            </div>
+            <div class="modal-body">
+                <p><strong>Dear Sarah</strong></p>
+                <p>Internation Finnace Corporation (IFC) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor lorem iaculis velit sagittis, ut sollicitudin felis auctor. Aenean nec dictum neque. Nam tempus risus eget gravida tristique.
+                    Sed id tristique justo, at mattis enim. Mauris in libero pretium, imperdiet dui at, </p>
+                <br /><br />
+                <p>Contact Name:</p>
+                <p>Client/Compant:</p>
+                <p>Address:</p>
+                <p>Email:</p>
+                <p>Tel:</p>
+                <p>Fax:</p>
+                <br /><br />
+                <p><strong>Warm Regards,</strong></p>
+                <p>WBG Finance and Accounting</p>
+                <p>IFC Equity and Custody Operations Unit (WFAEC)</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,866 @@
+<section class="content-header">
+    <h1>
+        Audit and Logging
+    </h1>
+</section>
+<section class="content">
+    <div class="col-lg-12 mar-t-10">
+        <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs mar-0">
+                <li class="active"><a data-toggle="tab" href="#audit">Audit</a></li>
+                <li><a data-toggle="tab" href="#logging">Logging</a></li>
+            </ul>
+
+            <div class="tab-content border-gray">
+                <div id="audit" class="tab-pane fade in active pad-t-b-15">
+                    <p class="font-20">Audit Information</p>
+                    <div class="row">
+                        <div class="col-lg-12 mar-b-10">
+                            <div id="accordion" class="box-group">
+                                <div class="panel box">
+                                    <div class="box-header with-border panel-heading">
+                                        <h4 class="box-title">
+                                            <a class="accordion-toggle collapsed pad-t-5" data-toggle="collapse" data-parent="#accordion" data-target="#searchEvents" href="">
+                                                    Search Options
+                                                </a>
+                                        </h4>
+                                    </div>
+                                    <div id="searchEvents" class="panel-collapse collapse">
+                                        <div class="box-body">
+                                            <div class="row">
+                                                <div class="col-lg-2 form-group">
+                                                    <h5>Audit ID</h5>
+                                                    <select class="form-control" id="">
+                                                    <option value="">Select</option>                                                      
+                                                </select>
+                                                </div>
+                                                <div class="col-lg-2 form-group">
+                                                    <h5>Activity By</h5>
+                                                    <select class="form-control" id="">
+                                                        <option value="">Select</option>                                                      
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 form-group">
+                                                    <h5>Action</h5>
+                                                    <select class="form-control" id="">
+                                                            <option value="">Select</option>                                                      
+                                                        </select>
+                                                </div>
+                                                <div class="col-lg-2 form-group">
+                                                    <h5>Record Type Name</h5>
+                                                    <select class="form-control" id="">
+                                                                <option value="">Select</option>                                                      
+                                                            </select>
+                                                </div>
+                                                <div class="col-lg-2 form-group">
+                                                    <h5>Activity From</h5>
+                                                    <div class='input-group date'>
+                                                        <input id="date-picker-af" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                        <label for="date-picker-af" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                    </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 form-group">
+                                                    <h5>Activity To</h5>
+                                                    <div class='input-group date'>
+                                                        <input id="date-picker-at" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                        <label for="date-picker-at" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                    </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 text-right form-group">
+                                                <button type="button" class="btn btn-primary mar-r-15">Clear</button>
+                                                <button type="button" class="btn btn-primary mar-r-15">Search</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5 class="pull-left">
+                                Showing 1 to 10 of 1234 with 75 pages
+                            </h5>
+                            <ul class="nav navbar-nav pull-right">
+                                <li class="pad-l-15" style="padding-top: 7px;">Showing Records</li>
+                                <li class="form-group pad-l-15 mar-r-15">
+                                    <select class="form-control" id="">
+                                                                <option value="1">Select</option>
+                                                                                    <option value="1">10</option>
+                                                                                    <option value="2">2</option>
+                                                                                    <option value="3">3</option>
+                                                                                    <option value="4">4</option>
+                                                                                </select>
+                                </li>
+                                <li class="pad-l-15" style="padding-top: 7px;">Jump To</li>
+                                <li class="form-group pad-l-15 mar-r-15">
+                                    <select class="form-control" id="">
+                                                                <option value="1">Select</option>
+                                                                                    <option value="1">10</option>
+                                                                                    <option value="2">2</option>
+                                                                                    <option value="3">3</option>
+                                                                                    <option value="4">4</option>
+                                                                                </select>
+                                </li>
+                                <li class="pad-5"><a href="" style="padding: 5px 0 0 0;"><i class="fa fa-file-excel-o text-green" aria-hidden="true"></i> Export to Excel</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="col-lg-4 pad-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover scroll-table-height">
+                                        <thead>
+                                            <tr>
+
+                                                <th width="33%">Event ID
+                                                    <span class="icon-sorting">
+                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                    </span>
+                                                </th>
+                                                <th width="33%">Activity By
+                                                    <span class="icon-sorting">
+                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                    </span>
+                                                </th>
+                                                <th width="33%">Activity Date
+                                                    <span class="icon-sorting">
+                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                    </span>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border-down">
+                                                <td class="form-group">
+                                                    <input class="form-control" id="" type="text">
+                                                </td>
+                                                <td class="form-group">
+                                                    <select class="form-control" id="">
+                                                        <option selected="" value="Select">Select</option>
+                                                        <option value="User07">User07</option>
+                                                        <option value="User27">User27</option>
+                                                        <option value="User32">User32</option>
+                                                        <option value="User33">User33</option>
+                                                        <option value="User37">User37</option>
+                                                        <option value="User87">User87</option>
+                                                        <option value="User99">User99</option>
+                                                    </select>
+                                                </td>
+                                                <td class="form-group">
+                                                    <select class="form-control" id="">
+                                                        <option selected="" value="New">New</option>
+                                                        <option value="Trade Posted">Trade Posted</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="border-bottom">
+                                                <td><a href="" data-toggle="modal" data-target="#auditModal">20001</a></td>
+                                                <td>IFC\user87</td>
+                                                <td>7/29/2015 12:48:43</td>
+                                            </tr>
+                                            <tr class="border-bottom">
+                                                <td><a href="">20001</a></td>
+                                                <td>IFC\user87</td>
+                                                <td>7/29/2015 12:48:43</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 pad-0 table-scroll">
+                                <a class="text-black arrow-scroll-left" href="" data-target="#auditInformation" role="button" data-slide="prev"><i class="fa fa-chevron-left fa-fw fa-lg" aria-hidden="true"></i></a>
+                                <a class="text-black arrow-scroll-right" href="" data-target="#auditInformation" role="button" data-slide="next"><i class="fa fa-chevron-right fa-fw fa-lg" aria-hidden="true"></i></a>
+                                <div id="auditInformation" class="carousel slide" data-interval="false">
+                                    <div class="carousel-inner">
+                                        <!-- item set 1 -->
+                                        <div class="table-responsive item active">
+                                            <table class="table table-hover scroll-table-height">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Action
+                                                            <span class="icon-sorting">
+                                                                <a class="up" href="" aria-hidden="true"></a>
+                                                                <a class="down" href="" aria-hidden="true"></a>
+                                                            </span>
+                                                        </th>
+                                                        <th>Record Type
+                                                            <span class="icon-sorting">
+                                                                <a class="up" href="" aria-hidden="true"></a>
+                                                                <a class="down" href="" aria-hidden="true"></a>
+                                                            </span>
+                                                        </th>
+                                                        <th>Record ID
+                                                            <span class="icon-sorting">
+                                                                <a class="up" href="" aria-hidden="true"></a>
+                                                                <a class="down" href="" aria-hidden="true"></a>
+                                                            </span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="border-down">
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                    <option value="Update">Update</option>
+                                                                    <option value="Created">Created</option>
+                                                                    <option value="Deleted">Deleted</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                        <option value="Select">Select</option>
+                                                                    </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                <option value="abs">ABS</option>                                                                        
+                                                            </select>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td>Update</td>
+                                                        <td>Settlement Business Event</td>
+                                                        <td>8002</td>
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td>Update</td>
+                                                        <td>Settlement Business Event</td>
+                                                        <td>8002</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- /item set 1 -->
+                                        <!-- item set 2 -->
+                                        <div class="table-responsive item">
+                                            <table class="table table-hover scroll-table-height">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Action
+                                                            <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                        </th>
+                                                        <th>Record Type
+                                                            <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                        </th>
+                                                        <th>Record ID
+                                                            <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="border-down">
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                            <option value="Update">Update</option>
+                                                                            <option value="Created">Created</option>
+                                                                            <option value="Deleted">Deleted</option>
+                                                                    </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                                <option value="Select">Select</option>
+                                                                            </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                        <option value="abs">ABS</option>                                                                        
+                                                                    </select>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td>Update</td>
+                                                        <td>Settlement Business Event</td>
+                                                        <td>8002</td>
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td>Update</td>
+                                                        <td>Settlement Business Event</td>
+                                                        <td>8002</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- /item set 2 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="pagination pull-right charectorSearch">
+                                <a href="#"><i class="fa fa-angle-left fa-fw" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-angle-double-left fa-fw" aria-hidden="true"></i></a>
+                                <a href="#">1</a>
+                                <a class="active" href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="logging" class="tab-pane fade pad-t-b-15">
+                    <p class="font-20">Login Information</p>
+                    <div class="row">
+                        <div class="col-lg-12 mar-b-10">
+                            <div id="accordion" class="box-group">
+                                <div class="panel box">
+                                    <div class="box-header with-border panel-heading">
+                                        <h4 class="box-title">
+                                            <a class="accordion-toggle collapsed pad-t-5" data-toggle="collapse" data-parent="#accordion" data-target="#searchOptions" href="">
+                                                        Search Options
+                                                    </a>
+                                        </h4>
+                                    </div>
+                                    <div id="searchOptions" class="panel-collapse collapse">
+                                        <div class="box-body">
+                                            <div class="row">
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Log ID</h5>
+                                                    <select class="form-control" id="">
+                                                            <option value="">Select</option>                                                      
+                                                        </select>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Process ID</h5>
+                                                    <select class="form-control" id="">
+                                                                <option value="">Select</option>                                                      
+                                                            </select>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Logged By</h5>
+                                                    <select class="form-control" id="">
+                                                                    <option value="">Select</option>                                                      
+                                                                </select>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Source</h5>
+                                                    <select class="form-control" id="">
+                                                                        <option value="">Select</option>                                                      
+                                                                    </select>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Process From</h5>
+                                                    <div class='input-group date'>
+                                                        <input id="date-picker-pf" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                        <label for="date-picker-pf" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                            </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Process To</h5>
+                                                    <div class='input-group date'>
+                                                        <input id="date-picker-pt" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                        <label for="date-picker-pt" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                            </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Date From</h5>
+                                                    <div class='input-group date'>
+                                                        <input id="date-picker-df" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                        <label for="date-picker-df" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                                </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <h5>Date To</h5>
+                                                    <div class='input-group date'>
+                                                        <input id="date-picker-dt" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                                        <label for="date-picker-dt" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                                    </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 text-right form-group">
+                                                <button type="button" class="btn btn-primary mar-r-15">Clear</button>
+                                                <button type="button" class="btn btn-primary mar-r-15">Search</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5 class="pull-left">
+                                Showing 1 to 10 of 1234 with 75 pages
+                            </h5>
+                            <ul class="nav navbar-nav pull-right">
+                                <li class="pad-l-15" style="padding-top: 7px;">Showing Records</li>
+                                <li class="form-group pad-l-15 mar-r-15">
+                                    <select class="form-control" id="">
+                                        <option value="1">Select</option>
+                                        <option value="1">10</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </li>
+                                <li class="pad-l-15" style="padding-top: 7px;">Jump To</li>
+                                <li class="form-group pad-l-15 mar-r-15">
+                                    <select class="form-control" id="">
+                                        <option value="1">Select</option>
+                                        <option value="1">10</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </li>
+                                <li class="pad-5"><a href="" style="padding: 5px 0 0 0;"><i class="fa fa-file-excel-o text-green" aria-hidden="true"></i> Export to Excel</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="col-lg-4 pad-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover scroll-table-height">
+                                        <thead>
+                                            <tr>
+                                                <th width="33%">Event ID
+                                                    <span class="icon-sorting">
+                                                            <a class="up" href="" aria-hidden="true"></a>
+                                                            <a class="down" href="" aria-hidden="true"></a>
+                                                        </span>
+                                                </th>
+                                                <th width="33%">Activity By
+                                                    <span class="icon-sorting">
+                                                            <a class="up" href="" aria-hidden="true"></a>
+                                                            <a class="down" href="" aria-hidden="true"></a>
+                                                        </span>
+                                                </th>
+                                                <th width="33%">Activity Date
+                                                    <span class="icon-sorting">
+                                                            <a class="up" href="" aria-hidden="true"></a>
+                                                            <a class="down" href="" aria-hidden="true"></a>
+                                                        </span>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border-down">
+                                                <td class="form-group">
+                                                    <input class="form-control" id="" type="text">
+                                                </td>
+                                                <td class="form-group">
+                                                    <select class="form-control" id="">
+                                                            <option selected="" value="Select">Select</option>
+                                                            <option value="User07">User07</option>
+                                                            <option value="User27">User27</option>
+                                                            <option value="User32">User32</option>
+                                                            <option value="User33">User33</option>
+                                                            <option value="User37">User37</option>
+                                                            <option value="User87">User87</option>
+                                                            <option value="User99">User99</option>
+                                                        </select>
+                                                </td>
+                                                <td class="form-group">
+                                                    <select class="form-control" id="">
+                                                            <option selected="" value="New">New</option>
+                                                            <option value="Trade Posted">Trade Posted</option>
+                                                        </select>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="border-bottom">
+                                                <td><a href="" data-toggle="modal" data-target="#loggingModal">20001</a></td>
+                                                <td>IFC\user87</td>
+                                                <td>7/29/2015 12:48:43</td>
+                                            </tr>
+                                            <tr class="border-bottom">
+                                                <td><a href="">20001</a></td>
+                                                <td>IFC\user87</td>
+                                                <td>7/29/2015 12:48:43</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 pad-0 table-scroll">
+                                <a class="text-black arrow-scroll-left" href="" data-target="#loggingInformation" role="button" data-slide="prev"><i class="fa fa-chevron-left fa-fw fa-lg" aria-hidden="true"></i></a>
+                                <a class="text-black arrow-scroll-right" href="" data-target="#loggingInformation" role="button" data-slide="next"><i class="fa fa-chevron-right fa-fw fa-lg" aria-hidden="true"></i></a>
+                                <div id="loggingInformation" class="carousel slide" data-interval="false">
+                                    <div class="carousel-inner">
+                                        <!-- item set 1 -->
+                                        <div class="table-responsive item active">
+                                            <table class="table table-hover scroll-table-height">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="15%">Level
+                                                            <span class="icon-sorting">
+                                                                    <a class="up" href="" aria-hidden="true"></a>
+                                                                    <a class="down" href="" aria-hidden="true"></a>
+                                                                </span>
+                                                        </th>
+                                                        <th width="30%">Source
+                                                            <span class="icon-sorting">
+                                                                    <a class="up" href="" aria-hidden="true"></a>
+                                                                    <a class="down" href="" aria-hidden="true"></a>
+                                                                </span>
+                                                        </th>
+                                                        <th width="15%">Process ID
+                                                            <span class="icon-sorting">
+                                                                    <a class="up" href="" aria-hidden="true"></a>
+                                                                    <a class="down" href="" aria-hidden="true"></a>
+                                                                </span>
+                                                        </th>
+                                                        <th width="40%">Message
+                                                            <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="border-down">
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                <option value="Debug">Debug</option>
+                                                                <option value="Info">Info</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                <option value="Select">Select</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                <option value="Select">Select</option>
+                                                                <option selected="" value="8002">8002</option>
+                                                                <option value="8001">8001</option>
+                                                                </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <input class="form-control" id="" type="text">
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td>Debug</td>
+                                                        <td>Logger Connection String HTTP Module</td>
+                                                        <td>8002</td>
+                                                        <td class="elli-text">Refreshed log4net connection Refreshed log4net connection</td>
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td>Debug</td>
+                                                        <td>Logger Connection String HTTP Module</td>
+                                                        <td>8002</td>
+                                                        <td class="elli-text">Refreshed log4net connection Refreshed log4net connection</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- /item set 1 -->
+                                        <!-- item set 2 -->
+                                        <div class="table-responsive item">
+                                            <table class="table table-hover scroll-table-height">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="15%">Level
+                                                            <span class="icon-sorting">
+                                                                            <a class="up" href="" aria-hidden="true"></a>
+                                                                            <a class="down" href="" aria-hidden="true"></a>
+                                                                        </span>
+                                                        </th>
+                                                        <th width="30%">Source
+                                                            <span class="icon-sorting">
+                                                                            <a class="up" href="" aria-hidden="true"></a>
+                                                                            <a class="down" href="" aria-hidden="true"></a>
+                                                                        </span>
+                                                        </th>
+                                                        <th width="15%">Process ID
+                                                            <span class="icon-sorting">
+                                                                            <a class="up" href="" aria-hidden="true"></a>
+                                                                            <a class="down" href="" aria-hidden="true"></a>
+                                                                        </span>
+                                                        </th>
+                                                        <th width="40%">Message
+                                                            <span class="icon-sorting">
+                                                                                <a class="up" href="" aria-hidden="true"></a>
+                                                                                <a class="down" href="" aria-hidden="true"></a>
+                                                                            </span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="border-down">
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                        <option value="Debug">Debug</option>
+                                                                        <option value="Info">Info</option>
+                                                                    </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                        <option value="Select">Select</option>
+                                                                    </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                        <option value="Select">Select</option>
+                                                                        <option selected="" value="8002">8002</option>
+                                                                        <option value="8001">8001</option>
+                                                                        </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <input class="form-control" id="" type="text">
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td>Debug</td>
+                                                        <td>Logger Connection String HTTP Module</td>
+                                                        <td>8002</td>
+                                                        <td class="elli-text">Refreshed log4net connection Refreshed log4net connection</td>
+                                                    </tr>
+                                                    <tr class="border-bottom">
+                                                        <td>Debug</td>
+                                                        <td>Logger Connection String HTTP Module</td>
+                                                        <td>8002</td>
+                                                        <td class="elli-text">Refreshed log4net connection Refreshed log4net connection</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- /item set 2 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="pagination pull-right charectorSearch">
+                                <a href="#"><i class="fa fa-angle-left fa-fw" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-angle-double-left fa-fw" aria-hidden="true"></i></a>
+                                <a href="#">1</a>
+                                <a class="active" href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</section>
+
+
+
+<div id="auditModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Audit Info</h4>
+            </div>
+            <div class="modal-body" style="height: 450px; overflow: auto;">
+                <fieldset>
+                    <legend>Audit Details</legend>
+                    <div class="row">
+                        <div class="col-lg-12 pad-t-10">
+                            <div class="col-lg-4 form-group">
+                                <div class="col-xs-5"><strong>Audit ID</strong></div>
+                                <div class="col-xs-7">87320733</div>
+                            </div>
+                            <div class="col-lg-4 form-group">
+                                <div class="col-xs-5"><strong>Activity By</strong></div>
+                                <div class="col-xs-7">IFC\User33</div>
+                            </div>
+                            <div class="col-lg-4 form-group">
+                                <div class="col-xs-5"><strong>Record ID</strong></div>
+                                <div class="col-xs-7">8707</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 pad-t-10">
+                            <div class="col-lg-4 form-group">
+                                <div class="col-xs-5"><strong>Action</strong></div>
+                                <div class="col-xs-7">Update</div>
+                            </div>
+                            <div class="col-lg-4 form-group">
+                                <div class="col-xs-5"><strong>Activity Date</strong></div>
+                                <div class="col-xs-7">10/31/2017</div>
+                            </div>
+                            <div class="col-lg-4 form-group">
+                                <div class="col-xs-5"><strong>Record Type</strong></div>
+                                <div class="col-xs-7">Settlement Batch Entry</div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th width="33%">Name</th>
+                                <th width="33%">Current Value</th>
+                                <th width="33%">Previous Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Accounting_Settlement_Voucher_Id</td>
+                                <td>2357</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Accounting_Settlement_Voucher_Id</td>
+                                <td>2357</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Accounting_Settlement_Voucher_Id</td>
+                                <td>2357</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Accounting_Settlement_Voucher_Id</td>
+                                <td>2357</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Accounting_Settlement_Voucher_Id</td>
+                                <td>2357</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Accounting_Settlement_Voucher_Id</td>
+                                <td>2357</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Accounting_Settlement_Voucher_Id</td>
+                                <td>2357</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Accounting_Settlement_Voucher_Id</td>
+                                <td>2357</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="loggingModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Logging Info</h4>
+            </div>
+            <div class="modal-body" style="height: 450px; overflow: auto;">
+                <div class="row">
+                    <div class="col-lg-12 header-blue mar-b-20">
+                        <h5><strong>Log ID:</strong> 9cb89f25-9c86-e711-b2ed-005056952be9 </h5>
+                    </div>
+                </div>
+                <fieldset>
+                    <legend>Logging Details</legend>
+
+                    <div class="row">
+                        <div class="col-lg-12 pad-t-10">
+                            <div class="col-lg-4 form-group">
+                                <div class="col-xs-5"><strong>Date</strong></div>
+                                <div class="col-xs-7">10/31/2017</div>
+                            </div>
+                            <div class="col-lg-4 form-group">
+                                <div class="col-xs-5"><strong>Logged By</strong></div>
+                                <div class="col-xs-7">IFC\User33</div>
+                            </div>
+                            <div class="col-lg-4 form-group">
+                                <div class="col-xs-5"><strong>Process ID</strong></div>
+                                <div class="col-xs-7">Unspecified</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 pad-t-10">
+                            <div class="col-lg-4 form-group">
+                                <div class="col-xs-5"><strong>Level</strong></div>
+                                <div class="col-xs-7">UPDATE</div>
+                            </div>
+                            <div class="col-lg-4 form-group">
+                                <div class="col-xs-5"><strong>Origin</strong></div>
+                                <div class="col-xs-7">Uncpecified</div>
+                            </div>
+                            <div class="col-lg-4 form-group">
+                                <div class="col-xs-5"><strong>Process Date</strong></div>
+                                <div class="col-xs-7">07/29/2017</div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="row">
+                    <div class="col-lg-12 form-group">
+                        <h5>Message</h5>
+                        <textarea class="form-control" rows="5" id=""></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 form-group">
+                        <h5>Exception</h5>
+                        <textarea class="form-control" rows="5" id=""></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Send</button>
+            </div>
+        </div>
+
+    </div>
+</div>

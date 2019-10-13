@@ -1,0 +1,510 @@
+<section class="content-header">
+    <h1>
+        Share Holder Confirmation
+    </h1>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box">
+                <div class="box-header">
+                    <h4 class="box-title">
+                        Mail Options
+                    </h4>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <h5>From</h5>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <input class="form-control" id="" type="text">
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2 text-right">
+                            <h5>Copy To (BCC)</h5>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <input class="form-control" id="" type="text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                            <h5>Subject</h5>
+                        </div>
+                        <div class="col-md-11 form-group">
+                            <input class="form-control" id="" type="text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                            <h5>Request Info</h5>
+                        </div>
+                        <div class="col-lg-3 form-group">
+                            <div class='input-group date'>
+                                <input id="date-picker-ri" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                <label for="date-picker-ri" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-right">
+                            <h5>Distribution from Date</h5>
+                        </div>
+                        <div class="col-lg-2 form-group">
+                            <div class='input-group date'>
+                                <input id="date-picker-dfd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                <label for="date-picker-dfd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                    </label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-right">
+                            <h5>Distribution to Date</h5>
+                        </div>
+                        <div class="col-lg-2 form-group">
+                            <div class='input-group date'>
+                                <input id="date-picker-dtd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                <label for="date-picker-dtd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                        </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5 class="pull-left">
+                                Total Number of Project selected: 2
+                            </h5>
+                            <button type="button" class="btn btn-primary pull-right">Send Email</button>
+                            <button type="button" class="btn btn-primary pull-right mar-r-15">Validate Email</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box-solid">
+                <div id="accordion" class="box-group">
+                    <div class="panel box">
+                        <div class="box-header with-border panel-heading">
+                            <h4 class="box-title">
+                                <a class="accordion-toggle pad-t-5 collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#shareHolderSearchOptions" href="">
+                                    Search Options
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="shareHolderSearchOptions" class="panel-collapse collapse">
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-lg-2 form-group">
+                                        <h5>Fiscal Year</h5>
+                                        <select class="form-control" id="">
+                                                    <option value="">Select</option>                                                      
+                                                </select>
+                                    </div>
+                                    <div class="col-lg-2 form-group">
+                                        <h5>Institution</h5>
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Institution Details" id="" type="text">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-primary btn-right" type="submit">
+                                                            <span class="glyphicon glyphicon-search"></span>
+                                                        </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 form-group">
+                                        <h5>Security Type</h5>
+                                        <select class="form-control" id="">
+                                                    <option value="">Select</option>                                                      
+                                                </select>
+                                    </div>
+                                    <div class="col-lg-2 form-group">
+                                        <h5>Mail Sent Date</h5>
+                                        <div class='input-group date'>
+                                            <input id="date-picker-msd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                            <label for="date-picker-msd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 form-group">
+                                        <h5>Mail Status</h5>
+                                        <select class="form-control" id="">
+                                                                    <option value="">Select</option>                                                      
+                                                                </select>
+                                    </div>
+                                    <div class="col-lg-2 form-group">
+                                        <h5>&nbsp;</h5>
+                                        <button type="button" class="btn btn-primary">Search</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-2 pad-t-10 pad-r-0">
+                                        <span class="checkbox">
+                                            <input id="edzp" type="checkbox" name="check" value="fl">
+                                            <label for="edzp">Exclude Dout Zero Project</label>
+                                        </span>
+                                    </div>
+                                    <div class="col-lg-3 pad-t-10">
+                                        <span class="checkbox">
+                                            <input id="ezshp" type="checkbox" name="check" value="fl">
+                                            <label for="ezshp">Exclude Zero Shares held Project</label>
+                                        </span>
+                                    </div>
+                                    <div class="col-lg-2 pad-t-10">
+                                        <span class="checkbox">
+                                            <input id="els" type="checkbox" name="check" value="fl">
+                                            <label for="els">Exclude listed securities</label>
+                                        </span>
+                                    </div>
+                                    <div class="col-lg-2 pad-t-10">
+                                        <span class="checkbox">
+                                            <input id="el" type="checkbox" name="check" value="fl">
+                                            <label for="el">Exclusion List</label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box">
+                <div class="box-body">
+                    <div class="row">
+                        <h5 class="pull-left mar-l-15">
+                            Showing 1 to 10 of 1234 with 75 pages
+                        </h5>
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="pad-l-15" style="padding-top: 7px;">Showing Records</li>
+                            <li class="form-group pad-l-15 mar-r-15">
+                                <select class="form-control" id="">
+                                                <option value="1">Select</option>
+                                                                    <option value="1">10</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                </select>
+                            </li>
+                            <li class="pad-l-15" style="padding-top: 7px;">Jump To</li>
+                            <li class="form-group pad-l-15 mar-r-15">
+                                <select class="form-control" id="">
+                                                <option value="1">Select</option>
+                                                                    <option value="1">10</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                </select>
+                            </li>
+                            <li class="pad-5"><a href="" style="padding: 5px 20px 0 0;"><i class="fa fa-file-excel-o text-green" aria-hidden="true"></i> Export to Excel</a></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="col-lg-4 pad-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover height-50 text-center">
+                                        <thead>
+                                            <tr>
+                                                <th width="10%">All</th>
+                                                <th width="30%">Institution ID
+                                                    <span class="icon-sorting">
+                                                                    <a class="up" href="" aria-hidden="true"></a>
+                                                                    <a class="down" href="" aria-hidden="true"></a>
+                                                            </span>
+                                                </th>
+                                                <th width="30%">Institution Name
+                                                    <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                </span>
+                                                </th>
+                                                <th width="30%">Project
+                                                    <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                </span>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border-down">
+                                                <td>
+                                                    <span class="checkbox">
+                                                            <input id="Prorate2" name="check" value="" type="checkbox">
+                                                            <label for="Prorate2" style="padding-left: 10px;"></label>
+                                                    </span>
+                                                </td>
+                                                <td class="form-group">
+                                                    <input class="form-control" id="" type="text">
+                                                </td>
+                                                <td class="form-group">
+                                                    <select class="form-control" id="">
+                                                            <option value="" selected="">Select</option>
+                                                            <option value="ABM">ABM</option>
+                                                            <option value="ABCA">ABCA</option>
+                                                            <option value="Adhar">Adhar</option>
+                                                            <option value="7L Capital">7L Capital</option>
+                                                            <option value="21 Concordia">21 Concordia</option>
+                                                            <option value="8 Miles">8 Miles</option>
+                                                            </select>
+                                                </td>
+                                                <td class="form-group">
+                                                    <select class="form-control" id="">
+                                                            <option value="" selected="">Select</option>
+                                                                <option value="1"></option>                                                                            
+                                                            </select>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <span class="checkbox">
+                                                                <input id="Prorate3" name="check" value="" type="checkbox">
+                                                                <label for="Prorate3" style="padding-left: 10px;"></label>
+                                                        </span>
+                                                </td>
+                                                <td><a href="">20001</a></td>
+                                                <td>ABM</td>
+                                                <td>2345 - ABM</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 pad-0 table-scroll">
+                                <a class="text-black arrow-scroll-left" href="" data-target="#eventDetailsTable" role="button" data-slide="prev"><i class="fa fa-chevron-left fa-fw fa-lg" aria-hidden="true"></i></a>
+                                <a class="text-black arrow-scroll-right" href="" data-target="#eventDetailsTable" role="button" data-slide="next"><i class="fa fa-chevron-right fa-fw fa-lg" aria-hidden="true"></i></a>
+                                <div id="eventDetailsTable" class="carousel slide" data-interval="false">
+                                    <div class="carousel-inner">
+                                        <!-- item set 1 -->
+                                        <div class="table-responsive item active">
+                                            <table class="table table-hover height-50 text-center">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="20%">Share Type
+                                                            <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                        </th>
+                                                        <th width="20%">Contact Email (TO:)
+                                                            <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                        </th>
+                                                        <th width="20%">Email Sent on
+                                                            <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                        </th>
+                                                        <th width="20%">Preview
+                                                            <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                        </th>
+                                                        <th width="20%">Email As Of
+                                                            <span class="icon-sorting">
+                                                                        <a class="up" href="" aria-hidden="true"></a>
+                                                                        <a class="down" href="" aria-hidden="true"></a>
+                                                                    </span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="border-down">
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                <option value="" selected="">Select</option>
+                                                                <option value=""></option>                                                                        
+                                                            </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                <option value="" selected="">Select</option>
+                                                                <option value=""></option>                                                                        
+                                                            </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                <option value="" selected="">Select</option>
+                                                                <option value=""></option>                                                                        
+                                                            </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                <option value="" selected="">Select</option>
+                                                                <option value=""></option>                                                                        
+                                                            </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                <option value="" selected="">Select</option>
+                                                                <option value=""></option>                                                                        
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>OWN</td>
+                                                        <td>
+                                                            <a href="">abcd@ifc.org</a>
+                                                            <a href=""><i class="fa fa-pencil-square-o fa-fw fa-lg" aria-hidden="true"></i></a>
+                                                        </td>
+                                                        <td>-</td>
+                                                        <td><a href="" data-toggle="modal" data-target="#email">Preview</a></td>
+                                                        <td>-</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- /item set 1 -->
+                                        <!-- item set 2 -->
+                                        <div class="table-responsive item">
+                                            <table class="table table-hover height-50 text-center">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="20%">Share Type
+                                                            <span class="icon-sorting">
+                                                                                <a class="up" href="" aria-hidden="true"></a>
+                                                                                <a class="down" href="" aria-hidden="true"></a>
+                                                                            </span>
+                                                        </th>
+                                                        <th width="20%">Contact Email (TO:)
+                                                            <span class="icon-sorting">
+                                                                                <a class="up" href="" aria-hidden="true"></a>
+                                                                                <a class="down" href="" aria-hidden="true"></a>
+                                                                            </span>
+                                                        </th>
+                                                        <th width="20%">Email Sent on
+                                                            <span class="icon-sorting">
+                                                                                <a class="up" href="" aria-hidden="true"></a>
+                                                                                <a class="down" href="" aria-hidden="true"></a>
+                                                                            </span>
+                                                        </th>
+                                                        <th width="20%">Preview
+                                                            <span class="icon-sorting">
+                                                                                <a class="up" href="" aria-hidden="true"></a>
+                                                                                <a class="down" href="" aria-hidden="true"></a>
+                                                                            </span>
+                                                        </th>
+                                                        <th width="20%">Email As Of
+                                                            <span class="icon-sorting">
+                                                                                <a class="up" href="" aria-hidden="true"></a>
+                                                                                <a class="down" href="" aria-hidden="true"></a>
+                                                                            </span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="border-down">
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                        <option value="" selected="">Select</option>
+                                                                        <option value=""></option>                                                                        
+                                                                    </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                        <option value="" selected="">Select</option>
+                                                                        <option value=""></option>                                                                        
+                                                                    </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                        <option value="" selected="">Select</option>
+                                                                        <option value=""></option>                                                                        
+                                                                    </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                        <option value="" selected="">Select</option>
+                                                                        <option value=""></option>                                                                        
+                                                                    </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                        <option value="" selected="">Select</option>
+                                                                        <option value=""></option>                                                                        
+                                                                    </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>OWN</td>
+                                                        <td>
+                                                            <a href="">abcd@ifc.org</a>
+                                                            <a href=""><i class="fa fa-pencil-square-o fa-fw fa-lg" aria-hidden="true"></i></a>
+                                                        </td>
+                                                        <td>-</td>
+                                                        <td><a href="">Preview</a></td>
+                                                        <td>-</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- /item set 2 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="pagination pull-right charectorSearch">
+                                <a href="#"><i class="fa fa-angle-left fa-fw" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-angle-double-left fa-fw" aria-hidden="true"></i></a>
+                                <a href="#">1</a>
+                                <a class="active" href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div id="email" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h5 class="modal-title"><strong>From: abc@ifc.org</strong></h5>
+                <h5 class="modal-title"><strong>To:  cba@ifc.org</strong></h5>
+                <h5 class="modal-title"><strong>CC: xxx@ifc.org, xyz@ifc.org</strong></h5>
+                <h5 class="modal-title"><strong>Subject:</strong> Internation Finnace Corporation (IFC) Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+            </div>
+            <div class="modal-body">
+                <p><strong>Dear Sarah</strong></p>
+                <p>Internation Finnace Corporation (IFC) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor lorem iaculis velit sagittis, ut sollicitudin felis auctor. Aenean nec dictum neque. Nam tempus risus eget gravida tristique.
+                    Sed id tristique justo, at mattis enim. Mauris in libero pretium, imperdiet dui at, </p>
+                <br /><br />
+                <p>Contact Name:</p>
+                <p>Client/Compant:</p>
+                <p>Address:</p>
+                <p>Email:</p>
+                <p>Tel:</p>
+                <p>Fax:</p>
+                <br /><br />
+                <p><strong>Warm Regards,</strong></p>
+                <p>WBG Finance and Accounting</p>
+                <p>IFC Equity and Custody Operations Unit (WFAEC)</p>
+            </div>
+        </div>
+    </div>
+</div>

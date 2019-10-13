@@ -1,0 +1,555 @@
+<section class="content-header">
+    <h1>
+        Administration - Fund Event Settings
+    </h1>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box-solid">
+                <div class="box-group">
+                    <div class="panel box">
+                        <div class="box-header with-border">
+                            <h4 class="box-title pull-left pad-t-5">
+                                Open Fund Event Setting
+                            </h4>
+                            <div class="radio col-lg-9 pull-right">
+                                <div class="col-md-12 pad-t-5">
+                                    <div class="col-sm-4">
+                                        <input id="etc" type="radio" value="etc" name="oaes" ng-model="oaes" ng-checked="">
+                                        <label for="etc">Event Type Configurations</label>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input id="eet" type="radio" value="eet" name="oaes" ng-model="oaes">
+                                        <label for="eet">Edit Event Type</label>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <input id="cet" type="radio" value="cet" name="oaes" ng-model="oaes">
+                                        <label for="cet">Create Event Type</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-body" ng-show="oaes =='etc'">
+
+                            <div class="row mar-b-20">
+                                <div class="col-lg-2">
+                                    <h5>Event</h5>
+                                    <select class="form-control" id="">
+                                        <option value="Basis Adjustment">Basis Adjustment</option>
+                                        <option value="Basis Adjustment - Non CF">Basis Adjustment - Non CF</option>
+                                        <option value="Cancellation">Cancellation</option>
+                                        <option value="Capital Gain">Capital Gain</option>
+                                        <option value="Cash Dividend">Cash Dividend</option>
+                                        <option value="Commitment">Commitment</option>
+                                        <option value="Conversion to Loan">Conversion to Loan</option>
+                                        <option value="Conversion to Loan - Fair Value Gain">Conversion to Loan - Fair Value Gain</option>
+                                        <option value="Conversion to Loan - Fair Value Loss">Conversion to Loan - Fair Value Loss</option>
+                                        <option value="Conversion to Loan – Undisbursed">Conversion to Loan – Undisbursed</option>
+                                        <option value="DIQ">DIQ</option>
+                                        <option value="Disbursement">Disbursement</option>
+                                        <option value="Disbursement – Expenses">Disbursement – Expenses</option>
+                                        <option value="Disbursement - Mgmt Fees">Disbursement - Mgmt Fees</option>
+                                        <option value="Disbursement - Org Costs">Disbursement - Org Costs</option>
+                                        <option value="DSQ">DSQ</option>
+                                        <option value="EITF Write - Down">EITF Write - Down</option>
+                                        <option selected="" value="Select">Select</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2">
+                                    <h5>Sub Event</h5>
+                                    <select class="form-control" id="">
+                                        <option value="FX Changes">FX Changes</option>
+                                        <option selected="" value="Select">Select</option>
+                                        <option value="Misc Expenses">Misc Expenses</option>
+                                        <option value="Regular">Regular</option>
+                                        <option value="Settlement">Settlement</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2">
+                                    <h5>&nbsp;</h5>
+                                    <button type="button" class="btn btn-primary" ng-model="getConfiguration" ng-click="getConfiguration=true">Get Configuration</button>
+                                </div>
+                                <span ng-show="getConfiguration">
+                                <div class="col-lg-2">
+                                    <h5>Folder</h5>
+                                    <select class="form-control" id="">
+                                        <option value="Select">Select</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2">
+                                    <h5>Sub Folder</h5>
+                                    <select class="form-control" id="">
+                                        <option value="Select">Select</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2">
+                                    <h5>&nbsp;</h5>
+                                    <button type="button" class="btn btn-primary">Insert Configuration</button>
+                                </div>
+                            </span>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 pad-t-20">
+                                    <div class="nav-tabs-custom">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="" data-target="#ac" data-toggle="tab" aria-expanded="true">Accounting Configuration</a></li>
+                                            <li class=""><a href="" data-target="#os" data-toggle="tab" aria-expanded="false">Other Settings</a></li>
+                                            <li class="pull-right">
+                                                <button type="button" class="btn btn-link link">Cancel</button>
+                                                <button type="button" class="btn btn-primary">Submit</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content pad-0">
+                                            <div class="tab-pane active" id="ac">
+                                                <div id="accordion">
+                                                    <div class="panel box">
+                                                        <div class="box-header no-border panel-heading">
+                                                            <h4 class="box-title">
+                                                                <a class="accordion-toggle collapsed pad-t-5" data-toggle="collapse" data-parent="#accordion" data-target="#accountingConfiguration" href="">
+                                                                        DTFI Funds Pledged By Donors  -> Funds Pledged By Donors                                                                
+                                                                </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="accountingConfiguration" class="panel-collapse collapse">
+                                                            <div class="table-responsive">
+                                                                <table class="table table-hover" style="border: none;">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th class="pad-15">Transaction Type</th>
+                                                                            <th class="pad-15">Code</th>
+                                                                            <th class="pad-15">IsActive</th>
+                                                                            <th class="pad-15">Amount Attribute</th>
+                                                                            <th class="pad-15">Amount KPI</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="pad-15">Funds Pledge By donors - Dr</td>
+                                                                            <td class="pad-15">153</td>
+                                                                            <td class="pad-15">True</td>
+                                                                            <td class="pad-15">Required</td>
+                                                                            <td>
+                                                                                <div class="form-group mar-0">
+                                                                                    <select class="form-control" id="">
+                                                                                        <option value="Select">Select</option>                                                                                                
+                                                                                    </select>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="pad-15">Funds Pledged By Donors Contra - CR</td>
+                                                                            <td class="pad-15">153</td>
+                                                                            <td class="pad-15">True</td>
+                                                                            <td class="pad-15">Required</td>
+                                                                            <td>
+                                                                                <div class="form-group mar-0">
+                                                                                    <select class="form-control" id="">
+                                                                                            <option value="Select">Select</option>                                                                                                
+                                                                                        </select>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.tab-pane -->
+
+                                            <!-- /.tab-pane -->
+                                            <div class="tab-pane pad-t-b-20" id="os">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <h5><strong>Enforce Maker - Checker</strong></h5>
+                                                        <h5>Lorem ipsum dolor sit amet, consectetur </h5>
+                                                    </div>
+                                                    <div class="col-md-2 ">
+                                                        <label class="bemSwitch">
+                                                                <input checked="" type="checkbox">
+                                                            <span class="bemSlider"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <h5><strong>Include Zero Transaction Amount</strong></h5>
+                                                        <h5>Lorem ipsum dolor sit amet, consectetur </h5>
+                                                    </div>
+                                                    <div class="col-md-2 ">
+                                                        <label class="bemSwitch">
+                                                                    <input checked="" type="checkbox">
+                                                                <span class="bemSlider"></span>
+                                                            </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.tab-pane -->
+                                        </div>
+                                        <!-- /.tab-content -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="box-body" ng-show="oaes =='eet'">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!-- Custom Tabs -->
+                                    <div class="nav-tabs-custom">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="" data-target="#event1" data-toggle="tab" aria-expanded="true">Event</a></li>
+                                            <li class=""><a href="" data-target="#subEvent1" data-toggle="tab" aria-expanded="false">Sub Event</a></li>
+
+                                        </ul>
+                                        <div class="tab-content mar-t-25">
+                                            <div class="tab-pane active" id="event1">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6 form-group">Name <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="">
+                                                                            <option value="Select">Select</option>
+                                                                            <option value="Select">Basis Adjustment</option>
+                                                                            <option value="Select">Cancellation</option>
+                                                                            <option value="Select">Capital Gain</option>
+                                                                            <option value="Select">Disbursement</option>
+                                                                            <option value="Select">DSQ</option>
+                                                                            <option value="Select">Equity</option>
+                                                                        </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Code</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <input class="form-control" id="" type="text">
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Support Manual Creation</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <label class="bemSwitch">
+                                                                                    <input checked="" type="checkbox">
+                                                                                    <span class="bemSlider"></span>
+                                                                                </label>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Settlement Option</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="" disabled="">
+                                                                                    <option value="Select">Select</option>                                    
+                                                                                </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Event Category</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control bemCustom" id="">
+                                                                                    <option value="Select">Select</option>                                    
+                                                                                </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Add Sub Event</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control bemCustom" id="">
+                                                                                    <option value="Select">Select</option>
+                                                                                    <option value="Equity">Equity</option>
+                                                                                    <option value="Cost">Cost</option>
+                                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6 form-group">Description</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <input class="form-control" id="" type="text">
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Asset Class</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="">
+                                                                                    <option value="Select">Select</option>                                    
+                                                                                </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Active</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <label class="bemSwitch">
+                                                                                            <input checked="" type="checkbox">
+                                                                                            <span class="bemSlider"></span>
+                                                                                        </label>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Investor</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <label class="bemSwitch">
+                                                                                            <input type="checkbox">
+                                                                                            <span class="bemSlider"></span>
+                                                                                        </label>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Extra Qualifier</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control bemCustom" id="">
+                                                                                            <option value="Select">Select</option>                                    
+                                                                                        </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 text-right mar-b-20">
+                                                        <button type="button" class="btn btn-link link">Delete</button>
+                                                        <button type="button" class="btn btn-link link">Cancel</button>
+                                                        <button type="button" class="btn btn-primary">Submit</button>
+
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                            <!-- /.tab-pane -->
+                                            <div class="tab-pane" id="subEvent1">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6 form-group">Name <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="">
+                                                                                <option value="Select">FX Changes</option>                                                                                
+                                                                            </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Description <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="" disabled>
+                                                                            <option value="Select">Select</option>                                                                            
+                                                                        </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Type</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="" disabled>
+                                                                            <option value="Select">Settlement</option>                                    
+                                                                        </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 text-right mar-b-20">
+                                                        <button type="button" class="btn btn-link link">Delete</button>
+                                                        <button type="button" class="btn btn-link link">Cancel</button>
+                                                        <button type="button" class="btn btn-primary">Submit</button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.tab-pane -->
+                                        </div>
+                                        <!-- /.tab-content -->
+                                    </div>
+                                    <!-- nav-tabs-custom -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body" ng-show="oaes =='cet'">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!-- Custom Tabs -->
+                                    <div class="nav-tabs-custom">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="" data-target="#event2" data-toggle="tab" aria-expanded="true">Event</a></li>
+                                            <li class=""><a href="" data-target="#subEvent2" data-toggle="tab" aria-expanded="false">Sub Event</a></li>
+
+                                        </ul>
+                                        <div class="tab-content mar-t-25">
+                                            <div class="tab-pane active" id="event2">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6 form-group">Name <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <input class="form-control" id="" type="text">
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Code</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <input class="form-control" id="" type="text">
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Support Manual Creation</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <label class="bemSwitch">
+                                                                    <input checked="" type="checkbox">
+                                                                    <span class="bemSlider"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Settlement Option</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="">
+                                                                    <option value="Select">Select</option>                                    
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Event Category</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="">
+                                                                    <option value="Select">Select</option>                                    
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Add Sub Event</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="">
+                                                                    <option value="Select">Select</option>
+                                                                    <option value="Equity">Equity</option>
+                                                                    <option value="Cost">Cost</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">&nbsp;</div>
+                                                            <div class="col-xs-6">
+                                                                <a href="">
+                                                                    <i class="btn btn-bem" ng-class="'icn-plus'"></i> <span class="icn-text">Add</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6 form-group">Description <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <input class="form-control" id="" type="text">
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Asset Class</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control bemCustom" id="">
+                                                                    <option value="Select">Select</option>                                    
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Active</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <label class="bemSwitch">
+                                                                            <input checked="" type="checkbox">
+                                                                            <span class="bemSlider"></span>
+                                                                        </label>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Investor</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <label class="bemSwitch">
+                                                                            <input type="checkbox">
+                                                                            <span class="bemSlider"></span>
+                                                                        </label>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Extra Qualifier</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control bemCustom" id="">
+                                                                            <option value="Select">Select</option>                                    
+                                                                        </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="row pad-15 mar-t-25 mar-b-20">
+                                                    <div class="table-responsive no-padding">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Name</th>
+                                                                    <th>FX Changes</th>
+                                                                    <th>Description</th>
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="form-group">
+                                                                        <span class="checkbox">
+                                                                        <input id="name" type="checkbox" name="check" value="">
+                                                                        <label for="name"></label>
+                                                                        </span>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <span class="checkbox">
+                                                                        <input id="fx" type="checkbox" name="check" value="">
+                                                                        <label for="fx"></label>
+                                                                        </span>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <span class="checkbox">
+                                                                        <input id="description" type="checkbox" name="check" value="">
+                                                                        <label for="description"></label>
+                                                                        </span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <a href=""><i class="fa fa-trash-o fa-fw fa-lg pad-5" aria-hidden="true"></i></a>
+                                                                    </td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+
+
+
+
+                                                <div class="row">
+                                                    <div class="col-lg-12 text-right mar-b-20">
+                                                        <button type="button" class="btn btn-link link">Cancel</button>
+                                                        <button type="button" class="btn btn-primary">Submit</button>
+
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                            <!-- /.tab-pane -->
+                                            <div class="tab-pane" id="subEvent2">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6 form-group">Name <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <input class="form-control" id="" type="text">
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Description <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <input class="form-control" id="" type="text">
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Type <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control bemCustom" id="">
+                                                            <option value="Select">Select</option>                                    
+                                                        </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 text-right mar-b-20">
+                                                        <button type="button" class="btn btn-link link">Cancel</button>
+                                                        <button type="button" class="btn btn-primary">Submit</button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.tab-pane -->
+                                        </div>
+                                        <!-- /.tab-content -->
+                                    </div>
+                                    <!-- nav-tabs-custom -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

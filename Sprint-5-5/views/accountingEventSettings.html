@@ -1,0 +1,1265 @@
+<section class="content-header">
+    <h1>
+        Accounting Event Settings
+    </h1>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box-solid">
+                <div class="box-group">
+                    <div class="panel box">
+                        <div class="box-header with-border">
+                            <h4 class="box-title pull-left pad-t-5">
+                                Open Accounting Event Settings
+                            </h4>
+                            <div class="radio col-lg-9 pull-right">
+                                <div class="col-md-12 pad-t-5">
+                                    <div class="col-sm-4">
+                                        <input id="etc" type="radio" value="etc" name="oaes" ng-model="oaes" ng-checked="">
+                                        <label for="etc">Event Type Configurations</label>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <input id="eet" type="radio" value="eet" name="oaes" ng-model="oaes">
+                                        <label for="eet">Edit Event Type</label>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <input id="cet" type="radio" value="cet" name="oaes" ng-model="oaes">
+                                        <label for="cet">Create Event Type</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-body" ng-show="oaes =='etc'">
+
+                            <div class="row mar-b-20 pad-t-b-20">
+                                <div class="col-lg-3">
+                                    <h5>Event</h5>
+                                    <select class="form-control" id="">
+                                        <option value="Basis Adjustment">Basis Adjustment</option>
+                                        <option value="Basis Adjustment - non CF">Basis Adjustment - Non CF</option>
+                                        <option value="Cancellation">Cancellation</option>
+                                        <option value="Capital Gain">Capital Gain</option>
+                                        <option value="Cash Dividend">Cash Dividend</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h5>Sub Event</h5>
+                                    <select class="form-control" id="">
+                                        <option value="FX Changes">FX Changes</option>
+                                        <option value="Misc Expenses">Misc Expenses</option>
+                                        <option value="Select">Select</option>
+                                        <option value="Regular">Regular</option>
+                                        <option value="Settlement">Settlement</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h5>Instrument Type</h5>
+                                    <select class="form-control" id="">
+                                        <option value="Equity">Equity</option>                                    
+                                    </select>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h5>&nbsp;</h5>
+                                    <button type="button" class="btn btn-primary">Get Configuration</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="nav-tabs-custom pad-5">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="" data-target="#ac" data-toggle="tab" aria-expanded="true">Accounting Configuration</a></li>
+                                        <li class=""><a href="" data-target="#kpic" data-toggle="tab" aria-expanded="false">Key Performance Indicators Configuration</a></li>
+                                        <li class=""><a href="" data-target="#os" data-toggle="tab" aria-expanded="false">Other Settings</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active pad-t-b-20" id="ac">
+                                            <p class="lead mar-b-20">New Configuration from Template</p>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="col-lg-12 line-header">
+                                                        <span>Accounting &amp; Earning Method</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="row checkbox">
+                                                        <div class="col-lg-12 pad-t-b-20 height-60">
+                                                            <div class="col-sm-2 form-group">
+                                                                <input id="check1" type="checkbox" name="check" value="">
+                                                                <label for="check1">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                                            </div>
+                                                            <div class="col-sm-2 form-group">
+                                                                <input id="check2" type="checkbox" name="check" value="">
+                                                                <label for="check2">Checkbox</label>
+                                                            </div>
+                                                            <div class="col-sm-2 form-group">
+                                                                <input id="check3" type="checkbox" name="check" value="">
+                                                                <label for="check3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                                            </div>
+                                                            <div class="col-sm-2 form-group">
+                                                                <input id="check4" type="checkbox" name="check" value="">
+                                                                <label for="check4">Checkbox</label>
+                                                            </div>
+                                                            <div class="col-sm-2 form-group">
+                                                                <input id="check5" type="checkbox" name="check" value="">
+                                                                <label for="check5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                                            </div>
+                                                            <div class="col-sm-2 form-group">
+                                                                <input id="check6" type="checkbox" name="check" value="">
+                                                                <label for="check6">Checkbox</label>
+                                                            </div>
+                                                            <div class="col-sm-2 form-group">
+                                                                <input id="check7" type="checkbox" name="check" value="">
+                                                                <label for="check7">Checkbox</label>
+                                                            </div>
+                                                            <div class="col-sm-2 form-group">
+                                                                <input id="check8" type="checkbox" name="check" value="">
+                                                                <label for="check8">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                                            </div>
+                                                            <div class="col-sm-2 form-group">
+                                                                <input id="check9" type="checkbox" name="check" value="">
+                                                                <label for="check9">Checkbox</label>
+                                                            </div>
+                                                            <div class="col-sm-2 form-group">
+                                                                <input id="check10" type="checkbox" name="check" value="">
+                                                                <label for="check10">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                                            </div>
+                                                            <div class="col-sm-2 form-group">
+                                                                <input id="check11" type="checkbox" name="check" value="">
+                                                                <label for="check11">Checkbox</label>
+                                                            </div>
+                                                            <div class="col-sm-2 form-group">
+                                                                <input id="check12" type="checkbox" name="check" value="">
+                                                                <label for="check12">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>No. of Securities </th>
+                                                                            <th>Folder</th>
+                                                                            <th>Sub Folder</th>
+                                                                            <th>Associated Instrument</th>
+                                                                            <th>Amount KPI</th>
+                                                                            <th>Quantity KPI</th>
+                                                                            <th>Action</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="form-group">
+                                                                                <select class="form-control">
+                                                                                                <option>option 1</option>
+                                                                                                <option>option 2</option>
+                                                                                                <option>option 3</option>
+                                                                                                <option>option 4</option>
+                                                                                                <option>option 5</option>
+                                                                                            </select>
+                                                                            </td>
+                                                                            <td class="form-group">
+                                                                                <select class="form-control">
+                                                                                                    <option>option 1</option>
+                                                                                                    <option>option 2</option>
+                                                                                                    <option>option 3</option>
+                                                                                                    <option>option 4</option>
+                                                                                                    <option>option 5</option>
+                                                                                                </select>
+                                                                            </td>
+                                                                            <td class="form-group">
+                                                                                <select class="form-control">
+                                                                                                        <option>option 1</option>
+                                                                                                        <option>option 2</option>
+                                                                                                        <option>option 3</option>
+                                                                                                        <option>option 4</option>
+                                                                                                        <option>option 5</option>
+                                                                                                    </select>
+                                                                            </td>
+                                                                            <td class="form-group">
+                                                                                <select class="form-control">
+                                                                                                            <option>option 1</option>
+                                                                                                            <option>option 2</option>
+                                                                                                            <option>option 3</option>
+                                                                                                            <option>option 4</option>
+                                                                                                            <option>option 5</option>
+                                                                                                        </select>
+                                                                            </td>
+                                                                            <td class="form-group">
+                                                                                <select class="form-control">
+                                                                                                                <option>option 1</option>
+                                                                                                                <option>option 2</option>
+                                                                                                                <option>option 3</option>
+                                                                                                                <option>option 4</option>
+                                                                                                                <option>option 5</option>
+                                                                                                            </select>
+                                                                            </td>
+                                                                            <td class="form-group">
+                                                                                <select class="form-control">
+                                                                                                                    <option>option 1</option>
+                                                                                                                    <option>option 2</option>
+                                                                                                                    <option>option 3</option>
+                                                                                                                    <option>option 4</option>
+                                                                                                                    <option>option 5</option>
+                                                                                                                </select>
+                                                                            </td>
+                                                                            <td><button type="button" class="btn btn-primary">Insert</button></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="col-lg-12 line-header">
+                                                        <span>Insert New Security Mapping</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="teble-responsive pad-t-20">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Security Type</th>
+                                                                    <th>Accounting and Earning Method</th>
+                                                                    <th>Associated Instrument</th>
+                                                                    <th>Folder</th>
+                                                                    <th>Sub Folder</th>
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="form-group">
+                                                                        <select class="form-control">
+                                                                                                            <option>option 1</option>
+                                                                                                            <option>option 2</option>
+                                                                                                            <option>option 3</option>
+                                                                                                            <option>option 4</option>
+                                                                                                            <option>option 5</option>
+                                                                                                        </select>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <select class="form-control">
+                                                                                                                <option>option 1</option>
+                                                                                                                <option>option 2</option>
+                                                                                                                <option>option 3</option>
+                                                                                                                <option>option 4</option>
+                                                                                                                <option>option 5</option>
+                                                                                                            </select>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <select class="form-control">
+                                                                                                                    <option>option 1</option>
+                                                                                                                    <option>option 2</option>
+                                                                                                                    <option>option 3</option>
+                                                                                                                    <option>option 4</option>
+                                                                                                                    <option>option 5</option>
+                                                                                                                </select>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <select class="form-control">
+                                                                                                                        <option>option 1</option>
+                                                                                                                        <option>option 2</option>
+                                                                                                                        <option>option 3</option>
+                                                                                                                        <option>option 4</option>
+                                                                                                                        <option>option 5</option>
+                                                                                                                    </select>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <select class="form-control">
+                                                                                                                            <option>option 1</option>
+                                                                                                                            <option>option 2</option>
+                                                                                                                            <option>option 3</option>
+                                                                                                                            <option>option 4</option>
+                                                                                                                            <option>option 5</option>
+                                                                                                                        </select>
+                                                                    </td>
+                                                                    <td><button type="button" class="btn btn-primary">Insert</button></td>
+                                                                </tr>
+
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="col-lg-12 border-gray">
+                                                        <div class="row">
+                                                            <div class="col-lg-12 header-blue mar-b-10">
+                                                                <div class="row">
+                                                                    <div class="col-lg-2">
+                                                                        <h6 class="mar-0"><strong>Revolving Commitment</strong></h6>
+                                                                    </div>
+                                                                    <div class="col-lg-3">
+                                                                        <h6 class="mar-0"><strong>Security Type</strong></h6>
+                                                                    </div>
+                                                                    <div class="col-lg-2">
+                                                                        <h6 class="mar-0"><strong>Accounting and Earning Method</strong></h6>
+                                                                    </div>
+                                                                    <div class="col-lg-2">
+                                                                        <h6 class="mar-0"><strong>Associated Instrument</strong></h6>
+                                                                    </div>
+                                                                    <div class="col-lg-2">
+                                                                        <h6 class="mar-0"><strong>Folder and Sub Folder</strong></h6>
+                                                                    </div>
+                                                                    <div class="col-lg-1">
+                                                                        <h6 class="mar-0"><strong>Action</strong></h6>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <div class="row pad-t-10">
+                                                                    <div class="col-lg-2 form-group">
+                                                                        <span class="pull-left mar-r-40"><i class="fa fa-files-o text-blue"></i></span>
+                                                                        <span class="pull-left checkbox mar-t-7">
+                                                                                <input id="rc1" type="checkbox" name="check" value="">
+                                                                                <label for="rc1"></label>
+                                                                            </span>
+                                                                    </div>
+                                                                    <div class="col-lg-3 form-group">
+                                                                        <button class="btn btn-bem" ng-model="securityType" ng-class="securityType ? 'icn-minus' : 'icn-plus'" ng-click="securityType = !securityType;">                                                                                
+                                                                                </button> American Depository Receipts (ADR)
+                                                                    </div>
+                                                                    <div class="col-lg-2 form-group">Not Applicable</div>
+                                                                    <div class="col-lg-2 form-group">
+                                                                        <select class="form-control">
+                                                                                    <option>option 1</option>
+                                                                                    <option>option 2</option>
+                                                                                    <option>option 3</option>
+                                                                                    <option>option 4</option>
+                                                                                    <option>option 5</option>
+                                                                                  </select>
+                                                                    </div>
+                                                                    <div class="col-lg-2 form-group">
+                                                                        <span class="pull-left" style="width:45%; margin-right: 15px;">
+                                                                                    <select class="form-control">
+                                                                                            <option>option 1</option>
+                                                                                            <option>option 2</option>
+                                                                                            <option>option 3</option>
+                                                                                            <option>option 4</option>
+                                                                                            <option>option 5</option>
+                                                                                          </select>
+                                                                            </span>
+
+                                                                        <span class="pull-left" style="width:45%;">
+                                                                                    <select class="form-control">
+                                                                                            <option>option 1</option>
+                                                                                            <option>option 2</option>
+                                                                                            <option>option 3</option>
+                                                                                            <option>option 4</option>
+                                                                                            <option>option 5</option>
+                                                                                          </select>
+                                                                            </span>
+                                                                    </div>
+                                                                    <div class="col-lg-1 form-group">
+                                                                        <a href=""><i class="fa fa-trash-o fa-fw fa-lg pad-5" aria-hidden="true"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 pad-t-20" ng-show="securityType">
+                                                        <div class="row">
+                                                            <div class="table-responsive">
+                                                                <table class="table mar-0">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Transaction Type</th>
+                                                                            <th>Code</th>
+                                                                            <th>Is Active?</th>
+                                                                            <th>Amount KPI</th>
+                                                                            <th>Amount Attribute</th>
+                                                                            <th>Quantity KPI</th>
+                                                                            <th>Quantity Attribute</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Equity -- XYZ</td>
+                                                                            <td>1911</td>
+                                                                            <td>True</td>
+                                                                            <td>
+                                                                                <div class="form-group">
+                                                                                    <select class="form-control">
+                                                                                                        <option>option 1</option>
+                                                                                                        <option>option 2</option>
+                                                                                                        <option>option 3</option>
+                                                                                                        <option>option 4</option>
+                                                                                                        <option>option 5</option>
+                                                                                                    </select>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>Required</td>
+                                                                            <td>&nbsp;</td>
+                                                                            <td>N/A</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="table-responsive pad-t-20">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Revolving Commitment</th>
+                                                                    <th>Security Type</th>
+                                                                    <th>Accounting and Earning Method</th>
+                                                                    <th>Associated Instrument</th>
+                                                                    <th colspan="2">Folder and Sub Folder</th>
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td> <span class="pull-left mar-r-40"><i class="fa fa-files-o text-blue"></i></span>
+                                                                        <span class="pull-left checkbox">
+                                                                            <input id="rc1" type="checkbox" name="check" value="">
+                                                                            <label for="rc1"></label>
+                                                                        </span>
+                                                                    </td>
+                                                                    <td><button class="btn btn-bem" ng-model="securityType" ng-class="securityType ? 'icn-minus' : 'icn-plus'" ng-click="securityType = !securityType;">                                                                                
+                                                                        </button> American Depository Receipts (ADR)
+                                                                    </td>
+                                                                    <td>Not Applicable</td>
+                                                                    <td>
+                                                                        <div class="form-group">
+                                                                            <select class="form-control">
+                                                                                        <option>option 1</option>
+                                                                                        <option>option 2</option>
+                                                                                        <option>option 3</option>
+                                                                                        <option>option 4</option>
+                                                                                        <option>option 5</option>
+                                                                                      </select>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="form-group">
+                                                                            <select class="form-control">
+                                                                                            <option>option 1</option>
+                                                                                            <option>option 2</option>
+                                                                                            <option>option 3</option>
+                                                                                            <option>option 4</option>
+                                                                                            <option>option 5</option>
+                                                                                          </select>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="form-group">
+                                                                            <select class="form-control">
+                                                                                                <option>option 1</option>
+                                                                                                <option>option 2</option>
+                                                                                                <option>option 3</option>
+                                                                                                <option>option 4</option>
+                                                                                                <option>option 5</option>
+                                                                                              </select>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <a href=""><i class="fa fa-trash-o fa-fw fa-lg pad-5" aria-hidden="true"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+
+
+                                            <div class="row">
+                                                <div class="col-lg-12 text-right pad-t-20">
+                                                    <button type="button" class="btn btn-link link">Cancel</button>
+                                                    <button type="button" class="btn btn-primary">Submit</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.tab-pane -->
+                                        <div class="tab-pane pad-t-b-20" id="kpic">
+                                            <div class="row">
+                                                <div class="col-sm-8"></div>
+                                                <div class="col-sm-4 pad-t-b-20">
+                                                    <div class="input-group">
+                                                        <input class="form-control" placeholder="Search" id="" type="text">
+                                                        <div class="input-group-btn">
+                                                            <button class="btn btn-primary btn-right" type="submit">
+                                                                    <span class="glyphicon glyphicon-search"></span>
+                                                                </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-responsive no-padding">
+                                                <table class="table border-gray">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>KPI Name</th>
+                                                            <th>Visible</th>
+                                                            <th>Calculation Effect</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="form-group">
+                                                                <select class="form-control">
+                                                                                <option>Not Applicable</option>
+                                                                                <option>Applicable</option>                                                                                   
+                                                                              </select>
+                                                            </td>
+                                                            <td class="form-group">
+                                                                <select class="form-control">
+                                                                            <option>Not Applicable</option>
+                                                                            <option>Applicable</option>                                                                                   
+                                                                          </select>
+                                                            </td>
+                                                            <td class="form-group">
+                                                                <select class="form-control">
+                                                                            <option>Not Applicable</option>
+                                                                            <option>Applicable</option>                                                                                   
+                                                                          </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cancellation Transfer</td>
+                                                            <td>
+                                                                <label class="bemSwitch">
+                                                                    <input checked="" type="checkbox">
+                                                                <span class="bemSlider"></span>
+                                                            </label></td>
+                                                            <td class="form-group">
+                                                                <select class="form-control">
+                                                                            <option>Not Applicable</option>
+                                                                            <option>Applicable</option>                                                                                   
+                                                                          </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Capital Return</td>
+                                                            <td>
+                                                                <label class="bemSwitch">
+                                                                        <input checked="" type="checkbox">
+                                                                    <span class="bemSlider"></span>
+                                                                </label></td>
+                                                            <td class="form-group">
+                                                                <select class="form-control">
+                                                                                <option>Not Applicable</option>
+                                                                                <option>Applicable</option>                                                                                   
+                                                                              </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cost of Sale Cash Basic Adjustment</td>
+                                                            <td>
+                                                                <label class="bemSwitch">
+                                                                            <input checked="" type="checkbox">
+                                                                        <span class="bemSlider"></span>
+                                                                    </label></td>
+                                                            <td class="form-group">
+                                                                <select class="form-control">
+                                                                                    <option>Not Applicable</option>
+                                                                                    <option>Applicable</option>                                                                                   
+                                                                                  </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cancellation</td>
+                                                            <td>
+                                                                <label class="bemSwitch">
+                                                                                <input checked="" type="checkbox">
+                                                                            <span class="bemSlider"></span>
+                                                                        </label></td>
+                                                            <td class="form-group">
+                                                                <select class="form-control">
+                                                                                        <option>Not Applicable</option>
+                                                                                        <option>Applicable</option>                                                                                   
+                                                                                      </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cancellation Transfer</td>
+                                                            <td>
+                                                                <label class="bemSwitch">
+                                                                                    <input checked="" type="checkbox">
+                                                                                <span class="bemSlider"></span>
+                                                                            </label></td>
+                                                            <td class="form-group">
+                                                                <select class="form-control">
+                                                                                            <option>Not Applicable</option>
+                                                                                            <option>Applicable</option>                                                                                   
+                                                                                          </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Capital Return</td>
+                                                            <td>
+                                                                <label class="bemSwitch">
+                                                                                        <input checked="" type="checkbox">
+                                                                                    <span class="bemSlider"></span>
+                                                                                </label></td>
+                                                            <td class="form-group">
+                                                                <select class="form-control">
+                                                                                                <option>Not Applicable</option>
+                                                                                                <option>Applicable</option>                                                                                   
+                                                                                              </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Capital Return</td>
+                                                            <td>
+                                                                <label class="bemSwitch">
+                                                                                            <input checked="" type="checkbox">
+                                                                                        <span class="bemSlider"></span>
+                                                                                    </label></td>
+                                                            <td class="form-group">
+                                                                <select class="form-control">
+                                                                                                    <option>Not Applicable</option>
+                                                                                                    <option>Applicable</option>                                                                                   
+                                                                                                  </select>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 text-right">
+                                                    <button type="button" class="btn btn-link link">Cancel</button>
+                                                    <button type="button" class="btn btn-primary">Submit</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.tab-pane -->
+                                        <div class="tab-pane pad-t-b-20" id="os">
+                                            <div class="row mar-t-b-20">
+                                                <div class="col-lg-4">
+                                                    <h5><strong>Proration Method</strong></h5>
+                                                </div>
+                                                <div class="col-lg-4 form-group">
+                                                    <select class="form-control">
+                                                                <option>Share</option>                                                                
+                                                              </select>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row mar-t-15">
+                                                <div class="col-md-4">
+                                                    <h5><strong>Calculate Cost of Sales (Cost Basis)</strong></h5>
+                                                    <h5>Lorem ipsum dolor sit amet, consectetur </h5>
+                                                </div>
+                                                <div class="col-md-2 ">
+                                                    <label class="bemSwitch">
+                                                                <input checked="" type="checkbox">
+                                                            <span class="bemSlider"></span>
+                                                </label></div>
+                                                <div class="col-md-4">
+                                                    <h5><strong>Include Swift Message</strong></h5>
+                                                    <h5>Lorem ipsum dolor sit amet, consectetur </h5>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label class="bemSwitch">
+                                                                    <input checked="" type="checkbox">
+                                                                <span class="bemSlider"></span>
+                                                    </label></div>
+                                                <div class="col-md-4">
+                                                    <h5><strong>Calculate Cost of Sales (Cash Basis)</strong></h5>
+                                                    <h5>Lorem ipsum dolor sit amet, consectetur </h5>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label class="bemSwitch">
+                                                                        <input checked="" type="checkbox">
+                                                                    <span class="bemSlider"></span>
+                                                        </label></div>
+                                                <div class="col-md-4">
+                                                    <h5><strong>Include Zero Transaction Amount</strong></h5>
+                                                    <h5>Lorem ipsum dolor sit amet, consectetur </h5>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label class="bemSwitch">
+                                                                            <input checked="" type="checkbox">
+                                                                        <span class="bemSlider"></span>
+                                                            </label></div>
+                                                <div class="col-md-4">
+                                                    <h5><strong>Enforce Marker-Checker</strong></h5>
+                                                    <h5>Lorem ipsum dolor sit amet, consectetur </h5>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label class="bemSwitch">
+                                                                                <input checked="" type="checkbox">
+                                                                            <span class="bemSlider"></span>
+                                                                </label></div>
+                                                <div class="col-md-4">
+                                                    <h5><strong>Exclude Transactions with Zero Amounts</strong></h5>
+                                                    <h5>Lorem ipsum dolor sit amet, consectetur </h5>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label class="bemSwitch">
+                                                                                                    <input checked="" type="checkbox">
+                                                                                                <span class="bemSlider"></span>
+                                                                                    </label></div>
+                                                <div class="col-md-4">
+                                                    <h5><strong>Configure Addendum Setting </strong></h5>
+                                                    <h5>Lorem ipsum dolor sit amet, consectetur </h5>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label class="bemSwitch">
+                                                                                    <input checked="" type="checkbox">
+                                                                                <span class="bemSlider"></span>
+                                                                    </label></div>
+
+                                            </div>
+                                            <div class="row mar-t-15">
+                                                <div class="col-lg-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table mar-0">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th width="30%">Code</th>
+                                                                    <th width="30%">Name</th>
+                                                                    <th width="30%">Description</th>
+                                                                    <th width="30%">Action</th>
+
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="form-group">
+                                                                        <select class="form-control" id="">                                                                                
+                                                                            <option value="Capital Return">Capital Return</option>
+                                                                            <option value="Cancellation">Cancellation</option>
+                                                                            <option value="Cancellation Transfer">Cancellation Transfer</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <select class="form-control" id="">                                                                                
+                                                                            <option value="">Select</option>                                                                                    
+                                                                        </select>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <select class="form-control" id="">                                                                                
+                                                                                <option value="yes">Yes</option>
+                                                                                <option value="no">No</option> 
+                                                                            </select>
+                                                                    </td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="table-responsive addendum-table">
+                                                        <table class="table table-striped table-hover mar-0">
+                                                            <tbody>
+                                                                <tr class="border-gray">
+                                                                    <td width="30%">ADVS</td>
+                                                                    <td width="30%">Advisory Fee</td>
+                                                                    <td width="30%">Advisory Fee</td>
+                                                                    <td width="30%">
+                                                                        <a href="" class="fa fa-fw fa-pencil-square-o text-black fa-lg" aria-hidden="true"></a>
+                                                                        <a href="" class="fa fa-fw fa-trash-o text-black fa-lg" aria-hidden="true"></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="border-gray">
+                                                                    <td width="30%">ADVS</td>
+                                                                    <td width="30%">Advisory Fee</td>
+                                                                    <td width="30%">Advisory Fee</td>
+                                                                    <td width="30%">
+                                                                        <a href="" class="fa fa-fw fa-pencil-square-o text-black fa-lg" aria-hidden="true"></a>
+                                                                        <a href="" class="fa fa-fw fa-trash-o text-black fa-lg" aria-hidden="true"></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="border-gray">
+                                                                    <td width="30%">ADVS</td>
+                                                                    <td width="30%">Advisory Fee</td>
+                                                                    <td width="30%">Advisory Fee</td>
+                                                                    <td width="30%">
+                                                                        <a href="" class="fa fa-fw fa-pencil-square-o text-black fa-lg" aria-hidden="true"></a>
+                                                                        <a href="" class="fa fa-fw fa-trash-o text-black fa-lg" aria-hidden="true"></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="border-gray">
+                                                                    <td width="30%">ADVS</td>
+                                                                    <td width="30%">Advisory Fee</td>
+                                                                    <td width="30%">Advisory Fee</td>
+                                                                    <td width="30%">
+                                                                        <a href="" class="fa fa-fw fa-pencil-square-o text-black fa-lg" aria-hidden="true"></a>
+                                                                        <a href="" class="fa fa-fw fa-trash-o text-black fa-lg" aria-hidden="true"></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="border-gray">
+                                                                    <td width="30%">ADVS</td>
+                                                                    <td width="30%">Advisory Fee</td>
+                                                                    <td width="30%">Advisory Fee</td>
+                                                                    <td width="30%">
+                                                                        <a href="" class="fa fa-fw fa-pencil-square-o text-black fa-lg" aria-hidden="true"></a>
+                                                                        <a href="" class="fa fa-fw fa-trash-o text-black fa-lg" aria-hidden="true"></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="border-gray">
+                                                                    <td width="30%">ADVS</td>
+                                                                    <td width="30%">Advisory Fee</td>
+                                                                    <td width="30%">Advisory Fee</td>
+                                                                    <td width="30%">
+                                                                        <a href="" class="fa fa-fw fa-pencil-square-o text-black fa-lg" aria-hidden="true"></a>
+                                                                        <a href="" class="fa fa-fw fa-trash-o text-black fa-lg" aria-hidden="true"></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="border-gray">
+                                                                    <td width="30%">ADVS</td>
+                                                                    <td width="30%">Advisory Fee</td>
+                                                                    <td width="30%">Advisory Fee</td>
+                                                                    <td width="30%">
+                                                                        <a href="" class="fa fa-fw fa-pencil-square-o text-black fa-lg" aria-hidden="true"></a>
+                                                                        <a href="" class="fa fa-fw fa-floppy-o text-black fa-lg" aria-hidden="true"></a>
+                                                                        <a href="" class="fa fa-fw fa-trash-o text-black fa-lg" aria-hidden="true"></a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="table-responsive" style="margin-top: -3px;">
+                                                        <table class="table">
+
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <a href="" data-toggle="modal" data-target="#addAddendum">
+                                                                            <i class="btn btn-bem" ng-class="'icn-plus'"></i> <span class="icn-text">Add New Addendum</span>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-12 text-right">
+                                                    <button type="button" class="btn btn-link link">Cancel</button>
+                                                    <button type="button" class="btn btn-primary">Submit</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.tab-pane -->
+                                    </div>
+                                    <!-- /.tab-content -->
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="box-body" ng-show="oaes =='eet'">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!-- Custom Tabs -->
+                                    <div class="nav-tabs-custom">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="" data-target="#event1" data-toggle="tab" aria-expanded="true">Event</a></li>
+                                            <li class=""><a href="" data-target="#subEvent1" data-toggle="tab" aria-expanded="false">Sub Event</a></li>
+
+                                        </ul>
+                                        <div class="tab-content mar-t-25">
+                                            <div class="tab-pane active" id="event1">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6 form-group">Name <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="">
+                                                                            <option value="Select">Select</option>
+                                                                            <option value="Select">Basis Adjustment</option>
+                                                                            <option value="Select">Cancellation</option>
+                                                                            <option value="Select">Capital Gain</option>
+                                                                            <option value="Select">Disbursement</option>
+                                                                            <option value="Select">DSQ</option>
+                                                                            <option value="Select">Equity</option>
+                                                                        </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Code</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <input class="form-control" id="" type="text">
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Support Manual Creation</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <label class="bemSwitch">
+                                                                                    <input checked="" type="checkbox">
+                                                                                    <span class="bemSlider"></span>
+                                                                                </label>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Settlement Option</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="" disabled="">
+                                                                                    <option value="Select">Select</option>                                    
+                                                                                </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Event Category</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control bemCustom" id="">
+                                                                                    <option value="Select">Select</option>                                    
+                                                                                </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Add Sub Event</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control bemCustom" id="">
+                                                                                    <option value="Select">Select</option>
+                                                                                    <option value="Equity">Equity</option>
+                                                                                    <option value="Cost">Cost</option>
+                                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6 form-group">Description</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <input class="form-control" id="" type="text">
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Asset Class</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="">
+                                                                                    <option value="Select">Select</option>                                    
+                                                                                </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Active</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <label class="bemSwitch">
+                                                                                            <input checked="" type="checkbox">
+                                                                                            <span class="bemSlider"></span>
+                                                                                        </label>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Investor</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <label class="bemSwitch">
+                                                                                            <input type="checkbox">
+                                                                                            <span class="bemSlider"></span>
+                                                                                        </label>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Extra Qualifier</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control bemCustom" id="">
+                                                                                            <option value="Select">Select</option>                                    
+                                                                                        </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 text-right mar-b-20">
+                                                        <button type="button" class="btn btn-link link">Delete</button>
+                                                        <button type="button" class="btn btn-link link">Cancel</button>
+                                                        <button type="button" class="btn btn-primary">Submit</button>
+
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                            <!-- /.tab-pane -->
+                                            <div class="tab-pane" id="subEvent1">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6 form-group">Name <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="">
+                                                                                <option value="Select">FX Changes</option>                                                                                
+                                                                            </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Description <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="" disabled>
+                                                                            <option value="Select">Select</option>                                                                            
+                                                                        </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Type</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="" disabled>
+                                                                            <option value="Select">Settlement</option>                                    
+                                                                        </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 text-right mar-b-20">
+                                                        <button type="button" class="btn btn-link link">Delete</button>
+                                                        <button type="button" class="btn btn-link link">Cancel</button>
+                                                        <button type="button" class="btn btn-primary">Submit</button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.tab-pane -->
+                                        </div>
+                                        <!-- /.tab-content -->
+                                    </div>
+                                    <!-- nav-tabs-custom -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box-body" ng-show="oaes =='cet'">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!-- Custom Tabs -->
+                                    <div class="nav-tabs-custom">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="" data-target="#event2" data-toggle="tab" aria-expanded="true">Event</a></li>
+                                            <li class=""><a href="" data-target="#subEvent2" data-toggle="tab" aria-expanded="false">Sub Event</a></li>
+
+                                        </ul>
+                                        <div class="tab-content mar-t-25">
+                                            <div class="tab-pane active" id="event2">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6 form-group">Name <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <input class="form-control" id="" type="text">
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Code</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <input class="form-control" id="" type="text">
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Support Manual Creation</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <label class="bemSwitch">
+                                                                    <input checked="" type="checkbox">
+                                                                    <span class="bemSlider"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Settlement Option</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="">
+                                                                    <option value="Select">Select</option>                                    
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Event Category</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="">
+                                                                    <option value="Select">Select</option>                                    
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Add Sub Event</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control" id="">
+                                                                    <option value="Select">Select</option>
+                                                                    <option value="Equity">Equity</option>
+                                                                    <option value="Cost">Cost</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">&nbsp;</div>
+                                                            <div class="col-xs-6">
+                                                                <a href="">
+                                                                    <i class="btn btn-bem" ng-class="'icn-plus'"></i> <span class="icn-text">Add</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6 form-group">Description <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <input class="form-control" id="" type="text">
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Asset Class</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control bemCustom" id="">
+                                                                    <option value="Select">Select</option>                                    
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Active</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <label class="bemSwitch">
+                                                                            <input checked="" type="checkbox">
+                                                                            <span class="bemSlider"></span>
+                                                                        </label>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Investor</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <label class="bemSwitch">
+                                                                            <input type="checkbox">
+                                                                            <span class="bemSlider"></span>
+                                                                        </label>
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Extra Qualifier</div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control bemCustom" id="">
+                                                                            <option value="Select">Select</option>                                    
+                                                                        </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="row pad-15 mar-t-25 mar-b-20">
+                                                    <div class="table-responsive no-padding">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Name</th>
+                                                                    <th>FX Changes</th>
+                                                                    <th>Description</th>
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="form-group">
+                                                                        <span class="checkbox">
+                                                                        <input id="name" type="checkbox" name="check" value="">
+                                                                        <label for="name"></label>
+                                                                        </span>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <span class="checkbox">
+                                                                        <input id="fx" type="checkbox" name="check" value="">
+                                                                        <label for="fx"></label>
+                                                                        </span>
+                                                                    </td>
+                                                                    <td class="form-group">
+                                                                        <span class="checkbox">
+                                                                        <input id="description" type="checkbox" name="check" value="">
+                                                                        <label for="description"></label>
+                                                                        </span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <a href=""><i class="fa fa-trash-o fa-fw fa-lg pad-5" aria-hidden="true"></i></a>
+                                                                    </td>
+                                                                </tr>
+
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+
+
+
+
+                                                <div class="row">
+                                                    <div class="col-lg-12 text-right mar-b-20">
+                                                        <button type="button" class="btn btn-link link">Cancel</button>
+                                                        <button type="button" class="btn btn-primary">Submit</button>
+
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                            <!-- /.tab-pane -->
+                                            <div class="tab-pane" id="subEvent2">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="col-xs-6 form-group">Name <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <input class="form-control" id="" type="text">
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Description <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <input class="form-control" id="" type="text">
+                                                            </div>
+                                                            <div class="col-xs-6 form-group">Type <sup> * </sup></div>
+                                                            <div class="col-xs-6 form-group">
+                                                                <select class="form-control bemCustom" id="">
+                                                            <option value="Select">Select</option>                                    
+                                                        </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 text-right mar-b-20">
+                                                        <button type="button" class="btn btn-link link">Cancel</button>
+                                                        <button type="button" class="btn btn-primary">Submit</button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.tab-pane -->
+                                        </div>
+                                        <!-- /.tab-content -->
+                                    </div>
+                                    <!-- nav-tabs-custom -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="addAddendum" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add New Addendums</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-4 form-group">Code</div>
+                    <div class="col-lg-8 form-group">
+                        <input class="form-control" id="" type="text">
+                    </div>
+                    <div class="col-lg-4 form-group">Name</div>
+                    <div class="col-lg-8 form-group">
+                        <input class="form-control" id="" type="text">
+                    </div>
+                    <div class="col-lg-4 form-group">Description</div>
+                    <div class="col-lg-8 form-group">
+                        <input class="form-control" id="" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary pull-right">Submit</button>
+                <button type="button" class="btn btn-link link pull-right">Cancel</button>
+
+            </div>
+        </div>
+
+    </div>
+</div>

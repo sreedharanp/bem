@@ -1,0 +1,403 @@
+<section class="content-header">
+    <h1>
+        Event Details
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-cog fa-fw"></i> Event Settings</a></li>
+    </ol>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box-solid">
+                <div id="accordion" class="box-group">
+                    <div class="panel box">
+                        <div class="box-header with-border panel-heading">
+                            <h4 class="box-title">
+                                <a class="accordion-toggle pad-t-5" href="" ng-model="eventSub" ng-click="eventSub=!eventSub">
+                                        Refine Search
+                                    </a>
+                            </h4>
+                        </div>
+                        <div id="refinedSearch" class="panel-collapse" ng-hide="eventSub">
+                            <div class="box-body">
+                                <div class="row mar-b-20">
+                                    <div class="col-lg-6">
+                                        <h4><i class="fa fa-circle" style="color: #00B0FF;" aria-hidden="true"></i> EPMS - TM > Interface Imported</h4>
+                                    </div>
+                                    <div class="col-lg-6 text-right">
+                                        <a href="" ui-sref="eventDetails">Back to Event</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div id="bemBarChart" style="width:80%; margin: 0 auto; height: 300px"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel box">
+                        <div class="box-header with-border panel-heading">
+                            <h4 class="box-title">
+                                <a class="accordion-toggle pad-t-5" data-toggle="collapse" data-parent="#accordion" data-target="#searchEvents" href="">
+                                        Search Events
+                                    </a>
+                            </h4>
+                        </div>
+                        <div id="searchEvents" class="panel-collapse collapse">
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Legal Entity</h5>
+                                        <select class="form-control" id="">
+                                                    <option value="">Select</option>                                                      
+                                                </select>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Institution Details</h5>
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Institution Details" id="" type="text">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-primary btn-right" type="submit">
+                                                                <span class="glyphicon glyphicon-search"></span>
+                                                            </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Institution Projects <sup> * </sup></h5>
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Institution Projects" id="" type="text">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-primary btn-right" type="submit">
+                                                                    <span class="glyphicon glyphicon-search"></span>
+                                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Investran Batch ID</h5>
+                                        <input class="form-control" id="" type="text">
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>JE Type</h5>
+                                        <select class="form-control" id="">
+                                                        <option value="">Select</option>                                                      
+                                                    </select>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Initiative</h5>
+                                        <select class="form-control" id="">
+                                                        <option value="">Select</option>                                                      
+                                                    </select>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Investor</h5>
+                                        <select class="form-control" id="">
+                                                        <option value="">Select</option>                                                      
+                                                    </select>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Imported</h5>
+                                        <select class="form-control" id="">
+                                                        <option value="">Select</option>                                                      
+                                                    </select>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Created By</h5>
+                                        <input class="form-control" id="" type="text">
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Created Date</h5>
+                                        <div class='input-group date'>
+                                            <input id="date-picker-cd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                            <label for="date-picker-cd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                    </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Changed By</h5>
+                                        <div class='input-group date'>
+                                            <input id="date-picker-cb" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                            <label for="date-picker-cb" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                        </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Changed Date</h5>
+                                        <div class='input-group date'>
+                                            <input id="date-picker-chd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                            <label for="date-picker-chd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 pad-t-20">
+                                        <button type="button" class="btn btn-primary pull-right">Search</button>
+                                        <button type="button" class="btn btn-link link pull-right">Clear All</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="row">
+                                <h5 class="pull-left mar-l-15">
+                                    Showing 1 to 10 of 1234 with 75 pages
+                                </h5>
+                                <ul class="nav navbar-nav pull-right">
+                                    <li class="pad-l-15" style="padding-top: 7px;">Showing Records</li>
+                                    <li class="form-group pad-l-15 mar-r-15">
+                                        <select class="form-control" id="">
+                                                                        <option value="1">10</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">3</option>
+                                                                        <option value="4">4</option>
+                                                                    </select>
+                                    </li>
+                                    <li class="pad-l-15" style="padding-top: 7px;">Jump To</li>
+                                    <li class="form-group pad-l-15 mar-r-15">
+                                        <select class="form-control" id="">
+                                                                        <option value="1">10</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">3</option>
+                                                                        <option value="4">4</option>
+                                                                    </select>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="col-lg-5 pad-0">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover height-small">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Link</th>
+                                                        <th>Event ID
+                                                            <a href="" class="fa fa-sort text-black font-12" aria-hidden="true"></a>
+                                                        </th>
+                                                        <th>Event Type
+                                                            <a href="" class="fa fa-sort text-black font-12" aria-hidden="true"></a>
+                                                        </th>
+                                                        <th>Event Status
+                                                            <a href="" class="fa fa-sort text-black font-12" aria-hidden="true"></a>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="bg-gray">
+                                                        <td>
+                                                            <a href="" class="glyphicon glyphicon-search"></a>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <input class="form-control" id="" type="text">
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                    <option value="1">Disbursement</option>                                                                        
+                                                                </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                    <option value="1">New</option>                                                                            
+                                                                </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="" class="glyphicon glyphicon-option-vertical"></a>
+                                                        </td>
+                                                        <td><a href="">20001</a></td>
+                                                        <td>Disbursement</td>
+                                                        <td><i class="fa fa-fw fa-circle" aria-hidden="true" style="color: #00B0FF;"></i> New</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="" class="glyphicon glyphicon-option-vertical"></a>
+                                                        </td>
+                                                        <td><a href="">20001</a></td>
+                                                        <td>Disbursement</td>
+                                                        <td><i class="fa fa-fw fa-circle" aria-hidden="true" style="color: #339966;"></i> New</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 pad-0">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover height-small">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Institution
+                                                            <a href="" class="fa fa-sort text-black font-12" aria-hidden="true"></a>
+                                                        </th>
+                                                        <th>Project ID
+                                                            <a href="" class="fa fa-sort text-black font-12" aria-hidden="true"></a>
+                                                        </th>
+                                                        <th>Investor
+                                                            <a href="" class="fa fa-sort text-black font-12" aria-hidden="true"></a>
+                                                        </th>
+                                                        <th>Initiative
+                                                            <a href="" class="fa fa-sort text-black font-12" aria-hidden="true"></a>
+                                                        </th>
+                                                        <th>EPMS ID
+                                                            <a href="" class="fa fa-sort text-black font-12" aria-hidden="true"></a>
+                                                        </th>
+                                                        <th>Import Ref ID
+                                                            <a href="" class="fa fa-sort text-black" aria-hidden="true"></a>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="bg-gray">
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                            <option value="1">XYZ Co</option>                                                                        
+                                                                        </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <input class="form-control" id="" type="text">
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                                <option value="1">IFC</option>                                                                        
+                                                                            </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <select class="form-control" id="">
+                                                                                    <option value="1">ABS</option>                                                                        
+                                                                                </select>
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <input class="form-control" id="" type="text">
+                                                        </td>
+                                                        <td class="form-group">
+                                                            <input class="form-control" id="" type="text">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>XYZ Co</td>
+                                                        <td>8002</td>
+                                                        <td>IFC</td>
+                                                        <td>Intiative</td>
+                                                        <td>7009</td>
+                                                        <td>3002</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>XYZ Co</td>
+                                                        <td>8002</td>
+                                                        <td>IFC</td>
+                                                        <td>Intiative</td>
+                                                        <td>7009</td>
+                                                        <td>3002</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="pagination pull-right charectorSearch">
+                                        <a href="#"><i class="fa fa-angle-left fa-fw" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-angle-double-left fa-fw" aria-hidden="true"></i></a>
+                                        <a href="#">1</a>
+                                        <a class="active" href="#">2</a>
+                                        <a href="#">3</a>
+                                        <a href="#">4</a>
+                                        <a href="#">5</a>
+                                        <a href="#">6</a>
+                                        <a href="#"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    var data = [{
+        data: [
+            [0, 900]
+        ],
+        color: "#66CCFF"
+    }, {
+        data: [
+            [1, 1200]
+        ],
+        color: "#0066FF"
+    }, {
+        data: [
+            [2, 1100]
+        ],
+        color: "#3366CC"
+    }, {
+        data: [
+            [3, 800]
+        ],
+        color: "#330066"
+    }, {
+        data: [
+            [4, 500]
+        ],
+        color: "#0066FF"
+    }, {
+        data: [
+            [5, 320]
+        ],
+        color: "#66CCFF"
+    }, {
+        data: [
+            [6, 100]
+        ],
+        color: "#66CCFF"
+    }];
+    $.plot("#bemBarChart", data, {
+        series: {
+            bars: {
+                show: true,
+                barWidth: 0.5,
+                align: "center",
+                lineWidth: 0,
+                fill: 1
+            }
+        },
+        xaxis: {
+            ticks: [
+                [0, "Status 1"],
+                [1, "Status 2"],
+                [2, "Status 3"],
+                [3, "Status 4"],
+                [4, "Status 5"],
+                [5, "Status 6"],
+                [6, "Status 7"]
+            ]
+        }
+    });
+</script>

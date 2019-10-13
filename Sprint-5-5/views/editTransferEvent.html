@@ -1,0 +1,996 @@
+<section class="content-header">
+    <h1 class="pull-left pad-t-5">
+        Edit Transfer Event
+    </h1>
+
+    <ul class="nav navbar-nav step-right hidden-xs hidden-sm">
+        <li class="selected">Step 1</li>
+        <li>Step 2</li>
+        <li>Step 3</li>
+    </ul>
+
+    <div class="nav navbar-nav pull-right hidden-xs hidden-sm pad-b-10 mar-m-5">
+
+        <button type="button" class="btn btn-link link">Recalculate</button>
+        <button type="button" class="btn btn-link link">Edit</button>
+        <button type="button" class="btn btn-link link">Cancel</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+    </div>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="box-solid">
+                <div id="accordion" class="box-group">
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <div class="row pad-t-5">
+                                <div class="col-lg-2 box-title">
+                                    Event ID: 32381
+                                </div>
+                                <div class="col-lg-2 box-title">
+                                    Imported: False
+                                </div>
+                                <div class="col-lg-4 box-title">
+                                    Event Status:&nbsp;&nbsp; <i class="fa fa-circle text-blue" aria-hidden="true"></i> Generated Entries
+                                </div>
+                                <div class="col-lg-4 box-title">
+                                    &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel box">
+                        <div class="box-header with-border panel-heading">
+                            <h4 class="box-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#eventDetails" href="">
+                                    <span class="badge">2</span> Event Details - Transfer Event - Regular
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="eventDetails" class="panel-collapse collapse">
+                            <div class="box-body">
+                                <fieldset>
+                                    <legend>Event Reference</legend>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Posting Date <sup> * </sup></h5>
+                                        <div class='input-group date'>
+                                            <input id="date-picker-pd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                            <label for="date-picker-pd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                    </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Value Date <sup> * </sup></h5>
+                                        <div class='input-group date'>
+                                            <input id="date-picker-vd" placeholder="DD/MM/YYYY" type="text" class="date-picker form-control" />
+                                            <label for="date-picker-vd" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>                                            
+                                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Proration Method</h5>
+                                        <select class="form-control" id="">
+                                                    <option value="Equal Proration">Equal Proration</option>                                                      
+                                                </select>
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>EPMS Transaction ID</h5>
+                                        <input class="form-control" id="" type="text">
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Workflow Number</h5>
+                                        <input class="form-control" id="" type="text">
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Import Reference ID</h5>
+                                        <input class="form-control" id="" type="text" disabled="">
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Imported</h5>
+                                        <input class="form-control" id="" type="text" disabled="">
+                                    </div>
+                                    <div class="col-lg-3 form-group">
+                                        <h5>Remarks</h5>
+                                        <input class="form-control" id="" type="text">
+                                    </div>
+                                </fieldset>
+                                <fieldset class="light-blue-bg">
+                                    <legend>Transfer details</legend>
+
+                                    <div class="row">
+                                        <div class="col-lg-12 pad-t-20">
+                                            <div class="col-lg-4">
+                                                <div class="row">
+                                                    <div class="col-lg-12"><strong>From</strong></div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <h5>Institution <sup> * </sup></h5>
+                                                        <div class="input-group">
+                                                            <input class="form-control" placeholder="Search" id="" type="text">
+                                                            <div class="input-group-btn">
+                                                                <button class="btn btn-primary btn-right" type="submit" data-toggle="modal" data-target="#fromInstitution">
+                                                    <span class="glyphicon glyphicon-search"></span>
+                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 form-group">
+                                                        <h5>Security Group</h5>
+                                                        <select class="form-control" id="">
+                                                        <option selected="" value="Select">Select</option>
+                                                        <option value="Equity">Equity</option>
+                                                        <option value="Loan">Loan</option>
+                                                        <option value="Options">Options</option>
+                                                    </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="row">
+                                                    <div class="col-lg-12"><strong>To</strong></div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6 form-group">
+                                                        <h5>Institution <sup> * </sup></h5>
+                                                        <div class="input-group">
+                                                            <input class="form-control" placeholder="Search" id="" type="text">
+                                                            <div class="input-group-btn">
+                                                                <button class="btn btn-primary btn-right" type="submit" data-toggle="modal" data-target="#toInstitution">
+                                                        <span class="glyphicon glyphicon-search"></span>
+                                                    </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 form-group">
+                                                        <h5>Security Group</h5>
+                                                        <select class="form-control" id="">
+                                                            <option selected="" value="Select">Select</option>
+                                                            <option value="Equity">Equity</option>
+                                                            <option value="Loan">Loan</option>
+                                                            <option value="Options">Options</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="row">
+                                                    <div class="col-lg-12">&nbsp;</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6 form-group">
+                                                        <h5>Currency</h5>
+                                                        <select class="form-control" id="">
+                                                            <option selected="" value="Select">Select</option>
+                                                            <option value="">USD</option>                                                            
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-6 form-group">
+                                                        <h5>&nbsp;</h5>
+                                                        <a class="btn btn-primary" href="" ng-model="expandme" ng-click="expandme=true">Get Criteria</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <div class="row" ng-show="expandme">
+                                    <div class="col-lg-12 mar-t-15">
+                                        <div class="row">
+                                            <div class="col-lg-4 pad-r-0">
+                                                <div class="row">
+                                                    <div class="col-lg-12 pad-r-0">
+                                                        <div class="col-lg-12 light-blue-bg-1 displayFlex height-big">
+                                                            <h4>From institute - 8 Miles</h4>
+                                                        </div>
+                                                        <div class="col-lg-6 displayFlex height-big border-gray">
+                                                            Project1 (222344)
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-12 displayFlex height-small border-gray">Tranche 50</div>
+                                                                <div class="col-lg-12 displayFlex height-small border-gray">Tranche 51</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-12 pad-r-0">
+                                                        <div class="col-lg-6 displayFlex height-big border-gray">
+                                                            Project1 (222344)
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-12 displayFlex height-small border-gray">Tranche 50</div>
+                                                                <div class="col-lg-12 displayFlex height-small border-gray">Tranche 51</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="text-center" colspan="7">
+                                                                    <h4 class="mar-0">To Institute - 21 Century</h4>
+                                                                </th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-center">Project1 (322344)</td>
+                                                                <td class="text-center" colspan="4">Project1 (322344)</td>
+                                                                <td class="text-center" colspan="2">Project1 (322344)</td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center">Tranche 50</td>
+                                                                <td class="text-center">Tranche 50</td>
+                                                                <td class="text-center">Tranche 50</td>
+                                                                <td class="text-center">Tranche 50</td>
+                                                                <td class="text-center">Tranche 50</td>
+                                                                <td class="text-center">Tranche 50</td>
+                                                                <td class="text-center">Tranche 50</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check1" type="checkbox" name="check" value="">
+                                                                        <label for="check1"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check2" type="checkbox" name="check" value="">
+                                                                        <label for="check2"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check3" type="checkbox" name="check" value="">
+                                                                        <label for="check3"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check4" type="checkbox" name="check" value="">
+                                                                        <label for="check4"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check5" type="checkbox" name="check" value="">
+                                                                        <label for="check5"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check6" type="checkbox" name="check" value="">
+                                                                        <label for="check6"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check7" type="checkbox" name="check" value="">
+                                                                        <label for="check7"></label>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check8" type="checkbox" name="check" value="">
+                                                                        <label for="check8"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check9" type="checkbox" name="check" value="">
+                                                                        <label for="check9"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check10" type="checkbox" name="check" value="">
+                                                                        <label for="check10"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check11" type="checkbox" name="check" value="">
+                                                                        <label for="check11"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check12" type="checkbox" name="check" value="">
+                                                                        <label for="check12"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check13" type="checkbox" name="check" value="">
+                                                                        <label for="check13"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check14" type="checkbox" name="check" value="">
+                                                                        <label for="check14"></label>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check15" type="checkbox" name="check" value="">
+                                                                        <label for="check15"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check16" type="checkbox" name="check" value="">
+                                                                        <label for="check16"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check17" type="checkbox" name="check" value="">
+                                                                        <label for="check17"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check18" type="checkbox" name="check" value="">
+                                                                        <label for="check18"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check19" type="checkbox" name="check" value="">
+                                                                        <label for="check19"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check20" type="checkbox" name="check" value="">
+                                                                        <label for="check20"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check21" type="checkbox" name="check" value="">
+                                                                        <label for="check21"></label>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check25" type="checkbox" name="check" value="">
+                                                                        <label for="check25"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check26" type="checkbox" name="check" value="">
+                                                                        <label for="check26"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check27" type="checkbox" name="check" value="">
+                                                                        <label for="check27"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check28" type="checkbox" name="check" value="">
+                                                                        <label for="check28"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check29" type="checkbox" name="check" value="">
+                                                                        <label for="check29"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check30" type="checkbox" name="check" value="">
+                                                                        <label for="check30"></label>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="text-center height-small">
+                                                                    <div class="checkbox">
+                                                                        <input id="check31" type="checkbox" name="check" value="">
+                                                                        <label for="check31"></label>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <button type="button" class="btn btn-primary pull-right">Regenerate</button>
+                                                <button type="button" class="btn btn-link link pull-right">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel box">
+                        <div class="box-header with-border panel-heading">
+                            <h4 class="box-title">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#generatedEntries" href="">
+                                    <span class="badge">3</span> Generated Entries
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="generatedEntries" class="panel-collapse collapse">
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-lg-3 pad-0 form-group">
+                                        <div class="col-xs-5"><strong>Institution From:</strong></div>
+                                        <div class="col-xs-7">7L Capital</div>
+                                    </div>
+                                    <div class="col-lg-3 pad-0 form-group">
+                                        <div class="col-xs-5"><strong>Security Group:</strong></div>
+                                        <div class="col-xs-7">Equity</div>
+                                    </div>
+                                    <div class="col-lg-3 pad-0 form-group">
+                                        <div class="col-xs-5"><strong>Institution To:</strong></div>
+                                        <div class="col-xs-7">8 Miles </div>
+                                    </div>
+                                    <div class="col-lg-3 pad-0 form-group">
+                                        <div class="col-xs-5"><strong>Security Group:</strong></div>
+                                        <div class="col-xs-7">Equity</div>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-lg-12 pad-t-20">
+                                        <button type="button" class="btn btn-primary pull-right">Recalculate</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- Custom Tabs -->
+                                    <div class="box-body">
+                                        <div class="table-responsive no-padding">
+                                            <div class="nav-tabs-custom">
+                                                <ul class="nav nav-tabs mar-0">
+                                                    <li class="active"><a href="" data-target="#ge_1" data-toggle="tab" aria-expanded="true">Proration (From)</a></li>
+                                                    <li class=""><a href="" data-target="#ge_2" data-toggle="tab" aria-expanded="false">Proration (To)</a></li>
+                                                    <li class=""><a href="" data-target="#ge_3" data-toggle="tab" aria-expanded="false">Trade Date Accounting</a></li>
+                                                </ul>
+                                                <div class="tab-content pad-0">
+                                                    <div class="tab-pane active" id="ge_1">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover table-striped" style="margin: 0;">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th colspan="5"></th>
+                                                                        <th colspan="2">Undisbursed Amount</th>
+                                                                        <th colspan="2">Disbursement Cost Basis</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>From</th>
+                                                                        <th>Project ID</th>
+                                                                        <th>Tranche Number</th>
+                                                                        <th>Local Currency</th>
+                                                                        <th>Quantity</th>
+                                                                        <th>Local</th>
+                                                                        <th>Legal</th>
+                                                                        <th>Local</th>
+                                                                        <th>Legal</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <button class="btn btn-bem" ng-model="generalEntries" ng-class="generalEntries ? 'icn-minus' : 'icn-plus'" ng-click="generalEntries = !generalEntries;">                                                                                
+                                                                            </button>
+                                                                        </td>
+                                                                        <td>3014-50</td>
+                                                                        <td>50</td>
+                                                                        <td>USD</td>
+                                                                        <td class="form-group">
+                                                                            <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                        </td>
+                                                                        <td class="form-group">
+                                                                            <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                        </td>
+                                                                        <td class="form-group">
+                                                                            <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                        </td>
+                                                                        <td class="form-group">
+                                                                            <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                        </td>
+                                                                        <td class="form-group">
+                                                                            <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <table class="table table-responsive" ng-show="generalEntries">
+                                                                            <tbody>
+                                                                                <tr class="pad-5">
+                                                                                    <th colspan="5"></th>
+                                                                                    <th colspan="2">Undisbursement Outstanding</th>
+                                                                                    <th colspan="2">Disbursement Cost Basis</th>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <th>To:(weights)</th>
+                                                                                    <th>Project Id</th>
+                                                                                    <th>Tranche Number</th>
+                                                                                    <th>Local Currency</th>
+                                                                                    <th>Quantity</th>
+                                                                                    <th>Local</th>
+                                                                                    <th>Legal</th>
+                                                                                    <th>Local</th>
+                                                                                    <th>Legal</th>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td class="form-group">
+                                                                                        <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                                    </td>
+                                                                                    <td>3014-50</td>
+                                                                                    <td>50</td>
+                                                                                    <td class="form-group">
+                                                                                        <select class="form-control" id="">
+                                                                                                                <option value="Equal Proration"></option>                                                      
+                                                                                                            </select>
+                                                                                    </td>
+                                                                                    <td class="form-group">
+                                                                                        <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                                    </td>
+                                                                                    <td class="form-group">
+                                                                                        <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                                    </td>
+                                                                                    <td class="form-group">
+                                                                                        <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                                    </td>
+                                                                                    <td class="form-group">
+                                                                                        <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                                    </td>
+                                                                                    <td class="form-group">
+                                                                                        <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td class="form-group">
+                                                                                        <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                                    </td>
+                                                                                    <td>3014-50</td>
+                                                                                    <td>50</td>
+                                                                                    <td class="form-group">
+                                                                                        <select class="form-control" id="">
+                                                                                                                        <option value="Equal Proration"></option>                                                      
+                                                                                                                    </select>
+                                                                                    </td>
+                                                                                    <td class="form-group">
+                                                                                        <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                                    </td>
+                                                                                    <td class="form-group">
+                                                                                        <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                                    </td>
+                                                                                    <td class="form-group">
+                                                                                        <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                                    </td>
+                                                                                    <td class="form-group">
+                                                                                        <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                                    </td>
+                                                                                    <td class="form-group">
+                                                                                        <input class="form-control text-right" id="" type="text" placeholder="0.0000">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.tab-pane -->
+                                                    <div class="tab-pane" id="ge_2">
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th colspan="4"></th>
+                                                                        <th colspan="2">Undisbursed Amount</th>
+                                                                        <th colspan="2">Disbursement Cost Basis</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Project ID</th>
+                                                                        <th>Tranche Number</th>
+                                                                        <th>Local Currency</th>
+                                                                        <th>Quantity</th>
+                                                                        <th>Local</th>
+                                                                        <th>Legal</th>
+                                                                        <th>Local</th>
+                                                                        <th>Legal</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>24464</td>
+                                                                        <td>50</td>
+                                                                        <td>USD</td>
+                                                                        <td>567,788.0000</td>
+                                                                        <td>0.0000</td>
+                                                                        <td>0.0000</td>
+                                                                        <td>0.0000</td>
+                                                                        <td>0.0000</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th colspan="4"></th>
+                                                                        <th colspan="2">Undisbursed Amount</th>
+                                                                        <th colspan="2">Disbursement Cost Basis</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Project ID</th>
+                                                                        <th>Tranche Number</th>
+                                                                        <th>Local Currency</th>
+                                                                        <th>Quantity</th>
+                                                                        <th>Local</th>
+                                                                        <th>Legal</th>
+                                                                        <th>Local</th>
+                                                                        <th>Legal</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>24464</td>
+                                                                        <td>50</td>
+                                                                        <td>USD</td>
+                                                                        <td>567,788.0000</td>
+                                                                        <td>0.0000</td>
+                                                                        <td>0.0000</td>
+                                                                        <td>0.0000</td>
+                                                                        <td>0.0000</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.tab-pane -->
+                                                    <div class="tab-pane" id="ge_3">
+                                                        <div class="row pad-t-20">
+                                                            <div class="col-lg-5 pad-0 form-group">
+                                                                <div class="col-xs-3"><strong>Batch ID:</strong></div>
+                                                                <div class="col-xs-9">0</div>
+                                                            </div>
+                                                            <div class="col-lg-5 pad-0 form-group">
+                                                                <div class="col-xs-4"><strong>Batch Status:</strong></div>
+                                                                <div class="col-xs-8">Draft </div>
+                                                            </div>
+                                                            <div class="col-lg-5 pad-0 form-group">
+                                                                <div class="col-xs-3"><strong>Comments:</strong></div>
+                                                                <div class="col-xs-9">Transfer - Company to Company 13/Jul/2017</div>
+                                                            </div>
+                                                            <div class="col-lg-5 pad-0 form-group">
+                                                                <div class="col-xs-4"><strong>Posting Date:</strong></div>
+                                                                <div class="col-xs-8">13/Jul/2017</div>
+                                                            </div>
+                                                        </div>
+                                                        <hr />
+                                                        <div class="table-responsive pad-t-20">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>S.No</th>
+                                                                        <th>Project ID</th>
+                                                                        <th>Tranche Number</th>
+                                                                        <th>Account</th>
+                                                                        <th>Transaction Type</th>
+                                                                        <th>Position</th>
+                                                                        <th>Currency</th>
+                                                                        <th>LA(FCY)Debit</th>
+                                                                        <th>LA(FCY)Credit</th>
+                                                                        <th>LE(USD)Debit</th>
+                                                                        <th>LE(USD)Credit</th>
+                                                                        <th>Quantity</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <h5>1</h5>
+                                                                        </td>
+                                                                        <td>
+                                                                            <h5>24464</h5>
+                                                                            <h5>24464</h5>
+                                                                        </td>
+                                                                        <td>
+                                                                            <h5>50</h5>
+                                                                            <h5>50</h5>
+                                                                        </td>
+                                                                        <td>
+                                                                            <h5>1300560</h5>
+                                                                            <h5>1300560</h5>
+                                                                        </td>
+                                                                        <td>
+                                                                            <h5>Equity Commitment -Transfer to other company - CR</h5>
+                                                                        </td>
+                                                                        <td>
+                                                                            <h5>7L Capital (Non-Share Equity 50)</h5>
+                                                                        </td>
+                                                                        <td>
+                                                                            <h5>EUR</h5>
+                                                                            <h5>EUR</h5>
+                                                                        </td>
+                                                                        <td>
+                                                                            <h5>4,025,759.1400</h5>
+                                                                            <h5>4,025,759.1400</h5>
+                                                                        </td>
+                                                                        <td>
+                                                                            <h5>4,025,759.1400</h5>
+                                                                            <h5>4,025,759.1400</h5>
+                                                                        </td>
+                                                                        <td>
+                                                                            <h5>5,500,306.7762</h5>
+                                                                            <h5>5,500,306.7762</h5>
+                                                                        </td>
+                                                                        <td>
+                                                                            <h5>5,500,306.7762</h5>
+                                                                            <h5>5,500,306.7762</h5>
+                                                                        </td>
+                                                                        <td>
+                                                                            <h5>0.0000</h5>
+                                                                            <h5>0.0000</h5>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 text-right">
+                                                <button type="button" class="btn btn-link link">Recalculate</button>
+                                                <button type="button" class="btn btn-link link">Edit</button>
+                                                <button type="button" class="btn btn-link link">Cancel</button>
+                                                <button type="button" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal Instotution from -->
+<div class="modal fade" id="fromInstitution" role="dialog">
+    <div class="modal-dialog" style="width: 75%;">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        <div class="input-group">
+                            <input class="form-control" placeholder="Search by Institution Name / Number" id="" type="text">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary btn-right" type="submit">
+                                                    <span class="glyphicon glyphicon-search"></span>
+                                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <a href="">Clear all</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table ng-table="" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th width="50%">
+                                            Institution Name
+                                        </th>
+                                        <th width="50%">
+                                            Institution Number
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            First Lease
+                                        </td>
+                                        <td>
+                                            54001
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            First Lease
+                                        </td>
+                                        <td>
+                                            54001
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            First Lease
+                                        </td>
+                                        <td>
+                                            54001
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            First Lease
+                                        </td>
+                                        <td>
+                                            54001
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            First Lease
+                                        </td>
+                                        <td>
+                                            54001
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination pull-left charectorSearch mar-0">
+                            <a href="#"><i class="fa fa-angle-left fa-fw" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-angle-double-left fa-fw" aria-hidden="true"></i></a>
+                            <a href="#">1</a>
+                            <a class="active" href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- EO Modal Institution from -->
+<!-- Modal Instotution to -->
+<div class="modal fade" id="toInstitution" role="dialog">
+    <div class="modal-dialog" style="width: 75%;">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6 form-group">
+                        <div class="input-group">
+                            <input class="form-control" placeholder="Search by Institution Name / Number" id="" type="text">
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary btn-right" type="submit">
+                                                        <span class="glyphicon glyphicon-search"></span>
+                                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <a href="">Clear all</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table ng-table="" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th width="50%">
+                                            Institution Name
+                                        </th>
+                                        <th width="50%">
+                                            Institution Number
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            First Lease
+                                        </td>
+                                        <td>
+                                            54001
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            First Lease
+                                        </td>
+                                        <td>
+                                            54001
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            First Lease
+                                        </td>
+                                        <td>
+                                            54001
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            First Lease
+                                        </td>
+                                        <td>
+                                            54001
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            First Lease
+                                        </td>
+                                        <td>
+                                            54001
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination pull-left charectorSearch mar-0">
+                            <a href="#"><i class="fa fa-angle-left fa-fw" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-angle-double-left fa-fw" aria-hidden="true"></i></a>
+                            <a href="#">1</a>
+                            <a class="active" href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- EO Modal Institution to -->
